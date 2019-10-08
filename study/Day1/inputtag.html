@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>input tag 예제</title>
+</head>
+<body>
+    <form action="">
+        input : text 예제 <br>
+        <!-- 
+        text는 ""와 '' 중 하나를 이용하여 작성 가능, 일반적으로 "" 이용하여 작성
+        placeholder 속성: 실제 input창에 문자열을 넣는게 아니라 어떠한 내용을 입력해야
+        하는지 문자열을 미리 보여주는것
+        -->
+        <input type="text" placeholder="ID" name="id">
+        <!-- 
+        모든태그에서 name 속성은 중복 가능
+        input 태그에서 
+        name 속성: 서버로 데이터를 보낼때 보내지는 이름
+        모든 태그에서 id 속성은 중복이 불가능하므로 동일 id를 가지는 
+        태그가 있으면 하나만 인식.
+         -->
+        <input type='text' value="abcd">
+        <!-- 
+        value 속성: 실제값을 미리 입력하는 속성. (미리입력되어있어서 자동으로 뜸)
+         -->
+        <br> input 태그를 이용한 버튼 예제 <br>
+        <input type="submit" value="제출">
+        <input type="button" value="버튼">
+        <input type="reset" value="초기화">
+        <br> button 태그를 이용한 버튼 예제 <br>
+        <button type="submit">제출</button>
+        <button type="button">버튼</button>
+        <button type="reset">초기화</button>
+        <!-- 
+        submit, button, reset은 버튼을 만드는 속성, button태그로 대체가 가능. 
+        단, input태그의 버튼들은 단일태그이지만 button태그는 쌍태그이다.
+        submit은 서버로 데이터를 전송하기 위한 버튼
+        button은 단순한 버튼
+        reset은 같은 form태그 안에 있는 모든 input태그의 값들을 초기화
+         -->
+        <br> type을 지정안한 button 예제 <br>
+        <button>제출</button>
+        <!-- 
+        button태그에 type을 지정하지 않은 경우, 해당버튼이 form 태그 안에 있다면
+        type이 submit으로 자동설정
+        form 태그 밖에 있다면 type이 button으로 자동설정
+         -->
+        <br> 
+        
+    </form>
+</body>
+</html>
