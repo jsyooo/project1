@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  과일
+  <!-- (교재 p.98) ul:순차적이 아닌 리스트 만들때 -->
+  <ul>과일
+    <!-- 
+      type의 종류: dist(기본), square, circle
+      리스트를 단일로 쓸때에는 type 종류가 상관없지만 
+      리스트안에 리스트를 넣는경우 안에들어간 리스트에는 dist적용이 안됨.
+      이런 경우 기본은 윗 리스트에서 설정한 type으로 적용됨.
+    -->
+    <ul type="square">
+      <!-- #:a태그효과는 주지만 이동시키지 않을 때(아직 링크가 안정해졌을때 등) -->
+    <li> <a href="#"> 사과</a></li>
+    <li>배</li>
+    <li>포도
+      <ul type="dist">
+        <li>영동포도</li>
+        <li>거봉</li>
+      </ul>
+    </li>
+  </ul>
+  오늘의 할일
+  <!-- 
+  ol:순차적인 리스트 만들때
+  type 속성: 1(기본), I, i, A, a
+  start 속성: 시작번호를 설정
+  reversed 속성: 역순으로 지정
+   -->
+  <ol type="1" start="3">
+    <!-- 
+      리스트 태그는 주로 네비게이션(메뉴바)에서 많이 사용(ul)
+      css에서 앞에 글머리 기호 없애주는 작업 따로 함.
+      리스트는 기본 block 태그
+     -->
+    <li>수업</li>
+    <li>점심</li>
+  </ol>
+  <!-- 
+    span tag는 태그 자체는 아무 역할을 하지 않음
+    하지만 css를 처리할 때 사용, inline 태그
+   -->
+</body>
+</html>
