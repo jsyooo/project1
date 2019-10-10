@@ -1,0 +1,10 @@
+/* 
+style  태그나 css 파일에서 다른 css파일을 가져오는 방법
+주로 글자폰트를 가져올 때 많이 사용(기본폰트 아닐 때)
+*/
+/* @import url(css주소) */
+
+#hi{
+    font-size: 50px;
+    color: rgb(0,0,255)
+}
