@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>단위 확인 예제</title>
+	<style>
+		/* :root 문서의 기본값을 설정 */
+		:root{
+			font-size: 14px;
+		}
+	#hi1{
+		background-color: lavender;
+		width: 400px;
+	}
+	/* 
+	%는 부모를 기준으로 계산이 되므로 높이 계산할 때 조심해야한다
+	상위 태그가 부모가 됨(p태그의 부모는 body태그).
+	 */
+	#hi2{
+		background-color: lavender;
+		width: 50%;
+		height: 1000;
+	}
+	/* 
+	em은 부모의 폰트 사이즈를 기준으로 배수를 의미한다(상대적)
+	1.5em은 부모의 150%
+	여기서는 body의 폰트사이즈가 14, hi3의 사이즈가 14x2=28, span1의 사이즈는 28x3=84.
+	 */
+	body{
+		font-size: 14px;
+	}
+	#hi3{
+		font-size: 2em;
+	}
+	#span1{
+		font-size: 3em;
+	}
+	/* 
+	rem에서 r은 root를 의미하며 root는 문서의 기본값을 의미
+	문서의 기본값을 14px로 위에서 설정했으므로 14x3=42px.
+	 */
+	#hi4{
+		font-size: 2rem;
+	}
+	#span2{
+		font-size: 3rem;
+	}
+	/* 뷰포트의 상대값으로 크기를 지정하는 방법, 
+	보이는 화면 크기창에 따라 그 상대값으로 적용됨(%) */
+	#hi5{
+		background-color: lightblue;
+		height: 50vh;
+	}
+	</style>
+</head>
+<body>
+	<p id="hi1">안녕하세요.</p>
+	<p id="hi2">안녕하세요.</p>
+	<p id="hi3"> <span id="span1"> 안녕하세요.</span></p>
+	<p id="hi4"> <span id="span2"> 안녕하세요.</span></p>
+	<div id="hi5">안녕하세요.</div>
+</body>
+</html>
