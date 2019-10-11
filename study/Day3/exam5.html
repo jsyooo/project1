@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>가상선택자</title>
+    <style>
+    a:link{
+        color: red;
+    }
+    a:visited{
+        color: green;
+    }
+    /* hover: 마우스 롤오버 */
+    a:hover{
+        background-color: silver;
+    }
+
+    /* 입력창이 활성화 되어있을때 글씨 색 */
+    input:focus{
+        color: steelblue;
+    }
+
+    /* 입력창을 클릭할 때 */
+    input:active{
+        background-color: gray;
+    }
+    input:first-of-type{
+        background-color: red;
+    }
+    li:first-child{
+        color: blue;
+    }
+    /* 
+    2n-1: 홀수
+    홀수번째 항목마다 css 적용 
+    */
+    li:nth-child(2n-1){
+        text-decoration: underline;
+    }
+    h1::before{
+        content: "앞:";
+    }
+    h1::after{
+        content: ":뒤";
+    }
+    .test::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    <a href="http://naver.com">네이버</a>
+    <a href="http://naver1.com">네이버1</a>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <ul>
+        <li>apple</li>
+        <li>pear</li>
+        <li>grape</li>
+    </ul>
+    <h1>hello</h1>
+</body>
+</html>
