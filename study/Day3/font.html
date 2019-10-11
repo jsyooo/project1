@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>폰트 속성 예제</title>
+		<!-- link는 html파일에 css를 가져오는 방법 -->
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap" rel="stylesheet">
+		<style>
+			/* 위에 있는 링크 태그와 같은 역할을 아래 @import가 해준다
+			import는 css파일을 css에 가져오는 방법 */
+			@import url("https://fonts.googleapis.com/css?family=Do+Hyeon&display=swap");
+			/* @import url(http://~~교재165에 있는 연결코드 url 주소 입력) */
+			/* font-family: 폰트 종류 설정 */
+			body{
+				/* font-family: '돋움', dotum, Helvetica, sans-serif; */
+				font-family: 'Do Hyeon', sans-serif;
+				font-size: 16px;
+				/* font-weight는 100~900까지의 값을 가짐
+				700은 Bold로 지정 */
+				font-weight: 700;
+				/* text-decoration p.170참고
+				underline, overline, line-through, none */
+				text-decoration: underline;
+				/* 글자 스타일: normal, italic(=oblique) */
+				font-style: italic;
+				color: rosybrown;
+				/* 글자 정렬: center, right, left, justify */
+				text-align: left;
+				width: 120px;
+				/* 글자 사이의 간격 */
+				letter-spacing: 5px;
+				/* 단어 사이의 간격 */
+				word-spacing: 2px;
+				/* 글자 높이를 지정, 글자의 수직위치를 조절할 때 사용(글자의 길이를 늘리진 않음) */
+				line-height: 50px;
+				/* 글자의 들여쓰기 */
+				text-indent: 20px;
+				text-transform: uppercase;
+			}
+		</style>
+</head>
+<body>
+	안녕하세요 제 이름은 홍길동입니다. i go to school
+</body>
+</html>
