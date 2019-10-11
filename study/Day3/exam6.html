@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>우선 순위 확인 예제</title>
+    <style>
+        /* 
+        우선순위 점수
+        *:0
+        태그:1
+        클래스:10
+        아이디:100
+        우선순위가 같은 경우 아래 있는 스타일이 적용
+        !important는 우선순위와 상관없이 무조건 적용
+         */
+    *{color: red;}
+    div{color: blue;}
+    .div1{color: green;}
+    .test1{color: yellow!important;}
+    #hi1{color: darkgray;}
+    .div1.test1{color: pink;}
+    </style>
+</head>
+<body>
+    <div class="div1 test1" id="hi1">안녕1</div>
+    <div class="div1 test1">안녕2</div>
+    <div>안녕3</div>
+    <div>안녕4</div>
+    <div>안녕5</div>
+</body>
+</html>
