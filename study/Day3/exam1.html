@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>색상값 알아보기</title>
+		<style>
+		/* 
+		색상표현 방법1: 16진수 표현방법(포토샵)
+		#rrggbb로 표현하며 반복되는 경우 하나씩만 써도 된다.
+		#ff0000 -> #f00
+			*/
+		#hi1{
+			color: #ff0000;
+		}
+		/* 
+		색상표현 방법2: 미리 지정된 색상명으로 사용
+		 */
+		#hi2{
+			color: red
+		}
+		/* 
+		색상표현 방법3: rgb의 값을 10진수로 적용할때(그림판,포토샵)
+		 */
+		#hi3{
+			color:rgb(106,153,85)
+		}
+		/* 
+		색상표현 방법4: rgb의 값을 10진수로 적용할때 + 투명도(alpha);범위는 0(0%)~1(100%)
+		 */
+		 #hi4{
+			color:rgba(106,153,85,0.5)
+		}
+		/* 
+		색상표현 방법5: 색조(hue), 채도(saturation), 명도(lightness)를 입력
+		 */
+		 #hi5{
+			color:hsl(240, 50%, 50%)
+		}
+		</style>
+</head>
+<body>
+	<p id="hi1">안녕하세요.</p>
+	<p id="hi2">안녕하세요.</p>
+	<p id="hi3">안녕하세요.</p>
+	<p id="hi4">안녕하세요.</p>
+	<p id="hi5">안녕하세요.</p>
+</body>
+</html>
