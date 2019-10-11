@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>선택자 조합</title>
+		<style>
+		div{
+			color: red;
+		}
+		.hi{
+			background-color: yellow;
+		}
+		/* body 태그 안에 있는 모든 p태그(자식,손자,증손자 등 모든 후손)
+		안녕2, 안녕3 적용 */
+		body p{
+			font-weight: bold;
+		}
+
+		/* 
+		body태그 바로 안에 있는 p태그만(자식) 적용. 안녕3만 적용됨.
+		 */
+		body>p{
+			text-decoration: underline;
+		}
+		/* +는 인접한(붙어있는) 형제를 의미함
+		앞형제(첫번째 쓰이면 앞형제가 없는것)가 div태그이면서 본인이 div태그인 경우 */
+		div+div{
+			border-top: 1px solid black;
+		}
+		/* 
+		~은 형제를 의미(떨어져있어도 가능)
+		앞형제들 중에서 div1 클래스를 가지고 있으면서 본인이 p 태그인 경우
+		
+		,는 그룹화를 의미
+		A,B{}에서 A와 B 모두 같은 스타일을 적용할 때 사용 */
+		.div1~p,
+		.second{
+			border-bottom: 1px solid red
+			;
+		}
+		/* 본인을 구체적으로 강하게 나타내는 방법 
+		:붙여서 여러 선택자들을 사용한다.
+		태그 선택자들을 연달아 쓸 수 없다
+		ex) pdiv{} 이렇게 쓸 수없음
+		아이디 선택자들을 연달아 쓸 수없다.
+		ex)#id#pw{} 이렇게 쓸 수없음
+		가능한 상황
+		.클래스.클래스{}
+		태그.클래스{}/순서바뀌면 아예 다른 의미. 태그앞에는 구분자가 없으므로
+		태그#아이디{}/순서바뀌면 아예 다른 의미. 태그앞에는 구분자가 없으므로
+		#아이디.클래스{}
+		*/
+		.hi.first{
+			border-left: 1px blue solid;
+		}
+		</style>
+</head>
+<body>
+	<!-- 
+		id: 중복불가
+		name: 중복가능, 하나만 입력가능
+		class: 중복가능, 여러개 입력가능(띄어쓰기로 구분)
+	 -->
+	<div class="div1">
+	 <div class="hi first">안녕</div>
+	</div>
+	<div>
+		<div class="hello">안녕하세요</div>
+	</div>
+	<div class="hi second">
+		<p>안녕2</p>
+	</div>
+	<p class="hi">안녕3</p>
+</body>
+</html>
