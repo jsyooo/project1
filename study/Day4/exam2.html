@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>수직정렬</title>
+    <!-- 수직정렬:verticla-align
+         수평정렬:text-align -->
+    <style>
+    p{
+        font-size: 30px;
+        text-decoration: underline;
+    }
+    p>span{
+        font-size: 15px;
+    }
+    .second{
+        vertical-align: top;
+    }
+    .third{
+        vertical-align: middle;
+    }
+    .fourth{
+        vertical-align: bottom;
+    }
+    h1{
+        border: 1px solid black;
+    }
+    img{
+        vertical-align: top;
+    }
+    /* h1태그 안에 img태그를 넣으면 아래에 약간의 공백이 생기는데
+    이 공백을 없애기 위해 vertical-align:top;으로 없애줄 수 있다. */
+    </style>
+</head>
+<body>
+    <p>hello <span class="first"> yellow</span></p>
+    <p>hello <span class="second"> yellow</span></p>    
+    <p>hello <span class="third"> yellow</span></p>
+    <p>hello <span class="fourth"> yellow</span></p>
+    <h1>
+        <img src="../Day2/라이언.png" alt="">
+    </h1>
+</body>
+</html>
