@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>텍스트 줄바꿈</title>
+    <style>
+    p{
+        text-align: justify;
+    }
+    #second{
+        word-break: break-all;
+    }
+    /* 한 라인을 넘어가서 줄을 바꿀 때 단어를 깨서 다음라인으로 넘어갈지[break-all] 
+    or 단어를 깨지 않고 다음라인으로 넘어갈 것인지(기본) */
+
+    #p1{
+        white-space: nowrap;
+    }
+    #p2{
+        white-space: pre;
+    }
+    #p3{
+        white-space: pre-wrap;
+    }
+    #p4{
+        white-space: pre-line;
+    }
+    pre~p{
+        width: 100px;
+        overflow: hidden;
+        /* overflow:hidden; 넘어가는 자식 요소들을 안보이게 감춤 */
+    }
+    /* pre태그 다음에 나오는 형제 p태그들 */
+    </style>
+</head>
+<body>
+    <p id="first"> akadkkjadijwon jsoiej owiengnl idnls kinslml iindlfi oisdnlksji akadkk jsoiej owiengnl idnls kinslml iindlfi oisdnlksji jsoiej owiengnl idnls kinslml iindlfi oisdnlksjijsoiej owiengnl idnls kinslml iindlfi oisdnlksji</p>
+    <p id="second">akadkkjadijwon jsoiej owiengnl idnls kinslml iindlfi oisdnlksji akadkk jsoiej owiengnl idnls kinslml iindlfi oisdnlksji jsoiej owiengnl idnls kinslml iindlfi oisdnlksjijsoiej owiengnl idnls kinslml iindlfi oisdnlksji</p>
+
+    <pre>
+        안녕하세요
+        안녕하세요
+        안녕하세요
+    </pre>
+    <!-- pre태그: 태그 안에 입력한 코드를 그대로 보여줌. 공백,코드내용 등 
+    앞에 tab으로 띄워진 부분도 화면에 그대로 나타남.-->
+
+    <p id="p1">
+        안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </p>
+    <p id="p2">
+        안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </p>
+    <p id="p3">
+        안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </p>
+    <p id="p4">
+        안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
+    </p>
+</body>
+</html>
