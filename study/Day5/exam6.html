@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>테두리 예제</title>
+  <style>
+  div{
+    width: 300px;
+    height: 300px;
+    border-style: solid;
+    /* border-style: 테두리 종류 선택 속성. 상하좌우 테두리 종류가 같은경우 사용. 
+    다르면 각각 사용해야함.
+    border-top-style, border-bottom-style, border-left-style, border-right-style */
+    
+    border-top-style: dotted;
+    /* 윗줄만 dotted로 하고 나머지는 실선으로 두고 싶을 때, 이 한줄만 추가하면 덮어쓰기처럼됨. */
+    border-width: 1px;
+    /* border-width: 테두리 두께로 상하좌우 동일할 때 사용하는 속성 */
+    border-color: red;
+
+    border-top: solid blue 2px;
+    /* border-top: border-top-style + border-top-color + border-top-width */
+    border: solid 3px green;
+    /* border: border-top + border-bottom + border-left + border-right
+    종류, 굵기, 색상 입력하는 순서는 상관없음. */
+  }
+  </style>
+</head>
+<body>
+  <div>
+
+  </div>
+</body>
+</html>
