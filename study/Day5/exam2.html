@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>배경 예제</title>
+  <style>
+  .background{
+    background-color: rgb(110, 155, 238);
+    /* background-color: 배경색상을 지정하는 속성으로 
+    값으로 rgb, rgba, 색상번호, 이름 등의 함수가 온다. */
+    opacity: 0.7;
+    /* opacity: 투명도를 설정하는 속성으로 0은 완전투명, 1은 완전불투명.
+    0에서 1사이의 값이다. 해당 태그 안에있는 모든 요소들의 투명도에 적용된다. (배경과 글자 모두) */
+  }
+  .container{
+    background-color: red;
+    height: 158px;
+    position: relative;
+  }
+  .red{
+    background-color: black;
+    opacity: 0.6;
+    height: 158px;
+  }
+  .blue{
+    background-color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+  }
+  .bg-img{
+    width: 700px;
+    height: 700px;
+    background-image: url(../Day2/라이언.png);
+    /* background-image: 배경 이미지를 설정하는 속성으로 url함수로 사용
+    url함수: 상대경로를 통해 내 pc에 있는 이미지를 가져오거나
+             절대경로를 통해 온라인상에 오픈된 이미지를 가져올 수 있다. */
+    background-repeat: repeat-x;
+    /* background-repeat: 배경이미지가 배경보다 작은경우 남는부분이 발생할때 처리
+       기본값은 repeat으로 x축과 y축 모두 반복해서 이미지 채움.
+       no-repeat: 이미지를 반복해서 채우지 않음. 하나만 채움
+       repeat-x: x축으로 반복
+       repeat-y: y축으로 반복 */
+  }
+  </style>
+</head>
+<body>
+  <div class="background">배경색 설정</div>
+  <hr>
+  <div class="container">
+    <div class="red">
+      <div class="blue">hello</div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+    <div class="red"></div>
+    <div class="blue">hello</div>
+  </div>
+  <div class="bg-img">
+  </div>
+</body>
+</html>
