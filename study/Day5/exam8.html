@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>border-radius(둥근테두리) 예제</title>
+    <style>
+    .bt1{
+      border-radius: 5px;
+      /* border-xxx-radius: xxx에 해당하는 위치에 둥근모서리 적용
+         top: 좌측상단
+         right: 우측상단
+         bottom: 우측하단
+         left: 좌측하단
+         border-radius는 값의 갯수에 따라 의미가 달라진다.
+         값이 4개: 좌측상단부터 시계방향으로
+         좌측상단을 10px, 우측상단은 20px, 우측하단30px, 좌측하단 40px 둥글게 한다.
+         border-radius: 10px 20px 30px 40px
+         값이 3개: 좌측상단부터 시계방향으로 3개=right와 left가 같다=우측상단과 좌측하단이 같다 
+         border-radius: 10px 20px 30px 
+         값이 2개: right와 left가 같고, top과 bottom이 같다
+         값이 1개: 전부 다 같다 */
+      border-radius: 30px/20px;
+      /* /: 둥근 테두리를 타원형으로 만들고 싶을 때 사용하며 가로/세로로 입력. */
+
+      /* 각 모서리의 타원형 크기를 따로 표현하려면 /앞에는 좌측상단부터 각 모서리의 가로를,
+      /뒤에는 좌측상단부터 각 모서리의 세로를 입력한다
+      border-radius: 30px 40px 50px 60px/20px 30px 20px 30px; */
+    }
+    </style>
+</head>
+<body>
+  <button class="bt1">button</button>
+</body>
+</html>
