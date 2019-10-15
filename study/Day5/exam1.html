@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>display 예제2</title>
+  <style>
+  .list{
+    display: list-item;
+  }
+  /* 햄버거메뉴 만들때 list-item으로 만듦
+  div로 각각 작성해도 화면엔 똑같이 뜬다. 묶이는 것이 다를뿐 */
+
+  .table{
+    display: table;
+  }
+  .tr{
+    display: table-row;
+  }
+  .td{
+    display: table-cell;
+    border: 1px solid black;
+  }
+  .display-none{
+    display: none;
+  }
+  .visibility-hidden{
+    visibility: hidden;
+  }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>apple</li>
+    <li>banana</li>
+  </ul>
+  <div>
+    <span class="list">apple</span>
+    <span class="list">banana</span>
+  </div>
+  <div>apple</div>
+  <div>banana</div>
+
+  <div class="table">
+    <div class="tr">
+      <div class="td">제목1</div>
+      <div class="td">제목2</div>
+    </div>
+    <div class="tr">
+      <div class="td">내용1</div>
+      <div class="td">내용2</div>
+    </div>
+  </div>
+  <div class="display-none">보이나요 안보이나요?1</div>
+  <div>보이나요 안보이나요?2</div>
+  <div class="visibility-hidden">보이나요 안보이나요?3</div>
+  <div>보이나요 안보이나요?4</div>
+  <!-- display-none: 공간 자체를 차지하지 않고 안보이게 감추는 것
+       visibility-hidden: 공간 자체는 차지하지만 안보이게 감추는 것(=투명) -->
+</body>
+</html>
