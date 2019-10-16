@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table 관련 속성 예제</title>
+  <style>
+  table{
+    table-layout: fixed;
+    /* table-layout은 테이블태그의 가로가 지정되어있어야 fixed가 적용된다. */
+    border-collapse: separate;
+    /* '`collapse or separate' */
+    width: 400px;
+    border-spacing: 1px 5px;
+    /* border-spacing은 border-collapse: collapse를 지정하지 않고 separate를 지정해야
+  적용가능함.
+  값이 1개인 경우: 상하좌우 모두 동일하게 적용
+  값이 2개인 경우: 좌우 상하에 각각 동일하게 적용 */
+    caption-side: bottom;
+    /* caption의 위치를 설정 'top or bottom' */
+  }
+   
+  .empty-show{
+    empty-cells: show;
+  }
+  /* 테두리는 있지만 비어있음 */
+  
+  .empty-hide{
+    empty-cells: hide;
+  }
+  /* 테두리도 없이 비어있음 */
+  </style>
+</head>
+<body>
+  <table border="1">
+    <caption>테이블표</caption>
+    <tr>
+      <td>제목1</td>
+      <td>제목2</td>
+    </tr>
+    <tr>
+      <td>안녕하세요</td>
+      <td>제 이름은 홍길동입니다.</td>
+    </tr>
+    <tr>
+      <td class="empty-show"></td>
+      <td class="empty-hide"></td>
+    </tr>
+  </table>
+</body>
+</html>
