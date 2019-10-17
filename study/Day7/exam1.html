@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>메뉴바 만들기</title>
+  <style>
+  .p>div{
+    width: calc(100% / 3);
+    height: 100px;
+    border: black 1px solid;
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: beige;
+    font-size: 25px;
+    line-height: 94px;
+
+    border-right: none;
+  }
+     
+  .p>div:last-of-type{
+    border-right: 1px black solid;
+  }
+  /* 가운데 테두리 2px로 안생기고 1px로 만드는법 */
+
+  .p::after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  /* 부모 높이를 잡아야 밑에 내용을 작성할때 메뉴바 위에 겹쳐 생기지 않고
+  메뉴바 밑에 생김. */
+
+  a{
+    text-decoration: none;
+    color: black;
+  }
+  </style>
+</head>
+<body>
+  <div class="p">
+    <div><a href="">메뉴1</a></div>
+    <div><a href="">메뉴2</a></div>
+    <div><a href="">메뉴3</a></div>
+  </div>
+</body>
+</html>

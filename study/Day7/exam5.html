@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>table 연습문제</title>
+  <style>
+  /* .table{
+    display: table;
+    width: 100%;
+  }
+  .tr{
+    display: table-row;
+  }
+  .td{
+    display: table-cell;
+    height: 30px;
+    border: 1px solid;
+  } */
+
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td{
+    width: calc(100% / 3);
+  }
+  tr{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+  }
+  tr:first-child{
+    text-align: center;
+  }
+
+  tr:nth-child(2n){
+    background-color: yellow;
+  }
+
+  tr:hover{
+    background-color: darkgray;
+  }
+  tr:first-child:hover{
+    background: white;
+  }
+  /* .yel{
+    background-color: yellow;
+  } */
+
+  </style>
+</head>
+<body>
+  <!-- <div class="table">
+    <div class="tr">
+        <div class="td">학생이름</div>
+        <div class="td">국어</div>
+        <div class="td">수학</div>
+    </div>
+    <div class="tr">
+      <div class="td">홍길동</div>
+      <div class="td">100</div>
+      <div class="td">100</div>
+    </div>
+    <div class="tr">
+      <div class="td">임꺽정</div>
+      <div class="td">90</div>
+      <div class="td">90</div>
+    </div>
+  </div> -->
+
+  <table>
+    <tr>
+      <td>학생이름</td>
+      <td>국어</td>
+      <td>수학</td>
+    </tr>
+    <tr class="yel">
+      <td>홍길동</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>임꺽정</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+    <tr class="yel">
+      <td>홍길동</td>
+      <td>100</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>임꺽정</td>
+      <td>90</td>
+      <td>90</td>
+    </tr>
+  </table>
+</body>
+</html>

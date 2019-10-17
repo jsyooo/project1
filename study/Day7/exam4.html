@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>만든 내용 합치기</title>
+  <style>
+  .nav{
+    background-color: burlywood;
+    height: 50px;
+    line-height: 48px;
+  }
+  .nav::after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  .nav>div{
+    float: left;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .logo{
+    margin-left: 10px;
+  }
+  a{
+    text-decoration: none;
+    color: black;
+  }
+
+  div.search{
+    height: 50px;
+    float: right;
+    position: relative;
+    width: 200px;
+    margin-right: 50px;
+  }
+  .search>input{
+    position: absolute;
+    height: 30px;
+    width: 180px;
+    top: 50%;
+    margin-top: -15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid;
+  }
+  .search>input:focus{
+    border-radius: 0;
+  }
+  .search>button{
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    top: 50%;
+    margin-top: -15px;
+    box-sizing: border-box;
+    right: -20%;
+    border: solid 2px darkblue;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+
+  .side{
+    width: 100px;
+    float: left;
+    margin-top: 20px;
+  }
+  .menu{
+    height: 80px;
+    background-color: wheat;
+    border: 1px solid black;
+    text-align: center;
+    line-height: 75px;
+    box-sizing: border-box;
+    border-bottom: none;
+  }
+  .menu:last-of-type{
+    border: solid 1px black;
+  }
+  .box{
+    width: calc(100% - 100px - 20px);
+    height: 400px;
+    border: 1px solid black ;
+    box-sizing: border-box;
+    float: right;
+    margin-top: 20px;
+  }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="logo"><a href="">로고</a></div>
+    <div><a href="">메뉴1</a></div>
+    <div><a href="">메뉴2</a></div>
+    <div class="search">
+      <input type="text">
+      <button>검색</button>
+    </div>
+  </div>
+  <div class="side">
+    <div class="menu">메뉴1</div>
+    <div class="menu">메뉴2</div>
+    <div class="menu">메뉴3</div>  
+  </div>
+  <div class="box"></div>
+</body>
+</html>
