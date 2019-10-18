@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>연습예제3</title>
+  <!-- 페이지네이션 예제 -->
+  <style>
+  .pagination{
+    display: flex;
+    justify-content: center;
+  }
+  .pagination a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    /* a태그는 inline태그이므로 크기(너비/높이)나 여백조절이 불가능,
+    inline-block이나 block태그로 바꿔줘야함. */
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 37px;
+    float: left;
+    border-right: none;
+  }
+  .pagination a:last-child{
+    border: 1px solid black
+  }
+  .pagination a:hover{
+    font-weight: bold;
+  }
+  .active{
+    background-color: cornflowerblue;
+  }
+  /* css보다 html을 수정하게 하는게 더 편리 */
+  </style>
+</head>
+<body>
+  <div class="pagination">
+  <a href="">&laquo</a> 
+  <a href="">1</a> 
+  <a href="">2</a>
+  <a href="">3</a> 
+  <a href="" class="active">4</a> 
+  <a href="">5</a> 
+  <a href="">6</a> 
+  <a href="">&raquo</a> 
+</div>
+</body>
+</html>

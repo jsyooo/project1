@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>flex 예제</title>
+  <style>
+  .parent{
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    /* justify-content는 width 없애주면 가로 가운데 정렬 가능. */
+  }
+  /* display: flex;는 자식들의 가로 길이의 합이 부모의 가로보다 크더라도
+  부모의 가로 길이에 맞춘다.
+  자식들의 가로가 작은 경우엔 신경쓸 필요 없다.
+  자식들의 가로가 큰 경우엔 자식들 가로 길이의 비율대로 길이가 할당된다. */
+  /* child1은 200px, child2는 400px인데 부모의 가로가 500px로 자식들의 가로의 길이가 
+  큰 경우, child1은 500px의 200/600의 비율만큼 잡히고, child2는 500px의 400/600의
+  비율만큼 잡힌다.
+  flex는 엔터에 의한 공백이나 일반 공백(space)을 무시한다. &nbsp;는 무시못함.
+  display가 flex인 경우, justify-content를 이용하여 가운데 정렬을 쉽게 할 수 있다. */
+  .child{
+    height: 50px;
+    box-sizing: border-box;
+    border: 2px solid;
+  }
+  .child1{
+    width: 200px;
+    border-color: red;
+  }
+  .child2{
+    width: 400px;
+    border-color: blue;
+  }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child child1"></div>
+    <div class="child child2"></div>
+  </div>
+</body>
+</html>
