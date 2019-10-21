@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>naver 배치 예제</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+      min-width: 1100px;
+      /* 확대했을 때 윗부분 오른쪽이 짤리므로 min-width설정해주면 됨. */
+    }
+    /* header와 관련된 css */
+    .header{
+      height: 178px;
+    }
+    .header-top{
+      height: 130px;
+    }
+    .header-bottom{
+      height: 48px;
+      border-bottom: 1px solid /*#d1d8e4*/;
+      border-top: 1px solid /*#f1f3f6*/;
+    }
+   /* main과 관련된 css */
+    .main{
+      height: 1466px;
+    }
+    .container{
+      width: 1080px;
+      height: 100%;
+      margin: 0 auto;
+    }
+    .box-left{
+      width: 740px;
+      height: 100%;
+      float: left;
+    }
+    .box-right{
+      width: 332px;
+      height: 100%;
+      float: right;
+    }
+    .box{
+      margin-top: 8px;
+      width: 100%;
+    }
+    .leftcontent1,.rightcontent1{
+      height: 120px;
+    }
+    .leftcontent2{
+      height: 46px;
+    }
+    .leftcontent3{
+      height: 246px;
+    }
+    .leftcontent4,.rightcontent4{
+      height: 884px;
+    }
+    .leftcontent5,.rightcontent5{
+      height: 130px;
+    }
+    .rightcontent2{
+      height: 142px;
+    }
+    .rightcontent3{
+      height: 150px;
+    }
+   /* footer와 관련된 css */
+    .footer{
+      height: 314px;
+      margin-top: 8px;
+    }
+   /* 배경색 관련 클래스 */
+    .bg-white{
+    background-color: #fff;
+    }
+    .bg-body{
+      background-color: rgb(242, 244, 247);
+    }
+  </style>
+</head>
+<body class="bg-body">
+  <div class="header bg-white">
+    <div class="header-top"></div>
+    <div class="header-bottom"></div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="box-left">
+        <div class="box leftcontent1 bg-white"></div>
+        <div class="box leftcontent2 bg-white"></div>
+        <div class="box leftcontent3 bg-white"></div>
+        <div class="box leftcontent4 bg-white"></div>
+        <div class="box leftcontent5 bg-white"></div>
+      </div>
+      <div class="box-right">
+        <div class="box rightcontent1 bg-white"></div>
+        <div class="box rightcontent2 bg-white"></div>
+        <div class="box rightcontent3 bg-white"></div>
+        <div class="box rightcontent4 bg-white"></div>
+        <div class="box rightcontent5 bg-white"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer bg-white"></div>
+</body>
+</html>
