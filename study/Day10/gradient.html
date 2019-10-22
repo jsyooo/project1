@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>그라디언트 예제</title>
+  <style>
+    .g1{
+      background: -webkit-linear-gradient(left, #F00 0%, 
+                #ff0 50%, #0f0 100%);
+                /* linear-gradient: 선형으로 그라디언트 적용
+                   left: 방향
+                   #F00 0% :시작색 
+                   #ff0 50%: 중간색 
+                   #0f0 100%: 마지막 색 */
+    }
+    .box{
+      height: 100px;
+      width: 100px;
+      display: inline-block
+    }
+    .b{
+      width: 100px;
+      height: 100px;
+      float: left;
+    }
+    .g2{
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f00), 
+                color-stop(50%, #ff0), color-stop(100%, #0f0));
+                /* left top: 왼쪽 상단에서 시작해서
+                   left bottom: 오른쪽 상단으로 끝남
+                   위의 두 값은 직선을 만들어서 그라디언트를 적용하는 방법
+                   color-stop(지점, 색상): 그라디언트를 적용하기 위해 
+                   지점과 색상을 설정하는 함수 */
+    }
+    .g3{
+      background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #f00), 
+                color-stop(50%, #ff0), color-stop(100%, #0f0));
+    }    
+    .g4{
+      background: -webkit-gradient(linear, right top, left bottom, color-stop(0%, #f00), 
+                color-stop(50%, #ff0), color-stop(100%, #0f0));
+    }
+    .p::after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+    .g5{
+      background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #f00), 
+                color-stop(50%, #ff0), color-stop(100%, #0f0));
+    }
+    .g6{
+      background: -webkit-gradient(linear, right bottom, left top, color-stop(0%, #f00), 
+                color-stop(50%, #ff0), color-stop(100%, #0f0));
+    }
+    .b1{
+      background: -webkit-radial-gradient(center, ellipse cover, #F00 0%, 
+                #ff0 50%, #0f0 100%);
+    }
+    .b2{
+      background: -webkit-gradient(radial, center center, 0px, center center, 100% 
+      color-stop(0%, #f00), color-stop(50%, #ff0), color-stop(100%, #0f0));
+    }
+  </style>
+</head>
+<body>
+  <div class="g1 box"></div>
+  <div class="g2 box"></div><br>
+  <div class="p">
+    <div class="g3 b"></div>
+    <div class="g4 b"></div>
+  </div>
+  <div class="p">
+    <div class="g5 b"></div>
+    <div class="g6 b"></div>
+  </div>
+  <div class="p">
+    <div class="b b1"></div>
+    <div class="b b2"></div>
+  </div>
+</body>
+</html>

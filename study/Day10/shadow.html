@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>그림자 효과</title>
+  <style>
+    div{
+      margin-top: 20px;
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .shadow1{
+      text-shadow: 5px 5px 0 rgba(0, 0, 0, 0.3);
+      /* text-shadow 속성값 순서(순서변경안됨)
+         수평이동거리, 수직이동거리, 번짐효과, 색상
+         수평으로 20px, 수직으로 30px, 번짐효과 0, 색상 검은색 투명도0.3 */
+    }
+    .shadow2{
+      color: white;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    }
+    .shadow3{
+      text-shadow: 2px 1px 0 white,
+                   0 0 8px black;
+      /* ','를 써서 여러개의 그림자 효과를 줄 수 있다. */
+    }
+    .box1{
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .box2{
+      box-shadow: 5px 5px 5px rgba(25, 10, 90, 0.3);
+    }
+    .box3{
+      box-shadow: 0 0 2px black,
+                  0 0 10px red;
+    }
+  </style>
+</head>
+<body>
+  <div class="shadow1 box1">그림자 효과1</div>
+  <div class="shadow2 box2">그림자 효과2</div>
+  <div class="shadow3 box3">그림자 효과3</div>
+</body>
+</html>

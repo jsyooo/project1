@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>다단 예제</title>
+  <style>
+    /* 속성 앞에 각 브라우저에 맞는 접두사
+       -webkit-: 크롬, 사파리
+       -ms-: 인터넷익스플로러(마이크로소프트) 
+       -moz-: 파이어폭스(모질라)
+       -o-: 오페라
+       ex) -webkit-column-count: */
+    .p1{
+      column-count: 2;
+      column-gap: 10px;
+    /* column-count: 단의 갯수
+       단의 갯수를 지정하면 전체 가로 길이에 따라 한 단의 가로 길이가 설정됨.
+       column-gap: 단 사이의 간격 */
+      column-rule: red solid 1px;
+    /* column-rule: 단 사이 구분선(width, color, style)
+       column-rule-color
+       column-rule-style
+       column-rule-width */
+    }
+    .p2{
+      column-width: 100px;
+      /* column-width: 한단의 가로길이 설정
+      한 단의 가로 길이를 지정하면 
+      전체 가로길이에 맞춰 단의 갯수가 지정된다. */
+      column-rule: blue dashed 2px;
+      columns: 100px 3;
+      /* columns는 column-width와 column-count를 같이 쓰는 속성이지만
+      두 속성이 동시에 적용되지는 않는다. 두 속성은 서로에게 영향을 주기 때문.
+      따라서 단이 작은쪽을 기준으로 적용. 가독성을 높이는 쪽으로
+      columns: 100px 3을 하면 100px일 때 10단이 되거나 3단이 되어야하는데
+      3단으로 적용된다. */
+    }
+    h1{
+      font-size: 30px;
+      font-weight: bold;
+      column-span: all;
+      /* column-span: 합쳐야하는 다단 부분에 사용. all/none */
+    }
+  </style>
+</head>
+<body>
+  <p class="p1">
+    트럼프 대통령은 그러면서 김정은 북한 국무위원장이 전임인 
+    버락 오바마 전 대통령의 11차례 통화 시도에 불응했지만 자신의 전화는
+    받는다며 김 위원장을 ‘젠틀맨’(gentleman)라고 부르기도 했다. 
+    트럼프 대통령은 이어 “북한과 전쟁이 일어날 수도 있다며 
+    ‘누가 알겠냐’”라고 말하기도 하면서 비핵화 협상이 속도를 
+    내지 못하면 관계가 급랭할 수 있다는 경고도 날렸다.
+  </p>
+  <hr>
+  <div class="p2">
+    <h1>오늘의 기사</h1>
+      트럼프 대통령은 그러면서 김정은 북한 국무위원장이 전임인 
+      버락 오바마 전 대통령의 11차례 통화 시도에 불응했지만 자신의 전화는
+      받는다며 김 위원장을 ‘젠틀맨’(gentleman)라고 부르기도 했다. 
+      트럼프 대통령은 이어 “북한과 전쟁이 일어날 수도 있다며 
+      ‘누가 알겠냐’”라고 말하기도 하면서 비핵화 협상이 속도를 
+      내지 못하면 관계가 급랭할 수 있다는 경고도 날렸다.
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animation 예제 p.292</title>
+  <!-- 
+  animation과 transition
+  공통점: 어떠한 효과를 준다
+  차이점: transition은 가상 선택자에 변경된 속성들이 있고, 
+  변경된 속성으로 변하는 과정을 관리하는 속성이다 
+  animation은 가상선택자가 꼭 필요없고, animation으로 이벤트를 등록한다.
+  transition은 최종 변경된 속성이 가상선택자에 있고 animation은 최종변경된
+  속성이 animation에 있다. -->
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background: -webkit-gradient(linear, left top , right top , color-stop(0%,#f00), color-stop(50%, #ff0), color-stop(100%, #0f0));
+      animation-name: scale;
+      /* animation-name은 적용할 애니메이션 이름을 넣어줌 */
+      
+      animation-duration: 3s;
+      /* animation-duration은 애니메이션 지속시간 */
+      
+      animation-iteration-count: infinite;
+      /* animation-iteration-count: 애니메이션 반복 횟수  */
+      animation-timing-function: ease;
+      
+      animation-delay: 1s;
+      /* animation-delay: 애니메이션이 로딩된 후 애니메이션이 실행되기
+      전까지 지연시간 */
+      
+      animation-play-state: running;
+      /* animation-play-state: 애니메이션을 멈추거나(paused) 다시 시작(running)
+      하는 속성. 나중에 자바스크립트를 이용해야함. */
+      
+      animation-fill-mode: backwards;
+      /* animation-fill-mode: 애니메이션이 종료된 후 상태를 처음 상태로 
+      돌아갈지(backwards), 현상태(나중상태: forwards)로 갈지 설정하는 속성
+      하지만 지금 예제는 다음과 같은 이유로 의미가 없다.
+      1.animation 무한반복
+      2.animation의 시작과 끝의 상태가 같기 때문 */
+      
+      animation-direction: alternate;
+      /* animation-direction: 애니메이션 진행방향으로
+      normal: 0% -> 100%
+      reverse: 100% -> 0%
+      alternate: 0% -> 100% -> 0%
+      alternate-reverse: 100% -> 0% -> 100% */
+    }
+    /* keyframes xxx: xxx라는 애니메이션을 등록 */
+    @keyframes scale {
+      0%{}
+      50%{}
+      100%{
+        width: 200px;
+        height: 200px;
+      }
+      /* %는 애니메이션 실행시간의 전체 시간을 기준으로 계산한다,
+      0% : 시작, 100%:애니메이션 끝
+      실행시간의 전체시간은 animation-duration 속성으로 지정한다.
+      0%는 from으로 대체할 수 있고, 100%는 to 로 대체할 수 있다.
+      from to를 사용하는 경우 중간에 %를 잘사용하지 않는다. */
+    }
+  </style>
+</head>
+<body>
+  <div class="box box1"></div>
+</body>
+</html>
