@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>transition 복습</title>
+  <style>
+    .trans{
+      font-size: 30px;
+      font-weight: bold;
+      transition-property: all;
+      /* 모든 속성 변경. 부분속성만 transition효과 주려면 all 대신
+        각 속성 적으면 됨. ex) color, width 등 */
+      transition-duration: 2s;
+      transition-timing-function: ease;
+    }
+    .trans:hover{
+      color: red;
+    }
+    .input{
+      transition-property: all;
+      transition-duration: 2s;
+      transition-timing-function: ease;
+    }
+    .input:focus{
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="trans">안녕하세요.</div><br>
+  <input type="text" class="input">
+</body>
+</html>

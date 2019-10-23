@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>filter 예제</title>
+  <style>
+    /* filter: 앞에서 배운 opacity, box-shadow와 같은 속성들이 
+    브라우저별 또는 버전별로 적용되지 않을 수 있는데
+    이 때, 적용하기 위한 방법으로 filter가 있다. */
+    .blur{
+      filter: blur(4px);
+      /* blur: px값이 높아질수록 많이 흐려짐 */ 
+    }
+    .brightness{
+      filter: brightness(50%);
+      /* brightness: %가 낮을수록 어두워지며 100%는 원본, 100% 이상은 
+      이미지가 밝아짐. */
+    }
+    .contrast{
+      filter: contrast(50%);
+      /* contrast: 대조 속성으로 100%는 원본, %가 낮을수록 색과 색의 구별이
+      낮아진다. */
+    }
+    .dropshadow{
+      filter: drop-shadow(10px 10px 5px grey);
+    }
+  </style>
+</head>
+<body>
+  <p class="blur"><img src="../Day2/라이언.png" alt=""></p>
+  <p class="brightness"><img src="../Day2/라이언.png" alt=""></p>
+  <p class="contrast"><img src="../Day2/라이언.png" alt=""></p>
+  <p class="dropshadow"><img src="../Day2/라이언.png" alt=""></p>
+</body>
+</html>

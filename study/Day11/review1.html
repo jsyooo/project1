@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>복습</title>
+  <style>
+    .box{
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: name;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* 기본 맨 처음 상태는 .box안에 써줘야 함. */
+    }
+    @keyframes name{
+      0%{}
+      50%{
+        position: absolute;
+        top: calc(100% - 100px);
+        left: 0;
+      }
+      100%{}
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+</body>
+</html>
