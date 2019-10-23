@@ -18,15 +18,18 @@
       top: 0;
       left: 0;
       width: 100%;
+      /* z-index: 겹쳐서 위에 올려놓을 때 사용 */
     }
     .behind{
       background-color: black;
       opacity: 0.5;
+      
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
+      /* position absolute~ 밑에 배경으로 불투명하게 깔기 */
     }
     /* opacity가 적용된 박스의 자식태그들은 부모의 투명도가 적용되서
     흐릿하게 보일 수 있다. */
