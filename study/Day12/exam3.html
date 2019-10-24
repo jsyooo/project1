@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 예제3 p.435</title>
+  <!-- 반응형 웹 디자인 레이아웃 
+    https://www.lukew.com/ff/entry.asp?1514 참고 -->
+  <style>
+    /* 1. mostly fluid
+       2. column drop
+       3. layout shifter 
+       4. tiny tweaks(부트스트랩 container-fluid)
+       5. off canvas */
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container1, .container4, .container2, 
+    .container3, .container5{
+      background-color: gray;
+      padding: 10px;
+    }
+    .container1 .nav{
+      width: 1080px;
+      height: 50px;
+      background-color: white;
+      margin: 0 auto;
+    }
+
+    /* 4 */
+    .container4 .nav{
+      height: 50px;
+      width: 100%;
+      background-color: yellow;
+    }
+
+    /* 2 */
+    .container2 .box1{
+      width: 30%;
+      height: 50px;
+      float: left;
+      background-color: red;
+    }
+    .container2 .box2{
+      width: 50%;
+      height: 50px;
+      float: left;
+      background-color: skyblue;
+    }
+    .container2 .box3{
+      width: 20%;
+      height: 50px;
+      float: left;
+      background-color: green;
+    }
+    .clear::after{
+      content: "";
+      clear: both;
+      display: block;
+    }
+
+    /* 3 */
+    .container3 .box1{
+      height: 50px;
+      float: right;
+      width: 20%;
+      background-color: teal;
+    }
+    .container3 .box2{
+      height: 50px;
+      float: right;
+      width: 40%;
+      background-color: thistle;
+    }
+    .container3 .box3{
+      height: 50px;
+      float: left;
+      width: 40%;
+      background-color: tomato;
+    }
+
+    /* 5 */
+    .container5 .box1{
+      width: 30%;
+      height: 50px;
+      background-color: slateblue;
+      float: left;
+    }
+    .container5 .box2{
+      width: 30%;
+      height: 50px;
+      background-color: tan;
+      float: left;
+    }
+    .container5 .box3{
+      width: 40%;
+      height: 50px;
+      background-color: yellowgreen;
+      float: left;
+    }
+    @media screen and (max-width: 1099px) {
+      /* 1080에 padding까지 */
+      .container1 .nav{
+        width: 700px;
+      }
+      .container2 .box1{
+        width: 40%;
+      }
+      .container2 .box2{
+        width: 60%;
+      }
+      .container2 .box3{
+        width: 100%;
+      }
+      .container3 .box1{
+      height: 50px;
+      float: right;
+      width: 80%;
+      }
+      .container3 .box2{
+        height: 100px;
+        float: left;
+        width: 20%;
+      }
+      .container3 .box3{
+        height: 50px;
+        float: right;
+        width: 80%;
+      }
+      .container5 .box1{
+        width: 50%;
+      }
+      .container5 .box2{
+        width: 50%;
+      }
+      .container5 .box3{
+        display: none;
+      }
+    }
+    @media screen and (max-width: 719px) {
+      .container1 .nav{
+        width: 300px
+      }
+      .container2 .box1,
+      .container2 .box2,
+      .container2 .box3{
+        width: 100%;
+      }
+      .container3 .box1,
+      .container3 .box2,
+      .container3 .box3{
+        width: 100%;
+        height: 50px;
+      }
+      .container5 .box1{
+        display: none;
+      }
+      .container5 .box2{
+        width: 100%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container1">
+    <div class="nav">1번 mostly fluid</div>
+  </div>
+
+  <div class="container4">
+    <div class="nav">4번 tiny tweaks</div>
+  </div>
+
+  <div class="container2 clear">
+    <div class="box1">2번 column drop <br> box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </div>
+
+  <div class="container3 clear">
+    <div class="box1">3번 layout shifter <br> box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </div>
+
+  <div class="container5 clear">
+    <div class="box1">5번 off canvas <br> box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+  </div>
+</body>
+</html>

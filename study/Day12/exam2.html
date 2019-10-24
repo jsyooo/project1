@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형예제2</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .bg{
+      height: 50px;
+      background-color: gray;
+    }
+    .menu{
+      font-size: 30px;
+      font-weight: bold;
+      float: left;
+      margin-left: 10px;
+      margin-top: 3px;
+    }
+    @media screen and (max-width: 1079px){
+      .left{
+      float: right;
+      margin-right: 10px;
+      }
+    }
+
+/* 해설 */
+    .nav{
+      background-color: gray;
+    }
+    .nav li{
+      list-style: none;
+      float: left;
+      padding: 0 10px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 25px;
+    }
+    .clear::after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+    @media screen and (max-width: 1079px) and (min-width: 701px){
+      .nav{
+        float: left;
+        width: 200px;
+      }
+      .nav li{
+        width: 200px;
+        border: 1px solid black;
+        border-bottom: none;
+      }
+      .nav li:last-child{
+        border-bottom: 1px solid black;
+      }
+    }
+    /* 위아래 추가한 @media 속성 때문에 반응형 화면전환이 잘 안되면 구체적으로 
+    min-width와 max-width를 주면 된다. */
+    @media screen and (max-width: 700px){
+      .nav ul{
+        float: right;
+      }
+    }
+   
+  </style>
+</head>
+<body>
+  <div class="bg">
+    <div class="left">
+      <div class="menu">메뉴1</div>
+      <div class="menu">메뉴2</div>
+      <div class="menu">메뉴3</div>
+    </div>
+  </div>
+  <br><br><br><br>
+  <div class="nav clear">
+    <ul class="clear">
+      <li>메뉴1</li>
+      <li>메뉴2</li>
+      <li>메뉴3</li>
+    </ul>
+  </div>
+</body>
+</html>

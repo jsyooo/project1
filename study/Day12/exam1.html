@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>반응형 예제 p.431기준</title>
+  <style>
+    /* p.431 기준으로 화면 구성 예제 */
+    /* @media 를 쓰지 않는 화면은 1200px 이상 */
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .container::after{
+      clear: both;
+      content: "";
+      display: block;
+    }
+    .box{
+      width: calc(100% / 5);
+      height: 200px;
+      border: 1px solid black;
+      float: left;
+    }
+    
+    /* 장치의 가로 화면을 기준으로 반응형을 적용 */
+    @media screen and (min-width: 980px) and (max-width: 1199px) {
+      .box{
+        width: calc(100% / 4);
+        border-color: red;
+      }
+      /* 980px 이상 1200px미만를 관리하기 위해 max-width를 1199px로 설정 */
+    }
+
+    @media screen and (max-width: 979px) {
+      .box{
+        width: calc(100% / 3);
+        border-color: blue;
+      }
+      /* 768px 이상 980px미만을 관리하기 위해 max-width를 979px로 설정 */
+    }
+    
+    @media screen and (max-width: 767px) {
+      .box{
+        width: calc(100% / 2);
+        border-color: green;
+      }
+      /* 481px 이상 768px미만을 관리하기 위해 max-width를 767px로 설정 */
+    }
+
+    @media screen and (max-width: 480px) {
+      .box{
+        width: calc(100% / 1);
+        border-color: yellow;
+      }
+      /* 480px 이하를 관리하기 위해 max-width를 480px로 설정 */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</div>
+</body>
+</html>
