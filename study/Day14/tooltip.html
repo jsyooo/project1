@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+  <script src="../JS/Jquery.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+</head>
+<body>
+  <br><br>
+  tooltip:
+  <a href="#" data-toggle="tooltip" data-placement="top" title="Hooray!">Top</a>
+  <a href="#" data-toggle="tooltip" data-placement="bottom" title="Hooray!">Bottom</a>
+  <a href="#" data-toggle="tooltip" data-placement="left" title="Hooray!">Left</a>
+  <a href="#" data-toggle="tooltip" data-placement="right" title="Hooray!">Right</a><br>
+  popover: <br>
+  <a href="#" title="click" data-toggle="popover" data-content="Some content">Click Me</a><br>
+  <a href="#" title="hover" data-toggle="popover" data-trigger="hover" data-content="Some content">Hover over me</a><br>
+  <!-- popover에서 팝업의 제목을 수정하려면 title 속성 수정,
+    내용을 수정하려면 data-content 수정하면 됨. -->
+  toast:
+  <button type="button" class="btn btn-primary" id="myBtn">Show Toast</button>
+  <div class="toast">
+    <div class="toast-header">
+      Toast Header
+    </div>
+    <div class="toast-body">
+      Some text inside the toast body
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip(); 
+      $('[data-toggle="popover"]').popover();  
+      $("#myBtn").click(function(){
+    $('.toast').toast('show');
+  });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>박스 예제2</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .nav{
+      height: 60px;
+      border: 1px solid blue;
+    }
+    .container{
+      height: 600px;
+      /* calc(100vh - 60px - 10px) */
+      margin-top: 10px;
+    }
+    .menu{
+      float: left;
+      border: 1px solid red;
+      width: 20%;
+      height: 100%;
+    }
+    .contents{
+      float: right;
+      border: 1px solid green;
+      width: calc(80% - 10px);
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="nav"></div>
+  <!-- div 대신 nav태그 사용가능. 기능은 똑같음. -->
+  <div class="container">
+    <div class="menu"></div>
+    <div class="contents"></div>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>박스 예제4</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .nav{
+      height: 60px;
+      border: 1px solid blue;
+    }
+    .container{
+      height: calc(100vh - 60px - 10px);
+      margin-top: 10px;
+    }
+    .menu{
+      float: left;
+      border: 1px solid red;
+      width: 20%;
+      height: 100%;
+    }
+    .contents{
+      float: right;
+      border: 1px solid green;
+      width: calc(80% - 10px);
+      height: 100%;
+    }
+    .mbox{
+      border: 1px solid gray;
+      background-color: lightgoldenrodyellow;
+      text-align: center;
+      line-height: 47px;
+      height: 50px;
+      border-bottom: none;
+    }
+    .mbox:last-child{
+      border-bottom: 1px solid gray;
+    }
+    @media screen and (max-width: 559px) {
+      .container{
+        margin-top: 0;
+      }
+      .menu{
+        width: 100%;
+        height: 50px;
+      }
+      .contents{
+        width: 100%;
+        height: calc(100vh - 120px);
+        margin-top: 10px;
+      }
+      .mbox{
+        width: 100px;
+        float: left;
+        height: 100%;
+        border: 1px solid gray;
+        border-right: none;
+      }
+      .mbox:last-child{
+        border-right: 1px solid gray;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="nav"></div>
+  <!-- div 대신 nav태그 사용가능. 기능은 똑같음. -->
+  <div class="container">
+    <div class="menu clear">
+      <div class="mbox">menu1</div>
+      <div class="mbox">menu2</div>
+      <div class="mbox">menu3</div>
+    </div>
+    <div class="contents clear"></div>
+  </div>
+</body>
+</html>

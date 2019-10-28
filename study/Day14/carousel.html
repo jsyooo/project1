@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+  <script src="../JS/Jquery.min.js"></script>
+  <script src="../JS/popper.min.js"></script>
+  <script src="../JS/bootstrap.min.js"></script>
+  <style>
+    .box{
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div class="container box">
+  <!-- 부트스트랩의 container클래스는 크기별(xs, sm, md, lg, xl)로 가로가 
+    px로 고정되어있음. container는 가로가 고정 픽셀! -->
+  
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+      </ul>
+      <!-- carousel을 사용할 때, id를 꼭 작성해 줘야함.
+      id 수정시 li태그의 data-target, 아래 a태그의 href를 같이 수정해야함. -->
+        <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/la.jpg" alt="Los Angeles" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/chicago.jpg" alt="Chicago" width="1100" height="500">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/ny.jpg" alt="New York" width="1100" height="500">
+        </div>
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </div>
+  <div class="container-fluid box">
+
+    <div id="demo2" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <!-- 슬라이더 쇼 부분에 이미지를 추가하는 경우 ul태그 안에 li태그를 
+        추가해야하고 추가된 li태그의 data-slide-to 속성에 이전숫자+1을 한다. -->
+      <ul class="carousel-indicators">
+        <li data-target="#demo2" data-slide-to="0" class="active"></li>
+        <li data-target="#demo2" data-slide-to="1"></li>
+        <li data-target="#demo2" data-slide-to="2"></li>
+        <li data-target="#demo2" data-slide-to="3"></li>
+      </ul>
+      <!-- carousel을 사용할 때, id를 꼭 작성해 줘야함.
+      id 수정시 li태그의 data-target, 아래 a태그의 href를 같이 수정해야함. -->
+        <!-- The slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="../img/la.jpg" alt="Los Angeles" width="100%" height="auto">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/chicago.jpg" alt="Chicago" width="100%" height="auto">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/ny.jpg" alt="New York" width="100%" height="auto">
+        </div>
+        <div class="carousel-item">
+          <img src="../img/chicago.jpg" alt="Chicago" width="100%" height="auto">
+        </div>
+        <!-- img태그에서 width를 %로 설정한 뒤 height를 auto로 설정하면
+        이미지 비율에 맞춰 높이가 자동으로 설정된다. -->
+      </div>
+      <!-- Left and right controls -->
+      <a class="carousel-control-prev" href="#demo2" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo2" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </div>
+  <!-- container-fluid 클래스는 가로가 부모의 100%로 고정되어있음.
+  일반적으로 부트스트랩을 이용하여 작성하는 경우 콘텐츠 부분의 박스를 
+  container 또는 container-fluid로 감싼다. -->
+</body>
+</html>
