@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>로그인박스 예제</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .red{
+      border: 1px solid red;
+      width: 400px;
+      height: 400px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -200px 0 0 -200px;
+    }
+    .red input, button{
+      width: 200px;
+      height: 40px;
+      margin: 70px 0 0 100px;
+    }
+    @media screen and (max-width: 560px)  {
+      .red{
+        position: absolute;
+        top: 0;
+        margin-top: 0;
+        height: 100vh;
+        padding-top: 100px;
+
+      }
+      .red input, button{
+        width: 90%;
+        height: 60px;
+        margin: 70px 0 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <form class="red">
+    <input type="text" class="id" placeholder="id">
+    <input type="password" class="pw" placeholder="password">
+    <button class="btn">log-in</button>
+  </form>
+</body>
+</html>
