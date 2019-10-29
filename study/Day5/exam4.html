@@ -20,6 +20,12 @@
       border-box는 border를 포함한 박스에 배경이 보이도록 설정
       padding-box는 padding을 포함한 박스에 배경이 보이도록 설정 */
     }
+    .bg-clip2{
+      background-clip: border-box;
+    }
+    .bg-clip3{
+      background-clip: padding-box;
+    }
     .bg-origin{
       background-origin: content-box;
       /* background-origin: content는 background-clip: content-box와 비슷
@@ -28,7 +34,9 @@
   </style>
 </head>
 <body>
-  <div class="bg-clip"></div>
+  <div class="bg-clip"></div><br>
+  <div class="bg-clip2"></div><br>
+  <div class="bg-clip3"></div><br>
   <div class="bg-origin"></div>
 </body>
 </html>
