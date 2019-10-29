@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>오버플로우 예제</title>
+  <style>
+   .parent{
+     width: 300px;
+     border: 1px solid black;
+     
+     height: 50px;
+     overflow: hidden;
+   }
+   /* overflow속성은 자식이 부모를 벗어나는 크기를 가질때 처리하는 속성
+    hidden: 넘어가는 내용들을 가린다.
+    auto: 내용이 넘어가면 스크롤을 생성하고 넘어가지 않으면 스크롤을 생성하지 않음.
+    scroll: 무조건 스크롤을 생성한다.
+    visible: 자식안의 넘어가는 내용이 보이도록 한다. (기본값) */
+   .child{
+     width: 400px;
+     border: 1px solid red;
+   }
+   .box{
+     width: 400px;
+     border: 1px solid blue;
+     /* overflow 속성을 이용한 말줄임(...)표시 적용하는 방법 */
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+   }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child">
+        You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+        You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+    </div>
+  </div>
+  <br>
+  <div class="box">
+    You can also remove the .navbar-expand-md class to ALWAYS hide navbar links and display the toggler button.
+  </div>
+</body>
+</html>
