@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>조건문</title>
+  <script>
+    /* 
+    조건문은 조건에 따라 결과가 달라지는 상황에서 사용하는 문법
+    - 조건문의 종류: if문, switch문
+    - ~하면 ...한다.로 표현
+    - ~ : 조건식, ...:실행문
+    if문
+    : 조건식 1이 참이면 실행문1을 실행해라
+    if(조건식1){
+      실행문1;
+    }
+
+    else if(조건식2){
+      실행문2;
+    }
+    조건식1이 거짓이고 조건식2가 참이면 실행문2를 실행하라
+
+    else문
+    : 현재 위치에서 위에 있는 조건식들이 거짓인 경우.
+    조건식1과 조건식2가 이 거짓이면 실행문 3을 실행해라. else는 else가 있다면 
+    무조건 if문 마지막에 와야함.
+    else 옆에는 ()가 올 수 없다.
+    else{
+      실행문3;
+    }
+    */
+    /* 변수 num가 짝수면 짝수라고 출력하는 예제,
+    홀수이면 아무것도 안함
+    num가 짝수 = num이 2의 배수 = num이 2로 나누어떨어진다 
+    = num을 2로 (나누었을때 나머지가) 0 (과같다)
+    num 2 % 0 ==
+    num % 2 == 0
+    */
+    var num = 3;
+    if(num % 2 == 0){
+      //짝수이다 로 출력; 
+      console.log('', num, '는 짝수');
+    }
+    else{
+      console.log('', num, '는 홀수')
+    }
+
+    /*
+    성적에 따른 학점을 출력하는 예제
+    90<= score <= 100 : A
+    80<= score <= 90  : B
+    70<= score <= 80  : C
+    60<= score <= 70  : D
+    0 <= score <= 60  : F
+    1. 조건식과 실행문으로 나눈다.
+      조건식: score가 90이상이고 100이하이다.
+      실행문: A라고 출력
+    2. 조건식을 풀어쓴 뒤 코드로 바꾼다.
+      score가 90이상이고 100이하이다.
+      = score가 90보다 (크거나 같)(고) 100보다 (작거나 같다.)
+      => score 90>= && score 100<=
+       => score >= 90 && score <= 100
+    */
+    var score = 95;
+    if(score >= 90 && score <= 100){
+      console.log('', score, '점은 A입니다.')
+    }
+    else if(score >= 80 && score < 90){
+      console.log('', score, '점은 B입니다.')
+    }
+    else if(score >= 70 && score < 80){
+      console.log('', score, '점은 C입니다.')
+    }
+    else if(score >= 60 && score < 70){
+      console.log('', score, '점은 D입니다.')
+    }
+    else if(score >= 0 && score < 60){
+      console.log('', score, '점은 F입니다.')
+    }
+    else{
+      console.log('성적이 잘못되었습니다.')
+    }
+    /* num가 2의 배수인지 아닌지 판별하는 예제*/
+    num = 8;
+    if(num % 2 == 0){
+      console.log('', num, '2의 배수이다.')
+    }
+    else if(num % 2 == 1){
+      console.log('', num, '2의 배수가 아니다.')
+    }
+
+    num = 66;
+    // if(num % 2 == 0 && num % 3 == 0){
+    //   console.log('', num, '2와 3의 배수이다.')
+    // }
+    if(num % 6 == 0){
+      console.log('', num, '6의 배수이다.')
+    }
+    else if(num % 2 == 0){
+      console.log('', num, '2의 배수이다.')
+    }
+    // if(num % 2 == 0){
+    //   console.log('', num, '2의 배수이다.')
+    // }
+    else if(num % 3 == 0){
+      console.log('', num, '3의 배수이다.')
+    }
+    else{
+      console.log('',num, '2,3,6의 배수가 아니다.')
+    }
+// 조건문 강화: (num % 2 == 0 && num % 3 != 0)
+
+/* 두 수와 산술연산자가 주어지면 산술연산 결과를 출력하는 예제 */
+    var num1 = 10, num2 = 20;
+    var op = '+';
+    if(op == '+'){
+      console.log('', num1,op,num2, '=', num1+num2);
+    }
+    else if(op == '-'){
+      console.log('', num1,op,num2, '=', num1-num2);
+    }
+    else if(op == '*'){
+      console.log('', num1,op,num2, '=', num1*num2);
+    }
+    else if(op == '/'){
+      console.log('', num1,op,num2, '=', num1/num2);
+    }
+    else if(op == '%'){
+      console.log('', num1,op,num2, '=', num1%num2);
+    }
+    else{
+      console.log(op, '는 잘못된 연산자입니다.');
+    }
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
