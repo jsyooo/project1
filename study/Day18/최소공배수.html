@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>최소공배수</title>
+  <script>
+    /* 공배수는 두수의 배수 중에서 공통으로 있는 수
+    최소공배수는 두수의 공배수 중 최소인 수
+    num1과 num2의 최소공배수를 구하여라.
+    10: 10 20 30 40 50...
+    15: 15 30 45 60 75...
+    최소공배수는 30 */
+
+
+    var i, num1=10, num2=15; //i=배수들
+    for(i=1; /*i<=num1*num2*/ ; i++){
+      if( i % num1 == 0 && i % num2 == 0 ){
+        console.log('',num1,',',num2,'의 최소공배수 :', i);
+        break;
+      }
+    }
+
+    num1=10000, num2=10;
+    for(i=num1; i<=num1*num2; i+=num1){ //1씩 증가하지 않고 num1씩 증가하므로
+      if( i % num2 == 0 ){
+        console.log('',num1,',',num2,'의 최소공배수 :', i);
+        break;
+      }
+    }
+
+    // num1과 num2 수가 바뀌었을 경우, 
+    var tmp;
+    if(num1 < num2){
+      tmp = num1; //tmp에 num1(10)값을 저장
+      num1 = num2; //num1에 num2(100000)값을 저장
+      num2 = tmp; //num2에 tmp값인 num1(10)값을 저장.
+    }
+    //결과적으로 num1과 num2의 값을 서로 바꾸어 저장하게 됨. 
+    //num1이 100000, num2이 10이 된다.
+    num1=10, num2=100000;
+    for(i=num1; i<=num1*num2; i+=num1){
+      if( i % num2 == 0 ){
+        console.log('',num1,',',num2,'의 최소공배수 :', i);
+        break;
+      }
+    }
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
