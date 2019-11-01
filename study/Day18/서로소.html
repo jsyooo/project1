@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>서로소 예제</title>
+  <script>
+    /*
+    두 수의 최대 공약수가 1인 두 수의 관계를 서로소라 한다.
+    num1과 num2가 서로소 관계인지 확인하는 코드를 작성하세요.
+    */
+
+    var i, gcd, num1=7, num2=10;
+    for(i=1; i<=num1; i++){
+      if(num1 % i == 0 && num2 % i == 0){
+        gcd=i;
+      }
+    }
+    if(gcd == 1){
+      console.log('',num1,'과',num2,'는 서로소이다.')
+    }else{
+      console.log('',num1,'과',num2,'는 서로소가 아니다.')
+    }
+
+    
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
