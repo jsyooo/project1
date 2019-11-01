@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>최대공약수</title>
+  <script>
+    /* num1과 num2의 최대 공약수를 구하세요.
+    공약수는 두 수의 약수 중 공통으로 있는 약수
+    최대 공약수는 공약수 중 가장 큰 약수 
+    8 : 1,2,4,8
+    12: 1,2,3,4,6,12
+    8과 12의 최대공약수 : 4
+    */
+    var i, gcd;
+    var num1 = 21;
+    var num2 = 14;
+    for(i=1; i<=num1; i++){
+      if(num1 % i == 0 && num2 % i == 0){
+        gcd = i;
+      }
+    }
+    console.log('',gcd,'는',num1,',', num2, '의 최대공약수');
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
