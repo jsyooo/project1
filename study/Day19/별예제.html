@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>별 예제</title>
+  <script>
+    /* 이중반복문은 반복문 안 실행문자리에 반복문이 들어가 있는 형태.
+    for( ; ; ){
+      for( ; ; ){
+
+      }
+    }
+    */
+    /*
+    ***** i=1
+    ***** i=2
+    ***** i=3
+    */
+// 방법1
+    var i;
+    var j;
+    var str ='';
+    for(i=1; i<=3; i++){
+      for(j=1, str=''; j<=5; j++){
+        str += '*';
+        //문자열에 +=로 뒤에 문자열이 오면 두 문자열을 합친 문자열이 된다.(이어붙임)
+      }
+      console.log(str);
+    }
+
+// 방법2
+    var i;
+    var j;
+    var str ='';
+    for(i=1; i<=3; i++){
+      for(j=1; j<=5; j++){
+        str += '*';
+        //문자열에 +=로 뒤에 문자열이 오면 두 문자열을 합친 문자열이 된다.(이어붙임)
+      }
+      str+='\n' //엔터친 효과(줄바꿈)
+    }console.log(str);
+
+    var i;
+    var j;
+    var str = '';
+    for(i=1; i<=5; i++){
+      for(j=1; j<=i; j++){
+        str+= '*';
+      }
+      str+='\n'
+    }console.log(str);
+
+    var i;
+    var j;
+    for(i=1, str=''; i<=5; i++){
+      for(j=1; j<=5-i; j++){
+        str+= ' ';
+      }
+      for(j=1; j<=i; j++){
+        str+= '*';
+      }
+      str+='\n'
+    }console.log(str);
+
+  </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../JS/Jquery.min.js"></script>
+  <title>document</title>
+  <style>
+  .display-none{
+    display: none;
+  }
+  </style>
+</head>
+<body>
+  <input type="checkbox" name="" id="input1" class="check" checked value="사과">
+  <button>토글</button>
+  <script>
+    /*
+    html문서에 있는 요소(태그, 아이디 클래스 등) 정보를 가져오는 방법
+    document 객체: html문서를 의미
+    1. getElementById(값): 값과 일치하는 아이디를 가진 요소의 정보를 가져옴. 
+      단수(하나이거나 없거나)
+    2. getElementsByTagName(값): 값과 일치하는 태그명을 가진 요소들의
+    정보를 가져옴. 복수(0~다수)
+    복수이기 때문에 배열을 활용.
+    3. getElementsByClassName(값): 값과 일치하는 클래스명을 가진 요소들의 정보를
+    가져옴. 복수(0~다수)
+    */
+    /* var input1 = document.getElementById('input1');
+    console.log(input1);
+
+    var input2 = document.getElementsByTagName('input');
+    console.log(input2[0]);
+
+    var input3 = document.getElementsByClassName('check');
+    console.log(input3[0]);
+
+    console.log(input3[0].className);
+    //요소.ClassName: 클래스 이름 */
+
+    /* input3[0].className = 'checkbox'; */
+    //현재 요소의 클래스명을 check -> checkbox로 수정 
+    
+    //input3[0].className += ' checkbox';
+    //현재 요소의 클래스명에 다른 클래스명을 하나 더 추가
+
+    /*jquery로 가져오는 방법으로 대신함.*/
+
+    
+    /*
+    jquery는 자바스크립트로 구성되어 있는 라이브러리이다.
+    자바스크립트는 아이디냐, 클래스명이냐에 따라 호출하는 함수가 달라진다.
+    jquery는 이러한 불편한 점을 해소하기 위해 나온 것이다.
+      - jquery에서 요소 정보를 가져오는 방법
+    $('선택자')
+      - jquery에서 속성 정보를 가져오는 방법
+    $('선택자').attr(속성명);
+    $('선택자').prop(속성명);
+    */
+    var input1 = $('#input1');
+    var input2 = $('.check');
+    var input3 = $('input');
+    console.log(input1.attr('type'));
+    console.log(input1.prop('type'));
+   
+    /*
+    input1요소의 checked속성이 없는 경우
+      attr은 속성이 없기 때문에 undefined가 출력되고
+      prop은 속성이 없어도 체크가 안되어 있기 때문에 false가 출력된다.
+    input1요소의 checked속성이 있는 경우
+      attr은 해당 속성값이 그대로 출력되고
+      prop은 해당 속성이 체크되어 있기 때문에 true로 출력된다.
+    */
+    console.log(input1.attr('checked'));
+    console.log(input1.prop('checked'));
+
+    /*
+    jquery에서 속성값을 설정하는 방법
+    $(선택자).attr('속성명',값);
+    $(선택자).prop('속성명',값);
+    */
+    $('#input1').prop('checked', false);  //체크박스 체크 해제함.
+    
+    //input태그에서 value의 값을 가져오는 방법1
+    var str = $('#input1').prop('value');
+    console.log(str);
+
+    str = $('#input1').val();
+    console.log(str);
+
+    $('#input1').prop('value','오렌지');
+    $('#input1').val('포도');
+    /*
+    prop('value')는 val()
+    porp('value','값')은 val('값')으로 대체된다.
+    */
+
+    /*
+    jquery에서 이벤트(클릭, 활성화, 키눌림, 마우스움직임 등) 등록 방법
+    $('선택자').이벤트명(function(){
+      구현;
+    });
+    해당 요소의 이벤트가 발생되면 구현 부분에 있는 코드가 실행
+    */
+    /*
+    마우스가 클릭됐을 때 체크박스가 선택되어 있으면 해제하고
+    해제되어 있으면 선택하는 예제
+    이벤트 주체: 버튼
+    이벤트명: click(마우스 왼쪽 클릭)
+    */
+    $('button').click(function(){
+      var isChecked = $('#input1').prop('checked');
+      $('#input1').prop('checked',!isChecked)
+    })
+  </script>
+</body>
+</html>
