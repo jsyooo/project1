@@ -37,7 +37,7 @@
         alert(str);
         //숫자를 문자열로 만드는 방법: 빈문자열 + 숫자
         var str2 = ''+123;
-        console.log(typeof str2);
+        console.log(typeof str2, str2);
         var str3 = 1 + 2 +'3';
         var str4 = '1' + 2 + 3;
         var str5 = '1' + (2 + 3);
@@ -50,12 +50,11 @@
         var className = $('.box').prop('class');
         var index = className.indexOf('display-none');
         //display-none 클래스가 있는 경우 -> box클래스만 남도록 만들어야함
-        if(index != -1){
-          //$('.box').prop('class','box'); 
-
-          /*클래스이름이 xxxxx display-none으로 되어있고 display-none이 있는
-          부분을 제거하여 xxxxx을 가져오는 작업*/
-          className = className.substring(0,index); //부분문자열 추출
+        if(index != -1){ //index(display-none클래스)가 없지 않으면 = ~번지에 존재하면
+          /*substring: 클래스이름이 xxxxx display-none으로 되어있고 
+          display-none이 있는 부분을 제거하여 xxxxx을 가져오는 작업*/
+          className = className.substring(0,index); 
+          //부분문자열 추출 substring(start,end). 0~4위치까지 추출(=box)
           $('.box').prop('class',className);
         }
         //display-none 클래스가 없는 경우 -> box와 display-none클래스 모두 나오게 만들기
