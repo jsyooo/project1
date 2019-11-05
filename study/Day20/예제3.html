@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hide/show</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#hide').click(function(){
+        $('.box').hide();
+      })
+      $('#more').click(function(){
+        $('.box').show();
+      })
+      $('#moreShow').click(function(){
+        $('.box').toggle();
+      })
+      $('.close').click(function(){
+        $('.box').hide();
+      })
+      /*
+      slide는 높이가 늘어나면서 나타나기 때문에 밑에 있는 컨텐츠가 천천히 밀린다.
+      fade는 높이가 갑자기 생기기 때문에 밑에 있는 컨텐츠가 확 밀린다.
+      */
+    })
+  </script>
+  <style>
+    .btn{
+      width: 100px;
+      height: 50px;
+      border: 1px solid blue;
+      border-radius: 5px;
+      line-height: 48px;
+      font-size: 25px;
+      font-weight: bold;
+      text-align: center;
+      cursor: pointer;
+    }
+    .box{
+      height: 100px;
+      background-color: green;
+    }
+    button{
+      float: right;
+      cursor: pointer;
+    }
+    button:hover{
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="btn" id="hide">감추기</div>
+  <div class="btn" id="more">더보기</div>
+  <div class="btn" id="moreShow">토글</div>
+  <div class="box">
+    <button class="close">X</button>
+  </div>
+</body>
+</html>
