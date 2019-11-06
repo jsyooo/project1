@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>애니메이션 STOP</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('#power').click(function(){
+        if(!$('#power').hasClass('stop')){
+          $('.move').animate({right:'0'},2000);
+        $('.move').animate({bottom:'0'},2000);
+        $('.move').animate({left:'0'},2000);
+        $('.move').animate({top:'0'},2000,function(){
+          $('.move').prop('style','');           
+        });
+        }
+        else{
+          /*
+          $(selector).stop(stopAll,goToEnd);
+          매개변수
+          1. stopAll : 선택사항, 기본값 false
+          - 실행해야할 애니메이션이 여러개라면 여러개를 중지할지 말지를 결정하는 값
+          - true면 모든 애니메이션 중지
+          - false면 현재 실행중인 애니메이션만 중지, 다음애니메이션은 그대로 진행
+          2. goToEnd : 선택사항, 기본값 false
+          - 중지했을 때 멈춰지는 위치가 현재 멈춰진 위치인지 완료된 상황에서 멈출것인지를 
+          결정하는 값
+          - false면 현재 위치에서 멈춤
+          - true면 완료된 상태에서 멈춤
+          */
+          $('.move').stop(false,true);
+        }
+        $('#power').toggleClass('stop')        
+        });
+      })
+  </script>
+  <style>
+    body{
+      margin: 0;
+    }
+    .box{
+      width: 100px;
+      height: 100px;
+      border: 2px solid salmon;
+      position: absolute;
+    }
+    #power{
+      left: 50%;
+      top: 50%;
+      margin-top: -52px;
+      margin-left: -52px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box move"></div>
+  <button class="box" id="power">시작</button>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>삭제</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      /*
+      remove(): 선택된 요소를 포함하여 자식까지 같이 삭제
+      empty(): 선택된 요소 안에 자식들만 삭제
+      */
+      $('.sub-menu1').remove();
+      $('.sub-menu2').empty();
+      console.log($('.menu1').css('list-style-type'));
+      ($('.menu1').css('background-color', 'green'));
+    })
+  </script>
+</head>
+<body>
+  <h1>메뉴A</h1>
+  <ul class="menu1">
+    <li class="sub-menu1">메뉴1
+      <ul>
+        <li>서브1</li>
+        <li>서브2</li>
+      </ul>
+    </li>
+    <li>메뉴2</li>
+  </ul>
+  <h1>메뉴B</h1>
+  <ul class="menu2">
+    <li class="sub-menu2">메뉴1
+      <ul>
+        <li>서브1</li>
+        <li>서브2</li>
+      </ul>
+    </li>
+    <li>메뉴2</li>
+  </ul>
+</body>
+</html>
