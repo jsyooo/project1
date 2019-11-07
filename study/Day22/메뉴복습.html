@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    //메뉴 선택시 활성화된 서브메뉴가 1개만 되도록 하는 예제
+    $(function(){
+      $('.menu').click(function(){
+        //지금 클릭된 메뉴가 이전에 클릭된 메뉴와 다를때
+        if(!$(this).children().hasClass('active')){ //선택한 메뉴 밑에 active를 안가지고 있으면(지금 클릭한 메뉴 밑에 서브메뉴가 안펼쳐져 있으면)
+          $('.menu').children().removeClass('active'); //다른메뉴들에는 active없애기
+          $(this).children().addClass('active'); //선택메뉴에는 active추가하기
+          $('.menu').children().slideUp(500); //다른메뉴들은 slideup하기
+          $(this).children('.submenu').slideDown(500); //선택메뉴는 slidedown하기
+        }else{ //선택한 메뉴 밑에 active를 가지고 있으면(서브메뉴가 이미 펼쳐져 있으면)
+          $(this).children().slideToggle(500); 
+        }
+      })
+    })
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+    nav>ul{
+      display: flex;
+    }
+    .menu{
+      width: 100px;
+      height: 50px;
+      line-height: 48px;
+      text-align: center;
+      cursor: pointer;
+      background-color: lightslategray;
+    }
+    .menu:hover{
+      font-weight: bold;
+    }
+    .submenu{
+      display: none;
+      margin-top: 2px;
+      font-weight: normal;
+    }
+    .submenu>li{
+      width: 100px;
+      height: 50px;
+      line-height: 48px;
+      background-color: gray;
+    }
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="menu">메뉴1
+        <ul class="submenu">
+          <li>서브메뉴1</li>
+          <li>서브메뉴2</li>
+        </ul>
+      </li>
+      <li class="menu">메뉴2
+        <ul class="submenu">
+          <li>서브메뉴1</li>
+          <li>서브메뉴2</li>
+        </ul>
+      </li>
+      <li class="menu">메뉴3
+          <ul class="submenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+          </ul>
+        </li>
+    </ul>
+    
+  </nav>
+</body>
+</html>

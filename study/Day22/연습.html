@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title></title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.btnbox').click(function(){
+        if($(this).children().hasClass('right')){
+          
+          if($('span').hasClass('active')){
+            $('.active').css('color', 'red');
+          }
+        else{
+         
+          if($('span').hasClass('active')){
+            $('.active').css('color', 'red');
+          }
+        }  
+        $('span').toggleClass('active') 
+        }
+      })
+    })
+  </script>
+  <style>
+  body{
+    display: flex;
+  }
+  span{
+    padding: 0 10px;
+    text-align: center;
+  }
+  .btnbox{
+    display: flex;
+  }
+  .btnbox>button{
+    width: 30px;
+    height: 30px;
+  }
+  </style>
+</head>
+<body>
+  <span class="start">디자인</span>
+  <span>경제</span>
+  <span>과학</span>
+  <span>중국</span>
+  <span>비즈니스</span>
+  <span>공연</span>
+  <span>법률</span>
+  <div class="btnbox">
+    <button class="left"><</button>
+    <button class="right">></button>
+  </div>
+</body>
+</html>

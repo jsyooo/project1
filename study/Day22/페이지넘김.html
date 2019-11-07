@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>페이지넘김 복습</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.btn-box>button').click(function(){
+        var page = $('.page').text(); //현재 페이지를 문자로 가져오기
+        page = parseInt(page);
+        var max = $('.max').text();
+        max = parseInt(max);
+          if($(this).hasClass('add')){ 
+            page += 1 ;
+            if(page > max){
+              page = 1;
+            }
+          }else{ 
+            page -= 1 ;
+            if(page == 0){
+              page = max;
+            }
+          }
+        $('.page').text(page);
+      })
+    })
+  </script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .btn-box>button{
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      border: 1px solid gray;
+      cursor: pointer;
+    }
+    .btn-box>button:last-child{
+      border-left: none;
+    }
+    .btn-box{
+      display: flex; 
+      /* 두 버튼 붙게 만들기 */
+    }
+    .page{
+      font-weight: bold;
+    }
+    body{
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span class="page">3</span><span>/</span><span class="max">5</span>
+    <div class="btn-box">
+     <button class="sub"><</button>
+     <button class="add">></button>
+  </div>
+</body>
+</html>

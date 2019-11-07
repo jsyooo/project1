@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자손탐색</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+   $(function(){
+    /*
+    children(): 자식 탐색
+    find(): 자손 탐색
+    */
+    $('body').children('.div1').css('color', 'red');
+    //바로 아래 자식에 .div1이 없으므로 적용 안됨.
+
+    $('body').find('.div1').css('color', 'red');
+   })
+  </script>
+</head>
+<body>
+  <div>
+    <div class="div1">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+      </ul>
+    </div>
+    <div class="div2">
+        <ul>
+          <li>메뉴3</li>
+          <li>메뉴4</li>
+        </ul>
+      </div>
+  </div>
+</body>
+</html>

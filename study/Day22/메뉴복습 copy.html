@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.menu').click(function(){
+        //지금 클릭된 메뉴가 이전에 클릭된 메뉴와 다를때
+        if(!$(this).children().hasClass('active')){
+          $(this).children().addClass('active');
+          $('.menu').children().removeClass('active');
+          //위 두개 순서가 바뀌면 추가한 클래스도 함께 지워짐.
+          $('.menu').children().slideUp(500);
+          $(this).children('.submenu').slideDown(500);
+        }else{ //active 클래스를 가지고 있는 항목이 없으니까 이부분이 적용안됨.
+          $(this).children().slideToggle(500);
+        }
+      })
+    })
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    ul{
+      list-style: none;
+    }
+    nav>ul{
+      display: flex;
+    }
+    .menu{
+      width: 100px;
+      height: 50px;
+      line-height: 48px;
+      text-align: center;
+      cursor: pointer;
+      background-color: lightslategray;
+    }
+    .menu:hover{
+      font-weight: bold;
+    }
+    .submenu{
+      display: none;
+      margin-top: 2px;
+      font-weight: normal;
+    }
+    .submenu>li{
+      width: 100px;
+      height: 50px;
+      line-height: 48px;
+      background-color: gray;
+    }
+    
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li class="menu">메뉴1
+        <ul class="submenu">
+          <li>서브메뉴1</li>
+          <li>서브메뉴2</li>
+        </ul>
+      </li>
+      <li class="menu">메뉴2
+        <ul class="submenu">
+          <li>서브메뉴1</li>
+          <li>서브메뉴2</li>
+        </ul>
+      </li>
+      <li class="menu">메뉴3
+          <ul class="submenu">
+            <li>서브메뉴1</li>
+            <li>서브메뉴2</li>
+          </ul>
+        </li>
+    </ul>
+    
+  </nav>
+</body>
+</html>

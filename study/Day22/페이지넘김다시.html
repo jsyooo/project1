@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.btn>button').click(function(){
+        var page = $('.page').text();
+        page = parseInt(page);
+        var max = $('.max').text();
+        max = parseInt(max);
+        if($(this).hasClass('sub')){
+          page -= 1;
+          if(page == 0){
+            page = max;
+          }
+        }
+          else{
+            page +=1;
+            if(page > max){
+              page = 1;
+            }
+          }
+        $('.page').text(page);
+      })
+    })
+  </script>
+  <style>
+  button{
+    width: 30px;
+    height: 30px;
+  }
+  .btn{
+    display: flex;
+  }
+  .page{
+    font-weight: bold;
+  }
+  </style>
+</head>
+<body>
+  <span class="page">3</span><span>/</span><span class="max">5</span>
+  <div class="btn">
+    <button class="sub"><</button>
+    <button class="add">></button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>복습</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.ask').click(function(){
+        $('.ask').after('<div class="box"><input type="text"><button class="submit">제출</button></div>')
+        // var str = '<div class="box">' + '<input type="text">' 
+        //+ '<button class="submit">제출</button>' + '</div>'
+        // $('.ask').append(str); 주로 append 사용.
+      })
+    })
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .ask{
+      margin: 30px 0 0 120px;
+      width: 100px;
+      height: 30px;
+    }
+    .box{
+      height: 60px;
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 20px;
+      border-radius: 5px;
+      border: 2px solid gray;
+      padding-top: 12px;
+      padding-left: 50px;
+    }
+    input{
+      width: 600px;
+      height: 30px;
+    }
+    .submit{
+      margin-left: 30px;
+      width: 80px;
+      height: 30px;
+      line-height: 27px;
+    }
+  </style>
+</head>
+<body>
+  <button class="ask">질문하기</button>
+</body>
+</html>
