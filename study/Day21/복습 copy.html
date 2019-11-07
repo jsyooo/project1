@@ -16,7 +16,14 @@
       */
       //this와 children을 이용하면 각 메뉴마다 이벤트를 각각 안줘도 됨.
       $('.menu').click(function(){
-        $(this).children('ul').slideToggle(500);       
+        if(!$(this).children().hasClass('active')){
+          $('.menu').children().removeClass('active');
+          $(this).children().addClass('active');
+          $('.menu').children().slideUp(500);
+          $(this).children().slideDown(500);
+        }else{
+          $(this).children('ul').slideToggle(500);    
+        } 
       })
       $('.mobile').click(function(){
         //사이드메뉴가 안보이는 경우
