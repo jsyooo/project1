@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.input').change(function(){
+        $(this).next().text('');
+         var str = $(this).val();
+         var id = $(this).prop('id');
+         // 아이디 입력창의 내용이 바뀌었는데 빈문자열인 경우 
+         // 비번 입력창의 내용이 바뀌었는데 빈문자열인 경우
+         if(id != 'pw2' && str.length == 0){
+          $(this).next().text('필수항목입니다.');
+         }
+         else if(id == 'id' && (str.length < 5 || str.length > 10)){
+          $(this).next().text('아이디는 최소 5자에서 최대 10자입니다.');
+         }
+         else if(id == 'pw1' && (str.length < 8 || str.length > 15)){
+          $(this).next().text('비밀번호는 최소 8자에서 최대 15자입니다.');
+         }else if(id == 'pw2'){
+           var str2 = $('#pw1').val();
+           if(str != str2){
+            $(this).next().text('비밀번호와 일치하지 않습니다.');
+           }
+         }
+
+
+        // var id = $('#id').val();
+        // if(id.length == 0){
+        //   $('#idError').html('아이디는 필수항목입니다.');
+        //   return false;
+        // }else if(id.length >= 5 && id.length <= 10){
+        //   return true;
+        // }
+        // else{
+        //   $('#idError').html('아이디는 최소 5자~최대 10자입니다.');
+        //   return false;
+        // }
+        // var pw = $('#pw').val();
+        // if(pw.length == 0){
+        //   $('#pwError').html('비밀번호는 필수항목입니다.');
+        //   return false;
+        // }else if(pw.length >= 8 && pw.length <= 15){
+        //   return true;
+        // }
+        // else{
+        //   $('#pwError').html('비밀번호는 최소 8자~최대 15자입니다.');
+        //   return false;
+        // }
+      })
+      $('#pw1').keyup(function(){
+        $(this).next().text('')
+      })
+      $('form').submit(function(){
+        var submit = true;
+        var id = $('#id').val();
+        if(id.length == 0){
+          $('#idError').text('필수항목입니다.');
+          submit = false;
+        }else if(id.length<5 || id.length>10){
+          $('#idError').text('아이디는 최소 5자에서 최대 10자입니다.');
+          submit = false;
+        }
+        var pw1 = $('#pw1').val();
+        if(pw1.length == 0){
+          $('#pw1Error').text('필수항목입니다.');
+          submit = false;
+        }else if(pw1.length<5 || pw1.length>10){
+          $('#pw1Error').text('비밀번호는 최소 8자에서 최대 15자입니다.');
+          submit = false;
+        }
+        var pw2 = $('#pw2').val();
+        if(pw1 != pw2){
+          $('#pw2Error').text('비밀번호와 일치하지 않습니다.');
+          submit = false;
+        }
+        return submit;
+      })
+    })
+  </script>
+  <style>
+   .red{
+     color: red;
+     font-size: 12px;
+     margin-bottom: 10px;
+   }
+   .container{
+     width: 300px; 
+     /* 가로가 주어져야 margin을 줘서 가운데 배치를 할 수 있음. */
+     margin: 100px auto 0;
+   }
+   input, button{
+     height: 30px;
+     font-size: 18px;
+     border: 1px solid blue;
+     border-radius: 5px;
+     margin-bottom: 10px;
+     width: 100%;
+   }
+   button{
+     background-color: blue;
+     color: white;
+   }
+   h1{
+     text-align: center;
+   }
+   button:hover{
+     background-color: white;
+     color: blue;
+     cursor: pointer;
+   }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>회원가입</h1>
+    <form action="">
+      <input type="text" placeholder="아이디" id="id" class="input">
+      <div class="red" id="idError"></div>
+      <input type="password" placeholder="비밀번호" id="pw1" class="input">
+      <div class="red" id="pw1Error"></div>
+      <input type="password" placeholder="비밀번호 확인" id="pw2" class="input">
+      <div class="red" id="pw2Error"></div>
+      <button>회원가입</button>
+    </form>
+</div>
+</body>
+</html>

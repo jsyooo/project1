@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>select box and change</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#state').change(function(){
+        var state = $(this).val();
+        var str = '';
+        if(state == '도'){
+          str = '<option value="">시/군</option>'
+        }
+        else if(state == '충청남도'){
+          str = '<option value="">시/군</option>'
+          str += '<option value="">천안시</option>'
+          str += '<option value="">아산시</option>'
+        }
+        else if(state == '충청북도'){
+          str = '<option value="">시/군</option>'
+          str += '<option value="">청주시</option>'
+          str += '<option value="">충주시</option>'
+        }
+        else{
+          str = '<option value="">시/군</option>'
+        }
+        $('#city').html(str);
+      })
+    })
+  </script>
+</head>
+<body>
+  <select name="state" id="state">
+    <option>도</option>
+    <option>서울특별시</option>
+    <option>충청남도</option>
+    <option>충청북도</option>
+  </select>
+  <select name="city" id="city">
+    <option value="">시/군</option>
+  </select>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    /*
+    $('선택자').change(function(){
+      구현;
+    })
+      - 내용이 변경되었을 때 실행되는 change 이벤트를 등록
+      - 주로 input 태그나 select태그에 적용
+    */
+    $(function(){
+      $('button').click(function(){ //변경**
+        //유효성 검사 전 이전에 했던 유효성 결과를 지워주는 작업
+        $('#idError').html('');
+        $('#pw1Error').html('');
+        $('#pw2Error').html('');
+       
+        var id = $('#id').val();
+       
+        if(id.length == 0){
+          //alert('아이디를 입력하세요')
+          $('#idError').html('아이디는 필수 항목입니다.');
+          return false;
+        }
+        var pw1 = $('#pw1').val();
+        if(pw1.length == 0){
+          //alert('비밀번호를 입력하세요')
+          $('#pw1Error').html('비밀번호는 필수 항목입니다.');
+          return false;
+        }
+        var pw2 = $('#pw2').val();
+        if(pw2 != pw1){
+          //alert('비밀번호 확인이 잘못 입력되었습니다.')
+          $('#pw2Error').html('비밀번호와 일치하지 않습니다.');
+          return false;
+        }
+        $('form').submit(); //추가**
+     
+        $('#id').change(function(){
+          var id = $('#id').val();
+          if(id.length == 0){
+           //alert('아이디를 입력하세요')
+            $('#idError').html('아이디는 필수 항목입니다.'); 
+          }
+        })
+        //keyup
+      })
+    })
+  </script>
+  <style>
+    .red{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <form action="">
+    <div>
+      <input type="text" placeholder="아이디" id="id">
+    </div>
+    <div id="idError" class="red"></div>
+    <div>
+      <input type="password" placeholder="비밀번호" id="pw1">
+    </div>
+    <div id="pw1Error" class="red"></div>
+    <div>
+      <input type="password" placeholder="비밀번호 확인" id="pw2">
+    </div>
+    <div id="pw2Error" class="red"></div>
+    <button type="button">회원가입</button> 
+    <!-- type=button 추가 -->
+  </form>
+</body>
+</html>
