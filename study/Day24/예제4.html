@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 버튼을 클릭하면 이미지가 추가로 생성 -->
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    /*
+    대상 버튼
+    이벤트 클릭
+    함수 append; 자식요소 끝에 새 요소를 추가
+     - last: 해당 요소들 중 마지막 요소를 찾는 함수
+     - remove: 본인을 포함하여 자식까지 다 지우는 함수
+    */
+    $(function(){
+      $('.add').click(function(){
+        $('div').append('<img src="../Day2/라이언.png">')
+      })
+      $('.del').click(function(){
+        $('img').last().remove();
+      })
+    })
+  </script>
+  <style>
+  img{
+    width: 10%;
+    height: 10%;
+  }
+  </style>
+</head>
+<body>
+  <button class="add">추가</button>
+  <button class="del">삭제</button>
+  <div></div>
+</body>
+</html>
