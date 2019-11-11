@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>메일예제</title>
+  <!-- 메일도메인 선택에 따라 인풋창 메일이 바뀜 -->
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('select').change(function(){
+        var select = $('select').val();
+        $('#mail').val(select);
+        // if(select == 'naver.com'){
+        //   $('#mail').val(select);
+        // }else if(select == 'hanmail.net'){
+        //   $('#mail').val(select);
+        // }else{
+        //   $('#mail').val(select);
+        // }
+        if(select == ''){
+          $('#mail').prop('readonly', false);
+        }else{
+          $('#mail').prop('readonly', true);
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="text" id="id">@<input type="text" id="mail">
+  <select id="domain">
+    <option value="">직접입력</option>
+    <option value="naver.com">네이버</option>
+    <option value="hanmail.net">다음</option>
+  </select>
+</body>
+</html>
