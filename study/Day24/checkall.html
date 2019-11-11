@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 전체선택하면 체크박스 전체가 석택 -->
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('#all').click(function(){
+        var check = $('#all').prop('checked');
+        $('.check').prop('checked',check);
+      })
+    })
+  </script>
+</head>
+<body>
+  <input type="checkbox" name="all" id="all"><br>
+  <input type="checkbox" name="" id="" class="check"><br>
+  <input type="checkbox" name="" id="" class="check"><br>
+  <input type="checkbox" name="" id="" class="check"><br>
+</body>
+</html>
