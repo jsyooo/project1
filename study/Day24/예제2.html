@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 메뉴 클릭하면 옆에서 숨겨져있던 메뉴 튀어나오게 -->
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    /*
+    대상 menu
+    이벤트 click
+    함수 animate
+
+    */
+    $(function(){
+      $('.menu').click(function(){
+        var left = $('.box').css('left')
+        if(left == '-250px'){
+        $('.box').animate({'left' : '0'},500)
+        }
+        else{
+        $('.box').animate({'left' : '-250px'},500)
+        }
+      })
+    })
+  </script>
+  <style>
+    .menu{
+      font-size: 30px;
+      font-weight: bold;
+      color: seagreen;
+      height: 50px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    .box{
+      width: 200px;
+      height: calc(100vh - 62px);
+      background-color: steelblue;
+      position: absolute;
+      left: -250px;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu">menu</div>
+  <div class="box"></div>
+</body>
+</html>
