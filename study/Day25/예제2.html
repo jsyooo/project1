@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    //cnt1은 스크립트가 실행될때 선언되서 다 끝날때(페이지가 넘어갈때)까지 유지된다.
+    var cnt1 = 0;
+    $(function(){
+     /*
+     $('선택자').each(function(){
+      $(this)
+     })
+     each: 요소들을 하나씩 꺼내어 작업할 때 사용한다.
+     each는 이벤트 안에 사용된다.
+     $('선택자').이벤트명(function(){
+       $('선택자').each(function(){
+
+       })
+     })
+     */
+     
+     $('button').click(function(){
+       //버튼을 클릭할때 cnt2가 생성되어 클릭이벤트가 종료되기 전까지 유지된다.
+       //지역변수(cnt2) 전역변수(cnt1) 차이를 보여주는 예제
+      var cnt2 = 0;
+      cnt1++;
+      cnt2++;
+      console.log('cnt1',cnt1);
+      console.log('cnt2',cnt2);
+      var cnt = 0; //체크된 체크박스의 갯수
+      //클래스가 check인 요소들을 각각 가져와서 function()에 구현된 작업을 실행
+      $('.check').each(function(){
+        //각 체크박스의 checked속성이 true인 요소의 갯수를 파악
+        if($(this).prop('checked')){
+          cnt++;
+        }
+      })
+      if(cnt == 0){
+        alert('1개 이상 선택해주세요.');
+        return false;
+      }
+     })
+    })
+  </script>
+  <style>
+    input{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p>취미를 선택하세요.(1개 이상)</p>
+  <form action="">
+    <input type="checkbox" class="check">야구<br>
+    <input type="checkbox" class="check">농구<br>
+    <input type="checkbox" class="check">축구<br>
+    <input type="checkbox" class="check">기타<br>
+    <button>제출</button>
+  </form>
+</body>
+</html>

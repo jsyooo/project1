@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    /*
+    대상   버튼 / form태그
+    이벤트 클릭 / submit
+    함수 
+
+    대상 체크박스
+    이벤트 클릭 or 변경
+    함수
+    체크속성 갯수
+    */
+    var cnt = 0; //function 밖에 변수 선언하는 것을 전역변수라고 한다.
+    //현재 체크된 체크박스의 갯수
+    $(function(){
+      $('.check').change(function(){
+        if($(this).prop('checked')){ // (== true) 생략가능
+          cnt += 1;
+        }
+        else{
+          cnt -=1;
+        }
+      })
+      $('button').click(function(){
+        if(cnt == 0){
+          alert('1개 이상 선택해주세요.');
+          return false; // = submit()을 막음.
+        }
+      })
+    })
+  </script>
+  <style>
+    input{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <p>취미를 선택하세요.(1개 이상)</p>
+  <form action="">
+    <input type="checkbox" class="check">야구<br>
+    <input type="checkbox" class="check">농구<br>
+    <input type="checkbox" class="check">축구<br>
+    <input type="checkbox" class="check">기타<br>
+    <button>제출</button>
+  </form>
+</body>
+</html>

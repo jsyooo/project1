@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script>
+    /*
+    .eq(index): index+1에 있는 요소를 선택
+    .removeClass():클래스 제거
+    .addClass():클래스 추가
+    .length: 해당요소들의 갯수
+
+    0. 전역변수 index선언 초기값:0
+    1. 모든 메뉴에 select 클래스를 제거
+    2. 다음 또는 이전 메뉴에 select 클래스 추가
+    2-1. 다음 버튼인 경우
+      - index에 1을 더함
+      - index가 최대 길이를 넘지 않도록 처리
+      - 더해진 index와 일치하는 요소에 select 클래스 추가
+    2-2. 이전 버튼인 경우
+      - index에 1을 뺌
+      - index가 0보다 작지 않도록 처리
+      - 뺀 index와 일치하는 요소에 select 클래스 추가
+    */
+    var index = 0;
+    $(function(){
+      $('.btn>button').click(function(){
+        $('li').removeClass('act')
+        if($(this).hasClass('right')){ //버튼구분! hasClass!
+          index ++;
+          if(index == $('li').length){
+            index = $('li').length -1;
+          }
+          $('li').eq(index).addClass('act');
+        }
+        if($(this).hasClass('left')){ // = else{}
+          index --;
+          if(index < 0){
+            index = 0;
+          }
+          $('li').eq(index).addClass('act');
+        }
+      })
+      $('li').click(function(){
+        $('li').removeClass('act')
+        $(this).addClass('act')
+        var cnt = 0;
+        /*방법1.
+        목표: 클릭한 메뉴의 위치와 index를 일치시킨다.
+        each를 이용하여 모든 메뉴의 정보들을 하나씩 끄집어낸다.
+          - 끄집어 낸 메뉴에 select 클래스가 있는지 확인하여 
+            있으면 index의 값을 cnt로 설정한다.
+          - cnt를 하나 증가시킨다.
+        */
+        // $('li').each(function(){
+          // if($(this).hasClass('act')){
+          //   index = cnt;
+          // }
+          // cnt++;
+        // })
+
+        //방법2.미리 저장된 value값을 가져와서 정수로 변환한 뒤 index로 저장
+        //div태그에서는 작동안됨.
+        index = parseInt($(this).prop('value'));
+        /*
+        input 태그나 select태그가 아닌 태그에서 value를 지정하여 사용할 수는 
+        있지만 val()는 사용할 수 없음.
+        */
+      })
+    })
+  </script>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .menu{
+      list-style: none;
+      display: flex;
+      background-color: darkolivegreen;
+    }
+    li{
+      font-size: 20px;
+      width: 80px;
+      height: 50px;
+      text-align: center;
+      line-height: 48px;
+      font-weight: bold;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    button{
+      width: 30px;
+      height: 30px;
+      border: 1px solid black;
+      background-color: #fff;
+      margin: 10px;
+    }
+    .act{
+      background-color: darksalmon;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="menu">
+      <li class="act" value="0"><a href="#">menu1</a></li>
+      <li value="1"><a href="#">menu2</a></li>
+      <li value="2"><a href="#">menu3</a></li>
+      <li value="3"><a href="#">menu4</a></li>
+      <li value="4"><a href="#">menu5</a></li>
+    </ul>
+    <div class="btn">
+      <button class="left"><</button>
+      <button class="right">></button>
+    </div>
+  </nav>
+</body>
+</html>
