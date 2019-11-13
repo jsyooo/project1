@@ -11,12 +11,11 @@
      //반복문을 이용한 방법.
      var inputs = $('input'); //모든 인풋태그의 요소정보
      var i;
-     console.log(inputs.length)
-     for(i=0; i<inputs.length; i++){
+     for(i=0; i<inputs.length; i++){ //inputs.length = 4
        //$('선택자').length: 해당 선택자가 있는 요소들의 갯수
        //$('선택자').eq(index): 해당 선택자가 있는 요소들 중 index번째에 있는 요소,
        //index는 0부터 시작
-       console.log(inputs.eq(i).val())
+       console.log(inputs.eq(i).val()) //input의 i번째(index)에 있는 value 값 출력
      }
      //each를 이용한 방법.
      $('input').each(function(){
