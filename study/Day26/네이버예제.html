@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>naver 예제</title>
+  <script src="../JS/Jquery.min.js"></script>
+  <script src="js/naver 예제.js"></script>
+  <script>
+    
+  </script>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      }
+    body{
+      min-width: 1100px;
+      /* 확대했을 때 윗부분 오른쪽이 짤리므로 min-width설정해주면 됨. */
+    }
+    /* header와 관련된 css */
+    .header{
+      height: 178px;
+    }
+    .header-top{
+      height: 130px;
+    }
+    .header-bottom{
+      height: 48px;
+      border-bottom: 1px solid /*#d1d8e4*/;
+      border-top: 1px solid /*#f1f3f6*/;
+    }
+   /* main과 관련된 css */
+    .main{
+      height: 1466px;
+    }
+    .container{
+      width: 1080px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative;
+    }
+    .box-left{
+      width: 740px;
+      height: 100%;
+      float: left;
+    }
+    .box-right{
+      width: 332px;
+      height: 100%;
+      float: right;
+    }
+    .box{
+      margin-top: 8px;
+      width: 100%;
+    }
+    .leftcontent1,.rightcontent1{
+      height: 120px;
+    }
+    .leftcontent2{
+      height: 46px;
+    }
+    .leftcontent3{
+      height: 246px;
+    }
+    .leftcontent4,.rightcontent4{
+      height: 884px;
+    }
+    .leftcontent5,.rightcontent5{
+      height: 130px;
+    }
+    .rightcontent2{
+      height: 142px;
+    }
+    .rightcontent3{
+      height: 150px;
+    }
+    /* 헤더 탑과 관련된 css */
+    .logo{
+      width: 198px;
+      height: 48px;
+      background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
+      position: absolute;
+      background-position: -4px -4px;
+      /* bg-position: 배경 이미지의 시작지점을 지정함. 
+      여러 이미지가 모여있는 한 이미지페이지에서 필요한 부분을 잘라씀. */
+      top: 50%;
+      margin-top: -25px;
+      left: -2px;
+    }
+    .search-box{
+      width: 521px;
+      height: 49px;
+      box-sizing: border-box;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      left: 219px;
+    }
+    .search-in{
+      border: 2px solid #03cf5d;
+      width: 474px;
+      height: 49px;
+    }
+    .search{
+      width: 405px;
+      height: 23px;
+      margin: 12px 0 0 9px;
+      border: none;
+      outline: none;
+      /* input 활성화되었을때 작성창 라인 없애기 */
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 23px;
+    }
+    .keyboard{
+      width: 31px;
+      height: 41px;
+      padding: 15px 6px;
+      display: block;
+      position: absolute;
+      right: 76px;
+      top: 50%;
+      margin-top: -21px;
+    }
+    .keyboard-icon{
+      width: 19px;
+      height: 11px;
+      background-position: -33px -60px;
+      display: block; 
+      /* i태그는 inline태그 */
+    }
+    .keyboard-on{
+      background-position: -60px -60px;
+    }
+    .auto{
+      width: 27px;
+      height: 42px;
+      position: absolute;
+      top: 50%;
+      right: 49px;
+      margin-top: -21px;
+      padding: 19px 12px 19px 6px;
+    }
+    .auto-icon{
+      width: 9px;
+      height: 4px;
+      background-position: -87px -60px;
+      display: block;
+    }
+    .auto-open{
+      background-position: -138px -60px;
+    }
+    .search-btn{
+      width: 49px;
+      height: 49px;
+      background: #03cf5d;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .search-icon{
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      width: 21px;
+      height: 21px;
+      background-position: -4px -60px;
+    }
+    /* 부모가 absolute이고 자식도 absolute이면 자식은 부모를 기준으로 잡는다. */
+
+    /* 배경이미지 관련 css */
+    .bg1{
+      background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
+    }
+   /* footer와 관련된 css */
+    .footer{
+      height: 314px;
+      margin-top: 8px;
+    }
+   /* 배경색 관련 클래스 */
+    .bg-white{
+    background-color: #fff;
+    }
+    .bg-body{
+      background-color: rgb(242, 244, 247);
+    }
+  </style>
+</head>
+<body class="bg-body">
+  <div class="header bg-white">
+    <div class="header-top">
+      <div class="container">
+        <div class="logo bg1"></div>
+        <div class="search-box">
+          <div class="search-in">
+            <input type="text" class="search">
+            <a href="#" class="keyboard">
+              <i class="keyboard-icon bg1"></i>
+            </a>
+            <a href="#" class="auto">
+              <i class="auto-icon bg1"></i>
+            </a>
+          </div>
+          <div class="search-btn">
+            <i class="search-icon bg1"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom"></div>
+  </div>
+  <div class="main">
+    <div class="container">
+      <div class="box-left">
+        <div class="box leftcontent1 bg-white">
+            <a href="#"><img src="./img/naverad.jpg" alt=""></a>
+        </div>
+        <div class="box leftcontent2 bg-white"></div>
+        <div class="box leftcontent3 bg-white"></div>
+        <div class="box leftcontent4 bg-white"></div>
+        <div class="box leftcontent5 bg-white"></div>
+      </div>
+      <div class="box-right">
+        <div class="box rightcontent1 bg-white"></div>
+        <div class="box rightcontent2 bg-white"></div>
+        <div class="box rightcontent3 bg-white">
+          <a href="#"><img src="./img/ad2.png" alt=""></a>
+        </div>
+        <div class="box rightcontent4 bg-white"></div>
+        <div class="box rightcontent5 bg-white"></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer bg-white"></div>
+</body>
+</html>
