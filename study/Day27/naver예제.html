@@ -35,6 +35,8 @@
 					<div class="auto-box"></div>
 				</div>
 				<!-- 검색 관련 박스 종료 -->
+				<!-- 오른쪽 위 연관페이지(쥬니어네이버, 해피빈) -->
+				<a href="#" class="jrnaver bg2"></a>
 				<a href="#" class="happybean bg2"></a>
 			</div>
 			<!-- header-top container 종료 -->
@@ -63,13 +65,6 @@
 					<a href="#" class="black-box bg3 comic"></a>
 				</div>
 				<!-- 검은색 메뉴 끝-->
-				<div class="empty-container display-none">
-					<div class="emptybox active"></div>
-					<div class="emptybox"></div>
-					<div class="emptybox"></div>
-					<div class="emptybox"></div>
-					<div class="emptybox"></div>
-				</div>
 				<div class="bar"></div>
 				<div class="bg3 black-box more"></div>
 				<!-- 더보기 메뉴 끝 -->
@@ -87,26 +82,35 @@
 					</div>
 					<div class="white-menu-sub2 display-none">
 						<a href="#" class="reset fold-btn">
-							<span class="bg5 reseti"></span> 초기화</a>
+							<i class="bg5 reseti"></i>초기화</a>
 						<a href="#" class="okay fold-btn">확인</a>
 						<a href="#" class="cancel fold-btn">취소</a>
 					</div>
 						<a href="#" class="f-close">
-							<div class="sv-close bg5"></div></a>
+							<i class="sv-close bg5"></i></a>
 				</div>
 				<!-- 더보기 버튼 클릭시, 메뉴 끝 -->
 				<div class="container white-menu">
 					<div class="menu-sub-list">
 						<a href="#" class="menu-sub-title">대표</a>
-						<a href="#" class="menu-sub">사전</a>
-						<a href="#" class="menu-sub">뉴스</a>
-						<a href="#" class="menu-sub">증권</a>
-						<a href="#" class="menu-sub">부동산</a>
-						<a href="#" class="menu-sub">지도</a>
-						<a href="#" class="menu-sub">영화</a>
-						<a href="#" class="menu-sub">뮤직</a>
-						<a href="#" class="menu-sub">책</a>
-						<a href="#" class="menu-sub">웹툰</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="사전" id=""></i>사전</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="뉴스" id=""></i>뉴스</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="증권" id=""></i>증권</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="부동산" id=""></i>부동산</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="지도" id=""></i>지도</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="영화" id=""></i>영화</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="뮤직" id=""></i>뮤직</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="책" id=""></i>책</a>
+						<a href="#" class="menu-sub"><i class="checkbox bg7 display-none">
+							<input class="checkbox-input" type="checkbox" value="웹툰" id=""></i>웹툰</a>
 					</div>
 				</div>
 				<!-- 메뉴 리스트 끝 -->
@@ -119,13 +123,32 @@
 				<div class="contents1 box bg-white">
 					<a href="#"><img src="img/광고.jpg" alt=""></a>
 				</div>
-				<div class="contents2 box bg-white"></div>
+				<div class="contents2 box bg-white">
+					<div class="headline-box">
+						<a href="#">연합뉴스<span class="right-icon bg6"></span></a>
+						<a href="#">뉴스 헤드라인</a>
+						<div class="headline-rbox">
+							<a href="#">네이버뉴스</a>
+							<a href="#">연예</a>
+							<a href="#">스포츠</a>
+							<a href="#">경제</a>
+						</div>
+					</div>
+				</div>
 				<div class="contents3 box bg-white">
 					<div class="newshead">
 						<div class="newslogo-left"><a href="#">뉴스스탠드<span class="right-icon bg6"></span></a></div>
 						<div class="newslogo-mid"><a href="#">전체 언론사</a><div class="news-bar"></div><a href="#" class="mynews">MY 뉴스</a></div>
 						<div class="newslogo-right">
-							<div class="newslogo-page"></div>
+							<div class="newslogo-page">
+								<div class="news-btn prev"><i class="news-prev bg6"></i></div>
+								<div class="news-btn next"><i class="news-next bg6"></i></div>
+							</div>
+							<div class="news-iconbox">
+								<a href="#" class="news-icon"><i class="thumb bg6"></i></a>
+								<a href="#" class="news-icon"><i class="list bg6"></i></a>
+								<a href="#" class="news-icon"><i class="set bg6"></i></a>
+							</div>
 						</div>
 					</div>
 					<div class="newsbottom">
@@ -304,7 +327,7 @@
 							</ul>
 						</div>
 					</div>
-					<!--  -->
+					<!-- 뉴스섹션 끝 -->
 				</div>
 				<div class="contents4 box bg-white"></div>
 				<div class="contents5 box bg-white"></div>
@@ -325,7 +348,7 @@
 									<i class="r2-prev-icon bg4"></i>
 								</div>
 								<div class="r2-btn next">
-										<i class="r2-next-icon bg4"></i>
+									<i class="r2-next-icon bg4"></i>
 								</div>
 							</div>
 						</div>
