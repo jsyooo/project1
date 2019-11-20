@@ -237,22 +237,6 @@ body{
 .music{	width: 26px; background-position: -72px -259px;}
 .book	{	width: 13px; background-position: -140px -78px;}
 .comic{	width: 27px; background-position: -279px 0;}
-.empty-container{
-	width: 350px;
-	height: 45px;
-	display: flex;
-	float: left;
-	margin-left: 10px;
-}
-.emptybox{
-	width: 64px;
-	height: 30px;
-	border: 1px solid #e3e7ee;
-	margin: 8px 0 0 5px;
-}
-.active{
-	border-color: #00b336;
-}
 .bar{
 	float: left;
 	margin: 18px 16px 0;

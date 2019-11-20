@@ -1,20 +1,41 @@
 	//원래 메뉴의 배열
 	var oriMenu = ["dic", "news", "stock", "deal", "map", 
 	"movie", "music", "book", "comic"];
-	var selMenu = [];
+	var selMenu = [];			//확인버튼을 눌러 확정된 메뉴들
+	var selMenuTmp = [];	//메뉴설정에서 선택된 메뉴들
 	// 검은색 메뉴를 초기화하는 함수
 	function initBlackMenu(){
 		var i = 0;
-		$('.black-container>a').each(function(){
-			$(this).prop('class','') 			 //요소의 모든 클래스를 제거
-			$(this).addClass('black-box'); //클래스 추가
-			$(this).addClass('bg3');			 //클래스 추가
-			$(this).addClass(oriMenu[i]);  //0번지의 oriMenu 배열 이름을 클래스로 추가
-			if(i<5){
-				$(this).addClass('box-menu') //박스메뉴 5개
-			}
-			i++;
-		})
+		//메뉴설정에서 선택된 메뉴가 있는 경우
+		if(selMenu.length != 0){
+			$('.black-container>a').each(function(){
+				$(this).prop('class','') 	//클래스 비우기
+				if(i<selMenu.length){
+					$(this).addClass('black-box');	//클래스 추가 
+					$(this).addClass('bg3');			  //클래스 추가
+					$(this).addClass(selMenu[i]);   
+					//selMenu 배열 중 i번째 번지에 있는 클래스 이름 추가
+				}else{
+					$(this).addClass('display-none');
+				}
+				if(i<5){
+					$(this).addClass('box-menu') //박스메뉴 5개
+				}
+				i++;
+		  })
+		}else{
+			$('.black-container>a').each(function(){
+				$(this).prop('class','') 	//클래스 비우기
+				$(this).addClass('black-box');	//클래스 추가 
+				$(this).addClass('bg3');			  //클래스 추가
+				$(this).addClass(oriMenu[i]);   
+				//selMenu 배열 중 i번째 번지에 있는 클래스 이름 추가
+				if(i<5){
+					$(this).addClass('box-menu'); //박스메뉴 5개
+				}
+				i++;
+		  })
+		}
 	}
 	// 화이트박스가 닫히면서 해야할 작업들
 	function closeWhiteBox(){
@@ -24,6 +45,46 @@
 		}else{
 			//선택된 메뉴들 호출하기
 		}
+	}
+	// arr를 기준으로 검은색 메뉴들을 빈 박스 또는 선택된 메뉴로 배치
+	function drawMenu(arr){
+		if(arr.length > 5){
+			return; 	//작업중단. 다른 작업 안하게 하기
+		}
+		var i = 0;
+		$('.black-container>a').each(function(){
+			$(this).prop('class','') 			
+			if(i < arr.length){
+				$(this).addClass('black-box'); 
+				$(this).addClass('bg3');			
+				$(this).addClass(arr[i]);
+			}
+			$(this).addClass('box-menu');
+		
+			if(i>4){
+				$(this).addClass('display-none');
+			}
+			i++;
+		})
+	}
+	// arr를 기준으로 input checkbox의 checked와 선택이미지를 설정하는 함수
+	function setInputCheckbox(arr){
+		$('.checkbox-input').each(function(){
+			/* 체크박스의 value를 가져옴 */
+			var value = $(this).val();
+			/* value가 arr에 있는지 확인 */
+			var pos = arr.indexOf(value);
+			// 있으면 체크박스를 체크하고
+			if(pos != -1){
+				$(this).prop('checked', true);
+				$(this).parent().addClass('checked');
+			}
+			// 없으면 체크박스를 해제한다.
+			else{
+				$(this).prop('checked', false);
+				$(this).parent().removeClass('checked');
+			}
+		})
 	}
 	$(function(){
 		$('.keyboard').click(function(){
@@ -83,20 +144,26 @@
 		})
 		$('.sv-close').click(function(){
 			$('.more').click();
+			$('.cancel').click();
 		})
-		$('.menu-setting').click(function(){ /* 메뉴설정 버튼 클릭할 때 */
+		/* 메뉴설정 버튼 클릭할 때 */
+		$('.menu-setting').click(function(){ 
 			$('.white-menu-sub1').toggleClass('display-none');
 			$('.white-menu-sub2').toggleClass('display-none');
-			$('.black-container .black-box').each(function(){
-				if(!$(this).hasClass('box-menu')){
-					$(this).addClass('display-none')
-				}else{
-					$(this).prop('class','box-menu') //클래스에 box-menu만 남기려는 작업
-				}
-			})
+			// $('.black-container .black-box').each(function(){
+			// 	if(!$(this).hasClass('box-menu')){
+			// 		$(this).addClass('display-none')
+			// 	}else{
+			// 		$(this).prop('class','box-menu') //클래스에 box-menu만 남기려는 작업
+			// 	}
+			// })
+			selMenuTmp = selMenu.slice(0);	//slice(똑같은 걸 복사본 만듦.)
+			drawMenu(selMenuTmp);
 			// $('.empty-container').toggleClass('display-none');
 			// black-box 없어지고 네모박스
 			// 서브메뉴 체크박스
+			$('.box-menu').eq(selMenu.length).addClass('select');
+			//빈 박스 선택된 곳에 초록색 테두리
 			$('.checkbox').removeClass('display-none');
 		})
 
@@ -109,7 +176,10 @@
 			 toggle과 toggleClass를 잘못 사용하여 충돌되는 경우,
 			 toggle에 있는 css가 적용된다. -> 원하지 않는 결과 */
 			$('.checkbox').addClass('display-none');
-			closeWhiteBox();
+			// closeWhiteBox();
+			selMenuTmp = []; //메뉴설정에서 선택된 메뉴들을 적용하지 않음.
+			setInputCheckbox(selMenu);
+			initBlackMenu(selMenu);
 		})
 		// $('.menu-sub').hover(function(){
 		// 	$(this).toggleClass('hover-underline');
@@ -124,12 +194,42 @@
 				}
 			}
 			/*  */
+			var value = $(this).find('.checkbox-input').val();
 			$(this).find('.checkbox').toggleClass('checked');
 			if($(this).find('.checkbox').hasClass('checked')){
 				$(this).find('.checkbox-input').prop('checked', true);
 			}else{
 				$(this).find('.checkbox-input').prop('checked', false);
 			}
-			$('.okay').toggleClass('okay-act');
+			var pos = selMenuTmp.indexOf(value);
+			if(pos == -1){ //선택한 메뉴가 이미 체크가 된 경우
+				// $('.box-menu').eq(selMenuTmp.length).addClass('bg3');
+				// $('.box-menu').eq(selMenuTmp.length).addClass('black-box');
+				// $('.box-menu').eq(selMenuTmp.length).addClass(value);
+				selMenuTmp.push(value);		//위 클래스를 배열에 집어넣기
+			}else{				 //선택된 메뉴가 체크 해제된 경우
+				selMenuTmp.splice(pos,1);
+				//selMenuTmp에 있는 배열에 맞춰 배치하기
+			}
+			drawMenu(selMenuTmp);
+			$('.box-menu').eq(selMenuTmp.length).addClass('select');  //다음박스 테두리
+		})
+		// 확인버튼이 클릭되면
+		$('.okay').click(function(){
+			selMenu = selMenuTmp.splice(0);
+			if(selMenu.length == 0){
+				alert('선택된 메뉴가 없습니다. 초기설정으로 돌아갑니다.')
+			}
+			//white box, black box 닫고 
+			$('.more').click();
+			//메뉴 적용
+			initBlackMenu();
+		})
+		$('.reset').click(function(){
+			alert('초기설정으로 돌아갑니다.');
+			selMenu = []; //메뉴설정에서 선택된 메뉴들을 적용하지 않음.
+			setInputCheckbox(selMenu);
+			initBlackMenu();
+			$('.more').click();
 		})
 	})
