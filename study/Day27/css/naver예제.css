@@ -343,6 +343,55 @@ body{
 	background-position: 0 -208px;
 	width: 45px;
 }
+/* 실시간 검색어 관련 태그 */
+.livesearch-box{
+	width: 198px;
+	height: 20px;
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 0;
+	overflow: hidden;
+}
+.livesearch{
+	width: 198px;
+	height: 441px;
+}
+.livesearch>ul{
+	list-style: none;
+}
+.livesearch li{
+	width: 140px;
+	padding: 1px 0 0 21px;
+}
+.live-r{
+	position: absolute;
+	left: 0;
+	min-width: 17px;
+	line-height: 18px;
+	text-align: center;
+	font-size: 16px;
+	color: #00ab33;
+	/* font-weight: 500; */
+}
+.livesearch a{
+	text-decoration: none;
+	color: black;
+}
+.live-t{
+	letter-spacing: -1px;
+	font-size: 14px;
+	margin-left: 2px;
+	vertical-align: 5px;
+}
+.under-i{
+	width: 11px;
+	height: 6px;
+	background-position: -223px -147px;
+	position: absolute;
+	top: 50%;
+	right: 4px;
+	margin-top: -3px;
+}
 .gray-box{
 	position: absolute;
 	left: 0;
@@ -480,6 +529,9 @@ body{
 }
 .bg7{
 	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_more_v180627.png');
+}
+.bg8{
+	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191113.png');
 }
 /* footer와 관련된 css */
 .footer{
