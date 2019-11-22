@@ -1,0 +1,150 @@
+@charset 'utf-8';
+*{
+	padding: 0;
+	margin: 0;
+  box-sizing: border-box;
+}
+body{
+  position: relative;
+  width: 100%;
+}
+/* 공통클래스 */
+.bg-white{
+  background-color: #fff;
+}
+.bg-body{
+  background-color: #e6e9f3
+}
+/* 배경 */
+.bg1{
+  background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191106.png);
+  background-size: 451px 440px;
+}
+/* head 관련 css */
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.head-top{
+  height: 60px;
+}
+.search-box{
+  margin-left: 54px;
+  padding: 17px 0 16px 14px;
+  /* margin-right: 124px; */
+}
+.logo-i{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 22px;
+  background-position: -32px -312px;
+  margin: 19px 14px 19px 15px;
+}
+.bar{
+  width: 1px;
+  height: 22px;
+  position: absolute;
+  top: calc(50%);
+  background-color: #eceff3;
+}
+.search{
+  width: 488px;
+  height: 27px;
+  font-size: 16px;
+  font-weight: 400;
+}
+.search-right{
+  width: 137px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 7px;
+  display: flex;
+}
+.search-right a{
+  width: 40px;
+  height: 60px;
+  margin-left: 1px;
+  display: inline-block;
+  text-align: center;
+  padding-top: 16px;
+}
+.voice-search-i{
+  width: 28px;
+  height: 28px;
+  background-position: -321px -93px;
+  display: inline-block;
+}
+.pic-search-i{
+  width: 28px;
+  height: 28px;
+  background-position: -321px -60px;
+  display: inline-block;
+}
+.map-search-i{
+  width: 28px;
+  height: 28px;
+  background-position: -321px -27px;
+  display: inline-block;
+}
+.head-bot{
+  height: 52px;
+}
+/* body관련 css */
+.over640{
+  display: none;
+}
+.body{
+  margin-top: 112px;
+}
+.container1{
+  height: 91px;
+  margin-bottom: 10px;
+}
+.container2{
+  height: 559px;
+  margin-bottom: 10px;
+}
+.container3{
+  height: 145px;
+  margin-bottom: 10px;
+}
+.container4{
+  height: 387px;
+}
+.container5{
+  height: 435px;
+}
+.container6, .container7{
+  height: 337px;
+}
+.container8{
+  height: 151px;
+  margin-bottom: 10px;
+}
+.container9{
+  height: 183px;
+  margin-bottom: 10px;
+}
+/* footer 관련 css */
+.foot{
+  width: 100%;
+  height: 262px;
+}
+/* 640px기준 반응형 웹 */
+@media screen and (min-width: 640px){
+  .under640{
+    display: none;
+  }
+  .over640{
+    display: flex;
+  }
+  .left-container, .right-container{
+    width: 50%;
+  }
+}

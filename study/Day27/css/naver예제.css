@@ -8,6 +8,47 @@ body{
 	min-width: 1100px;
 	position: relative;
 }
+/* 배경 이미지 관련 css */
+.bg1{
+	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
+}
+.bg2{ /*로고아이콘*/
+	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191029.png');
+}
+.bg3{ /*메뉴글씨아이콘*/
+	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png');
+}
+.bg4{ /*날씨아이콘*/
+	background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
+}
+.bg5{ /*아이콘모음*/
+	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png');
+}
+.bg6{ /*뉴스아이콘*/
+	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+}
+.bg7{
+	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_more_v180627.png');
+}
+.bg8{
+	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191113.png');
+}
+/* footer와 관련된 css */
+.footer{
+	height: 314px;
+	margin-top: 8px;
+}
+/* 배경 색 관련 클래스 */
+.bg-white{
+	background-color: white;
+}
+.bg-body{
+	background-color: rgb(242, 244, 247);
+}
+/* 공통 클래스 */
+.display-none{
+	display: none;
+}
 /* header와 관련된 css */
 .header{
 	height: 178px;
@@ -176,6 +217,7 @@ body{
 .happybean:hover{
 	background-position: -136px -157px;
 }
+/* 네비게이션 메뉴 바 관련 css */
 .green-container{
 	width: 303px;
 	height: 32px;
@@ -392,6 +434,7 @@ body{
 	right: 4px;
 	margin-top: -3px;
 }
+/* 더보기 눌렀을 때 뜨는 창 관련 css */
 .gray-box{
 	position: absolute;
 	left: 0;
@@ -508,48 +551,6 @@ body{
 	background-position: -433px -303px;
 	display: inline-block;
 }
-/* 배경 이미지 관련 css */
-.bg1{
-	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_search.svg');
-}
-.bg2{ /*로고아이콘*/
-	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191029.png');
-}
-.bg3{ /*메뉴글씨아이콘*/
-	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_nav.png');
-}
-.bg4{ /*날씨아이콘*/
-	background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
-}
-.bg5{ /*아이콘모음*/
-	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png');
-}
-.bg6{ /*뉴스아이콘*/
-	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
-}
-.bg7{
-	background-image: url('https://s.pstatic.net/static/www/img/2018/sp_more_v180627.png');
-}
-.bg8{
-	background-image: url('https://s.pstatic.net/static/www/img/uit/2019/sp_main_v191113.png');
-}
-/* footer와 관련된 css */
-.footer{
-	height: 314px;
-	margin-top: 8px;
-}
-
-/* 배경 색 관련 클래스 */
-.bg-white{
-	background-color: white;
-}
-.bg-body{
-	background-color: rgb(242, 244, 247);
-}
-/* 공통 클래스 */
-.display-none{
-	display: none;
-}
 .r2-top-right{
 	display: flex;
 	line-height: 33px;
@@ -566,6 +567,7 @@ body{
 .page-current{
 	color: black;
 }
+/* 왼쪽 2번째 뉴스 헤드라인 관련 css */
 .headline-box{
 	width: 738px;
 	height: 33px;
@@ -577,6 +579,27 @@ body{
 	text-decoration: none;
 	color: black;
 	margin-right: 12px;
+}
+.hdlinelive-box{
+	width: 340px;
+	height: 20px;
+	position: absolute;
+	top: calc(50% - 5px);
+	left: 100px;
+	overflow: hidden;
+}
+.hdlinelive-box ul{
+	list-style: none;
+}
+.hdlinelive-box a{
+	text-decoration: none;
+	color: black;
+}
+.hdlinelive-box li{
+	height: 20px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 .headline-rbox{
 	width: 215px;
@@ -595,6 +618,7 @@ body{
 	margin-right: 14px;
 	float: left;
 }
+/* 뉴스스탠드 관련 css */
 .newshead{
 	width: 738px;
 	height: 45px;

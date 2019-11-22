@@ -89,7 +89,30 @@
 			}
 		})
 	}
-	
+	/* 실시간 검색어 차트 올라가는 함수 */
+	// function live(height){
+	// 	$('.livesearch li').eq(0).animate({'margin-top': height},1000,
+	// 	// animate에서 설정한 애니메이션을 다 실행한 후 실행되는 함수
+	// 	function(){
+	// 		$('.livesearch li').eq(0).detach().appendTo('.livesearch>ul').
+	// 		removeAttr('style');
+	// 		/* 
+	// 		$(붙일곳).append(붙일애):
+	// 		$(붙일애).appendTo(붙일곳):
+	// 		*/
+	// 	});
+	// }
+	/* 매개변수 c(클래스) 추가해서 검색어와 뉴스헤드에서 공통으로 사용가능하게 */
+	function live(height,c,playtime){
+		/* var heigth = $(c+' li').css('height);
+			 height = '-' + heigth; */
+		$(c+' li').eq(0).animate({'margin-top': height},playtime,
+		function(){
+			$(c+' li').eq(0).detach().appendTo(c+'>ul').
+			removeAttr('style');
+		});
+	}
+
 	$(function(){
 		$('.keyboard').click(function(){
 			$('.keyboard-icon').toggleClass('active');
@@ -243,4 +266,17 @@
 			initBlackMenu();
 			$('.more').click();
 		})
+		// setInterval(함수,시간): 일정시간마다 함수를 동작시키는 함수
+		setInterval(function(){
+			var height = '-25px';
+			live(height,'.livesearch',500);
+			/* var height 지우고
+				 live(height, '.livesearch',500);
+				 live(heigth, '.hdlinelive',1000);
+				 으로 통합해서 써도 됨. */
+		},2000);
+		setInterval(function(){
+			var height = '-20px';
+			live(height,'.hdlinelive',1000);
+		},2000);
 	})
