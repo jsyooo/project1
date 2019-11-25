@@ -15,10 +15,17 @@ body{
 .bg-body{
   background-color: #e6e9f3
 }
+.display-none{
+  display: none;
+}
 /* 배경 */
 .bg1{
   background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191106.png);
   background-size: 451px 440px;
+}
+.bg2{
+  background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191114.png);
+  background-size: 621px 592px;
 }
 /* head 관련 css */
 .head{
@@ -48,14 +55,20 @@ body{
   width: 1px;
   height: 22px;
   position: absolute;
-  top: calc(50%);
-  background-color: #eceff3;
+  top: 18px;
+  left: 54px;
+  background-color: /*#eceff3*/ red;
 }
 .search{
   width: 488px;
   height: 27px;
   font-size: 16px;
   font-weight: 400;
+  border: none;
+  /* overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis; */
+  outline: none;
 }
 .search-right{
   width: 137px;
@@ -94,6 +107,7 @@ body{
 }
 .head-bot{
   height: 52px;
+  background-color: #0eca68;
 }
 /* body관련 css */
 .over640{
@@ -101,6 +115,7 @@ body{
 }
 .body{
   margin-top: 112px;
+  font-size: 16px;
 }
 .container1{
   height: 91px;
@@ -131,6 +146,81 @@ body{
   height: 183px;
   margin-bottom: 10px;
 }
+container1
+.edit-api{
+  height: 50px;
+  padding: 0 15px;
+}
+.edit-api-title{
+  font-size: 17px;
+  line-height: 22px;
+  display: inline-block;
+  color: #222;
+  padding: 14px 0;
+  margin-right: 15px;
+  letter-spacing: -1px;
+}
+.subsset{
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 15px;
+  width: 370px;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: right;
+  line-height: 50px;
+  text-decoration: none;
+  color: #555;
+  letter-spacing: -1px;
+}
+.subset-i{
+  width: 18px;
+  height: 18px;
+  background-position: -551px -161px;
+  display: inline-block;
+  vertical-align: -4px;
+  margin-left: 4px;
+}
+.brk-news-box{
+  height: 41px;
+}
+.brk-news1, .brk-news2{
+  overflow: hidden;
+  border-top: 1px solid #e6e8ed;
+}
+.brk-news-box a{
+  text-decoration: none;
+  color: #000;
+  display: block;
+  height: 40px;
+  padding: 11px 0 10px 15px;
+}
+.brk-logo{
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: -1px;
+  color: #f55950;
+  border-radius: 10px;
+  border: 1px solid #f55950;
+  padding: 0 6px 1px 5px;
+  margin-right: 5px;
+  vertical-align: 2px;
+}
+.brk-news{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.brk-api{
+  margin-left: 5px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 19px;
+  color: #7d7d7d;
+  letter-spacing: -1px;
+}
 /* footer 관련 css */
 .foot{
   width: 100%;
@@ -138,13 +228,24 @@ body{
 }
 /* 640px기준 반응형 웹 */
 @media screen and (min-width: 640px){
-  .under640{
+  /* .under640{
     display: none;
+  } */
+  .box{
+    content: "";
+    clear: both;
+    display: block;
   }
-  .over640{
+  .box:nth-of-type(2n-1){
+    float: left;
+  }
+  .box:nth-of-type(2n){
+    float: right;
+  }
+  /* .over640{
     display: flex;
   }
   .left-container, .right-container{
     width: 50%;
-  }
+  } */
 }
