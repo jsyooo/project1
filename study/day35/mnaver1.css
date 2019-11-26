@@ -1,0 +1,40 @@
+@charset 'utf-8';
+/* 640px 이하, 1단으로 보여질때 */
+@media (max-width:640px){
+	.contents{
+		width: 100%;
+		
+	}
+	.economy{
+	}
+	.news-all{
+		height: 200.86px;
+	}
+	.news-location{
+		height: 141.8px;
+	}
+	.pan{
+		height: 174px;
+	}
+	.news-list{
+		height: 156.1px;
+	}
+	.broadcast{
+		height: 435.8px;
+	}
+	.press{
+		height: 338px;
+	}
+	.internet{
+		height: 337.8px;
+	}
+	.edit{
+		height: 90.8px;
+	}
+	.ad{
+		height: 140px;
+	}
+	.line{
+		display: none;
+	}
+}
