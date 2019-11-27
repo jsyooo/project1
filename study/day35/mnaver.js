@@ -20,4 +20,16 @@ $(function(){
       $('.btn-api-select').addClass('display-none');
     }
   })
+  $('.menu-box').click(function(){
+    var index = $('.menu-box').index(this);
+    if(index > 5){
+      $('.btn-menuplus').removeClass('display-none');
+      $('.menu-list').removeClass('menu-list-change');
+    }
+    else{
+      $('.btn-menuplus').addClass('display-none');
+      $('.menu-list').addClass('menu-list-change');
+    }
+  })
+  
 })

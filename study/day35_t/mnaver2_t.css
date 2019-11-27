@@ -1,0 +1,422 @@
+@charset 'utf-8';
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+html{
+	font-size: 10px;
+}
+body{
+	background-color: #eff2f8;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+}
+.header{
+	position: fixed;
+	/* left:0와 right:0가 합쳐져서 width:100%의 기능을 대신한다 */
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 101;
+}
+.search{
+	height: 60px;
+	background-color: white;
+	display: flex;
+}
+/* menu css */
+.menu-list{
+	height: 52px;
+	background-image: linear-gradient(to right,#0eca68,#00bf5f);
+	padding-left: 15px;
+	overflow: hidden;
+	position: relative;
+}
+.menu-list2{
+	background-image: linear-gradient(to right,#f09dba,#b781d6 50%,#8981e6);
+}
+.menu-list-container{
+	min-width: 100%;
+}
+.menu-item{
+	display: inline-block;
+	height: 51px;
+	margin: 0 4px 0 3px;
+	padding: 0 4px;
+	line-height: 51px;
+	position: relative;
+}
+.menu-item>div{
+	position: relative;
+	top: 13px;
+}
+.todo{
+	width: 46px;
+	height: 24px;
+	background-position: -49px -189px;
+}
+.enter{
+	width: 32px;
+	height: 24px;
+	background-position: -345px -243px;
+}
+.mypay{
+	width: 54px;
+	height: 24px;
+	background-position: -198px -135px;
+}
+.selective{
+	width: 59px;
+	height: 24px;
+	background-position: -62px -162px;
+}
+.beauty{
+	width: 59px;
+	height: 24px;
+	background-position: 0 -162px;
+}
+.trend{
+	width: 45px;
+	height: 24px;
+	background-position: -260px -216px;
+}
+.home{
+	width: 18px;
+	height: 24px;
+	background-position: -283px -270px;
+}
+.news{
+	width: 33px;
+	height: 24px;
+	background-position: -108px -297px;
+}
+.ent{
+	width: 33px;
+	height: 24px;
+	background-position: -345px -27px;
+}
+.sports{
+	width: 46px;
+	height: 24px;
+	background-position: -260px -81px;
+}
+.chart{
+	width: 60px;
+	height: 24px;
+	background-position: -135px -108px;
+}
+.shopping{
+	width: 33px;
+	height: 24px;
+	background-position: -288px -297px;
+}
+.neighbor{
+	width: 60px;
+	height: 24px;
+	background-position: -63px -81px;
+}
+.mysubs{
+	width: 55px;
+	height: 24px;
+	background-position:	-198px -108px;
+}
+.menu-plus{
+	display: block;
+	position: absolute;
+	padding: 18px 14px 18px 8px;
+	top: 0;
+	right: 0;
+}
+.btn-plus{
+	width: 14px;
+	height: 14px;
+	background-position: -215px -146px;
+}
+.body{
+	margin-top: 112px;
+	position: relative;
+}
+.body::after{
+	clear: both;
+	content: "";
+	display: block;
+}
+.contents{
+	width: 50%;
+	background-color: white;
+	margin-bottom: 10px;
+}
+/* 홀수번째 요소는 왼쪽으로 */
+.contents:nth-of-type(2n-1){
+	float: left;
+}
+/* 짝수번째 요소는 오른쪽으로 */
+.contents:nth-of-type(2n){
+	float: right;
+}
+.economy{
+	height: 337.8px;
+}
+.news-all{
+	height: 200px;
+}
+.news-location{
+	height: 141.8px;
+}
+.pan{
+	height: 174px;
+}
+.news-list{
+	height: 547px;
+}
+.broadcast{
+	height: 435.8px;
+}
+.press{
+	height: 387px;
+}
+.internet{
+	height: 337.6px;
+}
+.edit{
+	height: 90.8px;
+}
+.ad{
+	height: 140px;
+}
+.line{
+	width: 1px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: calc(50% - 0.5px);
+	background-color: #efefef;
+	z-index: 100;
+}
+.logo{
+	width: 54px;
+	padding: 19px 14px 19px 15px;
+	position: relative;
+}
+.logo-icon{
+	width: 24px;
+	height: 22px;
+	background-position: -32px -312px;
+}
+.back-icon{
+	width: 21px;
+	height: 18px;
+	margin: 2px 0 0 3px;
+	background-position: -366px -298px;
+}
+.search-line{
+	height: 22px;
+	width: 1px;
+	background-color:#eceff3;
+	position: absolute;
+	top: 50%;
+	right: -1px;
+	margin-top: -11px;
+}
+.search-btn-group1{
+	width: 137px;
+	display: flex;
+	padding: 0 7px;
+}
+.search-btn-group1>button{
+	width: 40px;
+	margin-right: 1px;
+	height: 60px;
+	display: block;
+	border: none;
+	background: white;
+	outline: none;
+}
+.btn-mic,
+.btn-loc,
+.btn-pic{
+	width: 28px;
+	height: 28px;
+	margin: 0 auto;
+}
+.btn-mic{
+	background-position: -321px -93px;
+}
+.btn-pic{
+	background-position: -321px -60px;
+}
+.btn-loc{
+	background-position: -321px -27px;
+}
+.search-input{
+	width: calc(100% - 54px - 137px);
+	padding: 17px 0 16px 14px;
+}
+/* 검색창 클릭시 포커스 */
+.search-input-focus{
+	width: calc(100% - 54px - 58px);
+}
+.search-input>input{
+	height: 27px;
+	width: 100%;
+	border: none;
+	outline: none;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: -.4px;
+	color: #c7cad1;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+}
+.search-input>input::placeholder{
+	color: rgb(225, 236,246);
+}
+.search-btn-group2>button{
+	width: 58px;
+	height: 60px;
+	border: none;
+	background-color: white;
+}
+.btn-search{
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+	background-position: -206px -93px;
+	cursor: pointer;
+}
+.search-list-box{
+	z-index: 102;
+	height: 210px;
+	width: 100%;
+	position: absolute;
+	top: 61px;
+	background-color: #fff;
+}
+.search-list{
+	padding: 53px 0 54px;
+	font-size: 1.6rem;
+	overflow: hidden;
+	color: #666;
+	line-height: 29px;
+	letter-spacing: -.3px;
+}
+.search-list>p{
+	text-align: center;
+}
+.search-list-detail{
+	font-size: 1.5rem;
+	color: #8f8f8f;
+}
+.search-list-detail>a{
+	color: #00c73c;
+}
+.search-option{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 46px;
+	border-top: 1px solid #ecf0f2;
+	line-height: 46px;
+	letter-spacing: -.3px;
+}
+.box1{
+	padding: 0 9px 14px 10px;
+}
+/* 인터넷,it지 css */
+.card-title{
+	height: 29.65px;
+	padding: 3px 6px 10px 5px;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: 17px;
+	color: #555;
+	letter-spacing: -1px;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+}
+.card{
+	height: 293.65px;
+}
+.card-row{
+	display: flex;
+	margin-bottom: 11px;
+}
+.card-item{
+	width: 100%;
+	height: 87px;
+	border: 1px solid #edeff4; 
+	background-color: #f2f4f9;
+	margin: 0 6px 0 5px;
+	position: relative;
+	cursor: pointer;
+	border-radius: 3px;
+}
+.card-item-select{
+	background-color: white;
+	border-color: #19c546;
+}
+.card-icon{
+	width: 42px;
+	height: 42px;
+	margin: 12px auto 0;
+	border-radius: 21px;
+	display: block;
+	border: 1px solid rgba(0,0,0,.07);
+}
+.card-subs{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: 13px;
+	height: 13px;
+	background-position: -594px -429px;
+}
+.card-subs-select{
+	top: 7px;
+	height: 10px;
+	background-position: -347px -516px;
+}
+.card-name{
+	margin-top: 4px;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 16px;
+	font-weight: 500;
+	font-size: 13px;
+	letter-spacing: -.8px;
+	color: #444;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+}
+.subs-count-box{
+	width: 220px;
+	height: 40px;
+	border-radius: 20px;
+	position: fixed;
+	bottom: 18px;
+	left: 50%;
+	margin-left: -110px;
+	border: none;
+	background-image: linear-gradient(170deg,#02cf55,#1ec5a2);
+	z-index: 101;
+	color: white;
+	font-weight: 600;
+	font-size: 15px;
+	letter-spacing: -1px;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
+}
+/* 배경 관련 css */
+.bg1{
+	background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191106.png');
+	background-size: 451px 440px;
+}
+.bg2{
+	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191114.png);
+	background-size: 621px 592px;
+}
+.bg3{
+	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_nav_3x_v190731.png);
+	background-size: 378px 321px;
+}
+.display-none{
+	display: none;
+}

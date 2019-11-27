@@ -7,6 +7,7 @@
 }
 body{
 	background-color: #eff2f8;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
 }
 .header{
 	position: fixed;
@@ -23,7 +24,15 @@ body{
 }
 .menu-list{
 	height: 52px;
-	background-color: #0eca68;
+	background-image: linear-gradient(to right,#0eca68,#00bf5f);
+	border: 1px solid rgba(0,0,0,.08);
+	padding: 15px 10px;
+	padding-right: 39px;
+	white-space: nowrap;
+	position: relative;
+}
+.menu-list-change{
+	background-image: linear-gradient(to right,#f09dba,#b781d6 50%,#8981e6);
 }
 .body{
 	margin-top: 112px;
@@ -259,6 +268,96 @@ body{
 	font-size: 16px;
 	padding: 0 3px;
 }
+/* 메뉴리스트 */
+.menu-box{
+	margin: 0px 5px;
+	cursor: pointer;
+	display: inline-block;
+}
+.whatdo{
+	width: 46px;
+	height: 24px;
+	background-position: -49px -189px;
+}
+.enter{
+	width: 32px;
+	height: 24px;
+	background-position: -345px -243px;
+}
+.mypay{
+	width: 54px;
+	height: 24px;
+	background-position: -198px -135px;
+}
+.selective{
+	width: 59px;
+	height: 24px;
+	background-position: -62px -162px;
+}
+.beauty{
+	width: 59px;
+	height: 24px;
+	background-position: 0 -162px;
+}
+.trend{
+	width: 45px;
+	height: 24px;
+	background-position: -260px -216px;
+}
+.home{
+	width: 18px;
+	height: 24px;
+	background-position: -283px -270px;
+}
+.news{
+	width: 33px;
+	height: 24px;
+	background-position: -108px -297px;
+}
+.ent{
+	width: 33px;
+	height: 24px;
+	background-position: -345px -27px;
+}
+.sports{
+	width: 46px;
+	height: 24px;
+	background-position: -260px -81px;
+}
+.chart{
+	width: 60px;
+	height: 24px;
+	background-position: -135px -108px;
+}
+.shopping{
+	width: 33px;
+	height: 24px;
+	background-position: -288px -297px;
+}
+.neighbor{
+	width: 60px;
+	height: 24px;
+	background-position: -63px -81px;
+}
+.mysubs{
+	width: 55px;
+	height: 24px;
+	background-position:	-198px -108px;
+}
+.btn-menuplus{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 32px;
+	height: 50px;
+	background-color: #00bf5f;
+}
+.plusmenu{
+	width: 14px;
+	height: 14px;
+	background-position: -215px -146px;
+	margin: 18px 9px;
+}
 .internet-title{
 	padding: 3px 15px 10px;
 	color: #555;
@@ -323,17 +422,19 @@ body{
 	position: fixed;
 	left: 0;
 	right: 0;
-	bottom: 20px;
+	bottom: 18px;
 	margin: 0 auto;
 	z-index: 100;
 	border-radius: 20px;
 	line-height: 19px;
 	text-align: center;
 	color: white;
-	background: #02cf55;
+	background-image: linear-gradient(170deg,#02cf55,#1ec5a2);
 	border: none;
-	font-weight: bold;
+	font-weight: 600;
 	font-size: 15px;
+	letter-spacing: -1px;
+	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
 }
 .bg1{
 	background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191106.png');
@@ -342,6 +443,10 @@ body{
 .bg2{
 	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191114.png);
 	background-size: 621px 592px;
+}
+.bg3{
+	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_nav_3x_v190731.png);
+	background-size: 378px 321px;
 }
 .display-none{
 	display: none;
