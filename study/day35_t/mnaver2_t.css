@@ -40,6 +40,7 @@ body{
 }
 .menu-item{
 	display: inline-block;
+	width: auto;
 	height: 51px;
 	margin: 0 4px 0 3px;
 	padding: 0 4px;
@@ -140,6 +141,9 @@ body{
 	clear: both;
 	content: "";
 	display: block;
+}
+.tabContents .swiper-slide{
+	margin-top: 112px;
 }
 .contents{
 	width: 50%;
@@ -404,6 +408,53 @@ body{
 	letter-spacing: -1px;
 	font-family: "Helvetica Neue","Apple SD Gothic Neo",sans-serif;
 }
+/* 엔터 메뉴 */
+.enter-menu{
+	background-color: #fff;
+	padding: 11px 0;
+	width: 50%;
+}
+.enter-menu-container{
+	width: 202px;
+	height: 36px;
+	border: 1px solid #d5d1ff;
+	background-color: #f2f1ff;
+	border-radius: 18px;
+	margin: 0 auto;
+	display: flex;
+}
+.enter-menu-item{
+	width: 101px;
+	height: 35px;
+	border-radius: 18px;
+	text-align: center;
+	cursor: pointer;
+}
+.enter-menu-item.select{
+	background-image: linear-gradient(to right,#9063fe,#686bfe);
+}
+.drama-icon{
+	width: 41px;
+	height: 14px;
+	background-position: -214px -323px;
+	display: inline-block;
+	position: relative;
+	top: 11px;
+}
+.enter-menu-item.select .drama-icon{
+	background-position:  -260px -323px;
+}
+.enter-icon{
+	width: 27px;
+	height: 14px;
+	background-position: -276px -488px;
+	display: inline-block;
+	position: relative;
+	top: 11px;
+}
+.enter-menu-item.select .enter-icon{
+	background-position:	-308px -488px;
+}
 /* 배경 관련 css */
 .bg1{
 	background-image: url('https://s.pstatic.net/static/www/m/uit/2019/sp_search_v191106.png');
@@ -416,6 +467,10 @@ body{
 .bg3{
 	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_nav_3x_v190731.png);
 	background-size: 378px 321px;
+}
+.bg4{
+	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191127.png);
+  background-size: 625px 594px;
 }
 .display-none{
 	display: none;

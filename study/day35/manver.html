@@ -5,13 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>모바일 네이버</title>
+	<link rel="stylesheet" href="../CSS/swiper.css">
 	<link rel="stylesheet" href="mnaver2.css">
 	<link rel="stylesheet" href="mnaver1.css">
 	<script src="../JS/Jquery.min.js"></script>
+	<script src="../JS/swiper.js"></script>
 	<script src="mnaver.js"></script>
-	<script>
-
-	</script>
 </head>
 <body>
 	<div class="header">
@@ -30,24 +29,27 @@
 			</div>
 		</div>
 		<div class="menu-list">
-			<div class="menu-box whatdo bg3"></div>
-			<div class="menu-box bg3 enter"></div>
-			<div class="menu-box bg3 mypay"></div>
-			<div class="menu-box bg3 selective"></div>
-			<div class="menu-box bg3 beauty"></div>
-			<div class="menu-box bg3 trend"></div>
-			<div class="menu-box bg3 home"></div>
-			<div class="menu-box bg3 news"></div>
-			<div class="menu-box bg3 ent"></div>
-			<div class="menu-box bg3 sports"></div>
-			<div class="menu-box bg3 chart"></div>
-			<div class="menu-box bg3 shopping"></div>
-			<div class="menu-box bg3 neighbor"></div>
-			<div class="menu-box bg3 mysubs"></div>
+			<div class="menu-list-container swiper-container">
+				<div class="swiper-wrapper">
+					<div class="menu-box whatdo bg3 swiper-slide" data-hash="slide1"></div>
+					<div class="menu-box bg3 enter swiper-slide" data-hash="slide2"></div>
+					<div class="menu-box bg3 mypay swiper-slide" data-hash="slide3"></div>
+					<div class="menu-box bg3 selective swiper-slide" data-hash="slide4"></div>
+					<div class="menu-box bg3 beauty swiper-slide" data-hash="slide5"></div>
+					<div class="menu-box bg3 trend swiper-slide" data-hash="slide6"></div>
+					<div class="menu-box bg3 home swiper-slide" data-hash="slide7"></div>
+					<div class="menu-box bg3 news swiper-slide" data-hash="slide8"></div>
+					<div class="menu-box bg3 ent swiper-slide" data-hash="slide9"></div>
+					<div class="menu-box bg3 sports swiper-slide" data-hash="slide10"></div>
+					<div class="menu-box bg3 chart swiper-slide" data-hash="slide11"></div>
+					<div class="menu-box bg3 shopping swiper-slide" data-hash="slide12"></div>
+					<div class="menu-box bg3 neighbor swiper-slide" data-hash="slide13"></div>
+					<div class="menu-box bg3 mysubs swiper-slide" data-hash="slide14"></div>
+				</div>		
+			</div> 
 			<div class="btn-menuplus">
-					<div class="menu-box bg1 plusmenu"></div>
+				<div class="menu-box bg1 plusmenu"></div>
 			</div>
-			
 		</div>
 		<div class="grey_container display-none">
 			<div class="white_container">
@@ -74,111 +76,139 @@
 			</div>
 		</div>
 	</div>
-	<div class="body">
-		<div class="contents economy"></div>
-		<div class="contents news-all"></div>
-		<div class="contents news-location"></div>
-		<div class="contents pan"></div>
-		<div class="contents news-list"></div>
-		<div class="contents broadcast"></div>
-		<div class="contents press"></div>
-		<div class="contents internet">
-			<p class="internet-title">인터넷·IT지</p>
-			<div class="api-box-row">
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+	<div class="swiper-container tabContents">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" data-hash="slide1">뭐하지</div>
+			<div class="body swiper-slide" data-hash="slide2">
+				<div class="contents btn-enter-box">
+					<div class="btn-enter">
+						<div class="btn-drama btn-drama2">
+							<div class="dramai dramai2 bg4"></div>
+						</div>
+						<div class="btn-show">
+							<div class="showi bg4"></div>
+						</div>
 					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
 				</div>
 			</div>
-			<div class="api-box-row">
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+			<div class="swiper-slide" data-hash="slide3">MY페이</div>
+			<div class="swiper-slide" data-hash="slide4">셀렉티브</div>
+			<div class="swiper-slide" data-hash="slide5">오늘뷰티</div>
+			<div class="swiper-slide" data-hash="slide6">트렌드</div>
+			<div class="swiper-slide" data-hash="slide7">홈</div>
+			<div class="body swiper-slide" data-hash="slide8">
+				<div class="contents economy"></div>
+				<div class="contents news-all"></div>
+				<div class="contents news-location"></div>
+				<div class="contents pan"></div>
+				<div class="contents news-list"></div>
+				<div class="contents broadcast"></div>
+				<div class="contents press"></div>
+				<div class="contents internet">
+					<p class="internet-title">인터넷·IT지</p>
+					<div class="api-box-row">
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
 					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+					<div class="api-box-row">
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
 					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+					<div class="api-box-row">
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
+						<div class="api-item">
+							<div class="plus-icon bg2"></div>
+							<div class="api-logo">
+								<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
+							</div>
+							<div class="api-name">데일리안</div>
+						</div>
 					</div>
-					<div class="api-name">데일리안</div>
 				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
+				<div class="contents edit"></div>
+				<div class="contents ad"></div>	
+				<div class="line"></div>
 			</div>
-			<div class="api-box-row">
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-				<div class="api-item">
-					<div class="plus-icon bg2"></div>
-					<div class="api-logo">
-						<img src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png" alt="">
-					</div>
-					<div class="api-name">데일리안</div>
-				</div>
-			</div>
-			
+			<!-- 뉴스끝 -->
+			<div class="swiper-slide" data-hash="slide9">연예</div>
+			<div class="swiper-slide" data-hash="slide10">스포츠</div>
+			<div class="swiper-slide" data-hash="slide11">검색차트</div>
+			<div class="swiper-slide" data-hash="slide12">쇼핑</div>
+			<div class="swiper-slide" data-hash="slide13">우리동네</div>
+			<div class="swiper-slide" data-hash="slide14">MY구독</div>
 		</div>
-		<div class="contents edit"></div>
-		<div class="contents ad"></div>	
-		<div class="line"></div>
 	</div>
 	<button class="btn-api-select display-none">개 언론사 구독</button>
 	<div class="footer"></div>

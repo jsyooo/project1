@@ -31,5 +31,36 @@ $(function(){
       $('.menu-list').addClass('menu-list-change');
     }
   })
-  
+  var tabMenu = new Swiper('.menu-list-container', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    // centeredSlidesBounds:true,
+    touchRatio: 1,
+    slideToClickedSlide: true,
+    hashNavigation: true,
+  });
+  var tabContents = new Swiper('.tabContents', {
+    spaceBetween: 10,
+    hashNavigation: true,
+  });
+  // tabMenu와 tabContents를 연결해줌.
+  tabContents.controller.control = tabMenu;
+  tabMenu.controller.control = tabContents;
+
+  tabMenu.slideTo(7,0);
+  tabContents.slideTo(7,0);
+
+  $('.btn-drama').click(function(){
+    $(this).addClass('btn-drama2');
+    $('.btn-show').removeClass('btn-show2');
+    $(this).find('.dramai').addClass('dramai2');
+    $('.btn-show').find('.showi').removeClass('showi2');
+  })
+  $('.btn-show').click(function(){
+    $(this).addClass('btn-show2');
+    $('.btn-drama').removeClass('btn-drama2');
+    $(this).find('.showi').addClass('showi2');
+    $('.btn-drama').find('.dramai').removeClass('dramai2');
+  })
 })

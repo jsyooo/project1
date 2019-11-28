@@ -5,9 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>모바일 네이버_t</title>
+	<link rel="stylesheet" href="../CSS/swiper.css">
 	<link rel="stylesheet" href="mnaver2_t.css">
 	<link rel="stylesheet" href="mnaver1_t.css">
 	<script src="../JS/Jquery.min.js"></script>
+	<script src="../JS/swiper.js"></script>
 	<script src="mnaver_t.js"></script>
 </head>
 <body>
@@ -31,38 +33,42 @@
 			</div>
 		</div>
 		<div class="menu-list">
-			<div class="menu-list-container">
+			<div class="menu-list-container swiper-container">
+				<div class="swiper-wrapper">
 				<!-- onclick: click 이벤트 발생시, 처리하는 코드.
 						 자바스크립트 방식의 이벤트 처리
 						 유사한 방법으로 onchange 등이 있다.
 					아래코드는 a태그를 클릭했을 때 링크 이벤트가 발생하지 않도록 
 					처리하는방법 중 하나이다. -->
-				<a href="#" onclick="return false" class="menu-item sel-pink">
-				<div class="todo bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item sel-pink">
-					<div class="enter bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item sel-pink">
-					<div class="mypay bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item sel-pink">
-					<div class="beauty bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item sel-pink">
-					<div class="trend bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="home bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="news bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="ent bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="sports bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="chart bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="shopping bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="neighbor bg3"></div></a>
-				<a href="#" onclick="return false" class="menu-item">
-					<div class="mysubs bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide1">
+					<div class="todo bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide2">
+						<div class="enter bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide3">
+						<div class="mypay bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide4">
+						<div class="selective bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide5">
+						<div class="beauty bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item sel-pink swiper-slide" data-hash="slide6">
+						<div class="trend bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide7">
+						<div class="home bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide8">
+						<div class="news bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide9">
+						<div class="ent bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide10">
+						<div class="sports bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide11">
+						<div class="chart bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide12">
+						<div class="shopping bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide13">
+						<div class="neighbor bg3"></div></a>
+					<a href="#" onclick="return false" class="menu-item swiper-slide" data-hash="slide14">
+						<div class="mysubs bg3"></div></a>
+				</div>		
 			</div> 
 			<a href="#" onclick="return false" class="menu-plus">
 				<div class="btn-plus bg1"></div></a>
@@ -75,90 +81,129 @@
 		</div>
 		<div class="search-option"></div>
 	</div>
-	<div class="body">
-		<div class="contents economy"></div>
-		<div class="contents news-all"></div>
-		<div class="contents news-location"></div>
-		<div class="contents pan"></div>
-		<div class="contents news-list"></div>
-		<div class="contents broadcast"></div>
-		<div class="contents press"></div>
-		<div class="contents internet box1">
-			<div class="card-title">인터넷·IT지</div>
-			<div class="card">
-				<div class="card-row">
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
+	<div class="swiper-container tabContents">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" data-hash="slide1">뭐하지</div>
+			<div class="body swiper-slide" data-hash="slide2">
+				<div class="enter-menu">
+					<div class="enter-menu-container">
+						<div class="enter-menu-item select">
+							<a href="#" onclick="return false" class="drama-icon bg4"></a>
+						</div>
+						<div class="enter-menu-item">
+							<a href="#" onclick="return false" class="enter-icon bg4"></a>
+						</div>
 					</div>
 				</div>
-				<div class="card-row">
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
+				<!-- <div class="contents btn-enter-box">
+					<div class="btn-enter">
+						<div class="btn-drama">
+							<div class="dramai bg4"></div>
+						</div>
+						<div class="btn-show">
+							<div class="showi bg4"></div>
+						</div>
 					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-				</div>
-				<div class="card-row">
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-					<div class="card-item">
-						<div class="card-subs bg2"></div>
-						<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
-						<div class="card-name">데일리안</div>
-					</div>
-				</div>
+				</div> -->
 			</div>
+			<div class="swiper-slide" data-hash="slide3">MY페이</div>
+			<div class="swiper-slide" data-hash="slide4">셀렉티브</div>
+			<div class="swiper-slide" data-hash="slide5">오늘뷰티</div>
+			<div class="swiper-slide" data-hash="slide6">트렌드</div>
+			<div class="swiper-slide" data-hash="slide7">홈</div>
+			<div class="body swiper-slide" data-hash="slide8">
+				<div class="contents economy"></div>
+				<div class="contents news-all"></div>
+				<div class="contents news-location"></div>
+				<div class="contents pan"></div>
+				<div class="contents news-list"></div>
+				<div class="contents broadcast"></div>
+				<div class="contents press"></div>
+				<div class="contents internet box1">
+					<div class="card-title">인터넷·IT지</div>
+					<div class="card">
+						<div class="card-row">
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+						</div>
+						<div class="card-row">
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+						</div>
+						<div class="card-row">
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+							<div class="card-item">
+								<div class="card-subs bg2"></div>
+								<img class="card-icon" src="https://s.pstatic.net/mimgnews/image/upload/office_logo/119/2018/08/08/logo_119_57_20180808174508.png">
+								<div class="card-name">데일리안</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contents edit"></div>
+				<div class="contents ad"></div>	
+				<div class="line"></div>
+			</div>
+			<!-- (news부분) body class 끝 -->
+			<div class="swiper-slide" data-hash="slide9">연예</div>
+			<div class="swiper-slide" data-hash="slide10">스포츠</div>
+			<div class="swiper-slide" data-hash="slide11">검색차트</div>
+			<div class="swiper-slide" data-hash="slide12">쇼핑</div>
+			<div class="swiper-slide" data-hash="slide13">우리동네</div>
+			<div class="swiper-slide" data-hash="slide14">MY구독</div>
 		</div>
-		<div class="contents edit"></div>
-		<div class="contents ad"></div>	
-		<div class="line"></div>
-		<button class="subs-count-box display-none"></button>
 	</div>
+	<button class="subs-count-box display-none"></button>
 	<div class="footer"></div>
 </body>
 </html>

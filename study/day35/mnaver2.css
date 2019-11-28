@@ -23,6 +23,7 @@ body{
 	display: flex;
 }
 .menu-list{
+	width: auto;
 	height: 52px;
 	background-image: linear-gradient(to right,#0eca68,#00bf5f);
 	border: 1px solid rgba(0,0,0,.08);
@@ -55,6 +56,75 @@ body{
 /* 짝수번째 요소는 오른쪽으로 */
 .contents:nth-of-type(2n){
 	float: right;
+}
+/* 엔터 */
+.btn-enter-box{
+	height: 57.53px;
+	margin-bottom: 10px;
+	padding: 11px 0;
+	position: relative;
+}
+/* enter 버튼 */
+.btn-enter{
+	width: 202px;
+	height: 36px;
+	border-radius: 18px;
+	background-color: #f2f1ff;
+	border: 1px solid #d5d1ff;
+	display: flex;
+	cursor: pointer;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+.btn-drama{
+	width: 101px;
+	height: 36px;
+	border-radius: 18px;
+	position: absolute;
+	top: -1px;
+	left: 0;
+}
+.btn-drama2{
+	background-image: linear-gradient(to right,#9063fe,#686bfe);
+}
+.btn-show{
+	width: 101px;
+	height: 36px;
+	border-radius: 18px;
+	position: absolute;
+	top: -1px;
+	right: 0;
+}
+.btn-show2{
+	background-image: linear-gradient(to right,#9063fe,#686bfe);
+}
+.dramai{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 41px;
+	height: 14px;
+	background-position: -214px -323px;
+}
+.dramai2{
+	background-position: -260px -323px;
+}
+.showi{
+	position: absolute;
+	top: 10px;
+	right: 0;
+	left: 0;
+	margin: 0 auto;
+	width: 27px;
+	height: 14px;
+	background-position: -276px -488px;
+}
+.showi2{
+	background-position: -308px -488px;
 }
 .economy{
 	height: 337.8px;
@@ -447,6 +517,10 @@ body{
 .bg3{
 	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_nav_3x_v190731.png);
 	background-size: 378px 321px;
+}
+.bg4{
+	background-image: url(https://s.pstatic.net/static/www/m/uit/2019/sp_cui_v191127.png);
+  background-size: 625px 594px;
 }
 .display-none{
 	display: none;

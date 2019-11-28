@@ -45,4 +45,28 @@ $(function(){
       $('.menu-plus').removeClass('display-none');
     }
   })
+  var tabMenu = new Swiper('.menu-list-container', {
+    spaceBetween: 10,
+    slidesPerView: 'auto',
+    centeredSlides: true,
+    // centeredSlidesBounds:true,
+    touchRatio: 1,
+    slideToClickedSlide: true,
+    hashNavigation: true,
+  });
+  var tabContents = new Swiper('.tabContents', {
+    spaceBetween: 10,
+    hashNavigation: true,
+  });
+  // tabMenu와 tabContents를 연결해줌.
+  tabContents.controller.control = tabMenu;
+  tabMenu.controller.control = tabContents;
+
+  tabMenu.slideTo(7,0);
+  tabContents.slideTo(7,0);
+
+  $('.enter-menu-item').click(function(){
+    $(this).addClass('select').siblings().removeClass('select');
+  })
+  // 클릭한 요소에 select추가 다른형제에는 select제거
 })
