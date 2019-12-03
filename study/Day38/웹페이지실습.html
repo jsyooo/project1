@@ -6,29 +6,32 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹페이지 실습</title>
   <link rel="stylesheet" href="./웹페이지실습.css">
+  <script src="../JS/Jquery.min.js"></script>
+  <script src="./웹페이지실습.js"></script>
+  <script src="https://kit.fontawesome.com/ddedb4d3ce.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <div class="header">
     <div class="header-top">
       <div class="header-info">
-        <div class="a-login">Agent Login</div>
+        <div class="a-login"><i class="fas fa-user"></i> Agent Login</div>
         <div class="header-bar"></div>
-        <div class="c-login">Customer Login</div>
+        <div class="c-login"><i class="fas fa-user"></i>Customer Login</div>
         <div class="header-bar"></div>
-        <div class="register">Not a Member? <span>Register</span></div>
+        <div class="register"><i class="far fa-file"></i>Not a Member? <span>Register</span></div>
         <div class="header-bar"></div>
         <div class="callus">Call Us Now :815-123-4567</div>
         <div class="header-bar"></div>
       </div>
       <div class="sns-icon">
         <div class="header-bar"></div>
-        <div class="fb"></div>
+        <div class="fb"><i class="fab fa-facebook-f"></i></div>
         <div class="header-bar"></div>
-        <div class="twitter"></div>
+        <div class="twitter"><i class="fab fa-twitter"></i></div>
         <div class="header-bar"></div>
-        <div class="tumblr"></div>
+        <div class="tumblr"><i class="fab fa-tumblr"></i></div>
         <div class="header-bar"></div>
-        <div class="pinterest"></div>
+        <div class="pinterest"><i class="fab fa-pinterest"></i></div>
         <div class="header-bar"></div>
       </div>
     </div>
@@ -38,12 +41,13 @@
       </div>
       <div class="menu-list">
         <ul>
-          <li class="home">HOME</li>
+          <li class="home mint">HOME</li>
           <li class="destinations">DESTINATIONS</li>
           <li class="criuses">CRIUSES</li>
           <li class="specials">SPECIALS</li>
           <li class="holidays">HOLIDAYS</li>
           <li class="blog">BLOG</li>
+          <li><i class="fas fa-search"></i></li>
         </ul>
       </div>
     </div>
@@ -53,6 +57,22 @@
       <div class="main-img">
         <div class="bg-img"></div>
         <img class="img-bg" src="./img/메인이미지.jpg" alt="">
+        <div>
+          <div class="btn-left-box"></div>
+          <i class="fas fa-chevron-left btn-left btn"></i>
+          <div class="btn-right-box"></div>
+          <i class="fas fa-chevron-right btn btn-right"></i>
+        </div>
+        <div>
+          <div class="maintext">
+            <div>TO TRAVEL IS TO LIVE</div>
+            <div class="subtext">You Don't Need Magic to Disappear. All you need is a destination.</div>
+            <div class="main-btn">
+              <button class="showonthemap">SHOW ON THE MAP</button>
+              <button class="moreinfo">MORE INFO</button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="reserve">
         <div class="resev-title">FIND YOUR <span>HOLIDAYS</span></div>
@@ -81,8 +101,9 @@
           </div>
           <div class="detail">
             statue of liberty - USA
-            New Destination!              
+           <div>New Destination!</div>              
           </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
         <div class="photocard">
           <div class="photo">
@@ -90,17 +111,19 @@
           </div>
           <div class="detail">
             Spectacular Seychelles
-            New Destination!              
+           <div>New Destination!</div>              
           </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
-        <div class="photocard">
+        <div class="photocard selcted-photocard">
           <div class="photo">
             <img src="./img/sub_03.jpg" alt="">
           </div>
           <div class="detail">
             Hong Kong & Macau
-            Bonus Extras!              
+           <div>Bonus Extras!</div>              
           </div>
+          <i class="fas fa-chevron-down selected-down"></i>
         </div>
         <div class="photocard">
           <div class="photo">
@@ -108,8 +131,9 @@
           </div>
           <div class="detail">
             Vietnam Highlights
-            New Destination!              
+            <div>New Destination!</div>             
           </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
         <div class="photocard">
           <div class="photo">
@@ -117,8 +141,9 @@
           </div>
           <div class="detail">
             Spectacular Seychelles
-            New Destination!
+            <div>New Destination!</div>
           </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
         <div class="photocard">
           <div class="photo">
@@ -126,8 +151,9 @@
           </div>
           <div class="detail">
             Dubai
-            New Destination!              
+            <div>New Destination!</div>          
           </div>
+          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
     </div>
@@ -142,12 +168,30 @@
           <p class="type-text2">get explore your dream to travel the world!</p>
         </div>
         <div class="type-box">
-          <div class="cruise-box"></div>
-          <div class="city-box"></div>
-          <div class="honeymoon-box"></div>
-          <div class="adventure-box"></div>
-          <div class="safari-box"></div>
-          <div class="beach-box"></div>
+          <div class="traveltype">
+            <div class="round"><i class="fas fa-ship typei"></i></div>
+            <div class="type">Cruise</div>
+          </div>
+          <div class="traveltype">
+            <div class="round"><i class="fas fa-city typei"></i></div>
+            <div class="type"> City Breaks</div>
+          </div>
+          <div class="traveltype">
+            <div class="round type-slct"><i class="fas fa-heart typei type-slct"></i></div>
+            <div class="type type-slct">Honeymoon</div>
+          </div>
+          <div class="traveltype">
+            <div class="round"><i class="fas fa-compass typei"></i></div>
+            <div class="type">Adventure</div>
+          </div>
+          <div class="traveltype">
+            <div class="round"><i class="fas fa-paw typei"></i></i></div>
+            <div class="type">Safari</div>
+          </div>
+          <div class="traveltype">
+            <div class="round"><i class="fas fa-umbrella-beach typei"></i></div>
+            <div class="type">Beach</div>
+          </div>
         </div>
       </div>
     </div>
@@ -158,24 +202,29 @@
       </div>
       <div class="comment-box">
         <div class="comment">
-          Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.
-          <div>Client Name</div> 
+          <div class="active-bar display-none"></div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+          <div class="clientname">Client Name</div>
         </div>
         <div class="comment">
-          Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.
-        <div>Client Name</div>
+          <div class="active-bar"></div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+          <div class="clientname">Client Name</div>
         </div>
         <div class="comment">
-          Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.
-        <div>Client Name</div>
+          <div class="active-bar display-none"></div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+          <div class="clientname">Client Name</div>
         </div>
         <div class="comment">
-          Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.
-        <div>Client Name</div> 
+          <div class="active-bar display-none"></div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+          <div class="clientname">Client Name</div> 
         </div>
         <div class="comment">
-          Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.
-        <div>Client Name</div>
+          <div class="active-bar display-none"></div>
+          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+          <div class="clientname">Client Name</div>
         </div>
       </div>
     </div>
@@ -196,17 +245,21 @@
       <div class="footer-box latestnews">
         <div class="sub-title">Latest News</div>
         <div class="news">
-          <div class="newsphoto"></div>
-          <div>
+          <div class="newsphoto">
+            <img src="./img/photo1.jpg" alt="">
+          </div>
+          <div class="newstext">
             Postformat Gallery: Multiple images
             <br><div class="color-cyan">October 21, 2013 - 3:31 pm</div>
           </div>
         </div>
         <div class="news">
-          <div class="newsphoto"></div>
-          <div>
-              Snowboarding is fun!
-             <br><div class="color-cyan">December 12, 2012 - 9:11 pm</div>
+          <div class="newsphoto">
+            <img src="./img/photo2.jpg" alt="">
+          </div>
+          <div class="newstext">
+            Snowboarding is fun!
+            <br><div class="color-cyan">December 12, 2012 - 9:11 pm</div>
           </div>
         </div>
       </div>
@@ -230,11 +283,26 @@
           <br><div class="color-cyan">E-mail:</div> moin@blindtextgenerator.de
         </div>
         <div class="icons">
-
+          <div class="fb"><i class="fab fa-facebook-f"></i></div>
+          <div class="twitter"><i class="fab fa-twitter"></i></div>
+          <div class="tumblr"><i class="fab fa-tumblr"></i></div>
+          <div class="pinterest"><i class="fab fa-pinterest"></i></div>
         </div>
       </div>
     </div>
-    <div class="footer-bottom"></div>
+    <div class="footer-bottom">
+      <div class="tags">
+        <a href="#" class="tag now">Home</a> ::
+        <a href="#" class="tag">Destinations</a> ::
+        <a href="#" class="tag">Cruises</a> ::
+        <a href="#" class="tag">Specials</a> ::
+        <a href="#" class="tag">Holidays</a> ::
+        <a href="#" class="tag">Blog</a> ::
+        <a href="#" class="tag">Contact Us</a>
+      </div>
+      <div class="copyright">Copyright @voyage. All Right Reserved.</div>
+    </div>
+    
   </div>
 </body>
 </html>
