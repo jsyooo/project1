@@ -7,9 +7,6 @@
 body{
   width: 1700px;
 }
-i{
-  margin-right: 5px;
-}
 .mint{
   color: #1dd2af;
 }
@@ -69,17 +66,17 @@ i{
 }
 .a-login{
   width: 130px;
-  margin-right: 10px;
+  margin: 0 3px;
   cursor: pointer;
 }
 .c-login{
   width: 160px;
-  margin-right: 10px;
+  margin: 0 3px;
   cursor: pointer;
 }
 .register{
  width: 240px;
- margin-right: 10px;
+ margin: 0 3px;
  cursor: pointer;
 }
 .register>span{
@@ -87,7 +84,7 @@ i{
 }
 .callus{
   width: 250px;
-  margin-right: 10px;
+  margin: 0 3px;
   cursor: pointer;
 }
 .sns-icon{
@@ -331,6 +328,7 @@ li{
 }
 .offer-cards{
   width: 1720px;
+  height: 320px;
   margin-left: -10px;
 }
 .photocard{
@@ -340,18 +338,18 @@ li{
   border-radius: 2px;
   display: inline-block;
   margin-right: 10px;
-  overflow: hidden;
   cursor: pointer;
   background-color: #eeeeee;
   color: #626262;
   position: relative;
+  padding-bottom: 10px;
 }
 .photo{
   height: 196px;
   overflow: hidden;
 }
 .detail{
-  padding: 12px 0 0 15px;
+  padding: 15px 0 0 15px;
   height: 74px;
   font-size: 16px;
 }
@@ -359,16 +357,28 @@ li{
   color: #2c3e50;
   position: absolute;
   bottom: 20px;
-  right: 10px;
-  font-size: 18px;
+  right: 20px;
+  font-size: 22px;
 }
 .selcted-photocard{
   background-color: #2c3e50;
   border-color: #1dd2af;
   color: white;
+  height: 300px;
+  margin-top: -15px;
+}
+.selcted-photo{
+  height: 211px;
+}
+.selected-detail{
+  height: 89px;
 }
 .selected-down{
   color: #fff;
+  bottom: 25px;
+}
+.swiper-container{
+  overflow: visible;
 }
 
 /* content3 */
@@ -413,6 +423,9 @@ li{
   width: 150px;
   height: 200px;
   margin-right: 30px;
+}
+.traveltype{
+  cursor: pointer;
 }
 .round{
   width: 150px;
@@ -459,7 +472,6 @@ li{
 .comment-box{
   width: 100%;
   height: 179px;
-  overflow: hidden;
 }
 .comment{
   width: 475px;
@@ -471,6 +483,7 @@ li{
   border: 1px solid #dedede;
   margin-right: 18px;
   position: relative;
+  cursor: pointer;
 }
 .clientname{
   margin-top: 5px;
@@ -479,7 +492,7 @@ li{
   font-weight: 600;
 }
 .active-bar{
-  width: 474px;
+  width: 100%;
   height: 5px;
   background-color: #1dd2af;
   position: absolute;

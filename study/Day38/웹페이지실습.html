@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹페이지 실습</title>
+  <link rel="stylesheet" href="../CSS/swiper.css">
   <link rel="stylesheet" href="./웹페이지실습.css">
   <script src="../JS/Jquery.min.js"></script>
+  <script src="../JS/swiper.js"></script>
   <script src="./웹페이지실습.js"></script>
   <script src="https://kit.fontawesome.com/ddedb4d3ce.js" crossorigin="anonymous"></script>
 </head>
@@ -16,9 +18,9 @@
       <div class="header-info">
         <div class="a-login"><i class="fas fa-user"></i> Agent Login</div>
         <div class="header-bar"></div>
-        <div class="c-login"><i class="fas fa-user"></i>Customer Login</div>
+        <div class="c-login"><i class="fas fa-user"></i> Customer Login</div>
         <div class="header-bar"></div>
-        <div class="register"><i class="far fa-file"></i>Not a Member? <span>Register</span></div>
+        <div class="register"><i class="far fa-file"></i> Not a Member? <span>Register</span></div>
         <div class="header-bar"></div>
         <div class="callus">Call Us Now :815-123-4567</div>
         <div class="header-bar"></div>
@@ -94,66 +96,68 @@
         <p class="textline1">SPECIAL OFFERS</p>
         <p class="textline2">Best 2014 packages where people love to stay!</p>
       </div>
-      <div class="offer-cards">
-        <div class="photocard">
-          <div class="photo">
-            <img src="./img/sub_01.jpg" alt="">
+      <div class="swiper-container">
+        <div class="offer-cards swiper-wrapper">
+          <div class="photocard swiper-slide">
+            <div class="photo">
+              <img src="./img/sub_01.jpg" alt="">
+            </div>
+            <div class="detail">
+              statue of liberty - USA
+            <div>New Destination!</div>              
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <div class="detail">
-            statue of liberty - USA
-           <div>New Destination!</div>              
+          <div class="photocard swiper-slide">
+            <div class="photo">
+                <img src="./img/sub_02.jpg" alt="">
+            </div>
+            <div class="detail">
+              Spectacular Seychelles
+            <div>New Destination!</div>              
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="photocard">
-          <div class="photo">
-              <img src="./img/sub_02.jpg" alt="">
+          <div class="photocard swiper-slide">
+            <div class="photo">
+              <img src="./img/sub_03.jpg" alt="">
+            </div>
+            <div class="detail">
+              Hong Kong & Macau
+            <div>Bonus Extras!</div>              
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <div class="detail">
-            Spectacular Seychelles
-           <div>New Destination!</div>              
+          <div class="photocard swiper-slide">
+            <div class="photo">
+              <img src="./img/sub_04.jpg" alt="">
+            </div>
+            <div class="detail">
+              Vietnam Highlights
+              <div>New Destination!</div>             
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="photocard selcted-photocard">
-          <div class="photo">
-            <img src="./img/sub_03.jpg" alt="">
+          <div class="photocard swiper-slide">
+            <div class="photo">
+              <img src="./img/sub_05.jpg" alt="">
+            </div>
+            <div class="detail">
+              Spectacular Seychelles
+              <div>New Destination!</div>
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <div class="detail">
-            Hong Kong & Macau
-           <div>Bonus Extras!</div>              
+          <div class="photocard swiper-slide">
+            <div class="photo">
+              <img src="./img/sub_06.jpg" alt="">
+            </div>
+            <div class="detail">
+              Dubai
+              <div>New Destination!</div>          
+            </div>
+            <i class="fas fa-chevron-down"></i>
           </div>
-          <i class="fas fa-chevron-down selected-down"></i>
-        </div>
-        <div class="photocard">
-          <div class="photo">
-            <img src="./img/sub_04.jpg" alt="">
-          </div>
-          <div class="detail">
-            Vietnam Highlights
-            <div>New Destination!</div>             
-          </div>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="photocard">
-          <div class="photo">
-            <img src="./img/sub_05.jpg" alt="">
-          </div>
-          <div class="detail">
-            Spectacular Seychelles
-            <div>New Destination!</div>
-          </div>
-          <i class="fas fa-chevron-down"></i>
-        </div>
-        <div class="photocard">
-          <div class="photo">
-            <img src="./img/sub_06.jpg" alt="">
-          </div>
-          <div class="detail">
-            Dubai
-            <div>New Destination!</div>          
-          </div>
-          <i class="fas fa-chevron-down"></i>
         </div>
       </div>
     </div>
@@ -177,8 +181,8 @@
             <div class="type"> City Breaks</div>
           </div>
           <div class="traveltype">
-            <div class="round type-slct"><i class="fas fa-heart typei type-slct"></i></div>
-            <div class="type type-slct">Honeymoon</div>
+            <div class="round"><i class="fas fa-heart typei"></i></div>
+            <div class="type">Honeymoon</div>
           </div>
           <div class="traveltype">
             <div class="round"><i class="fas fa-compass typei"></i></div>
@@ -200,31 +204,33 @@
         <p class="review-text1">HAPPY CLIENTS</p>
         <p class="review-text2">what customer say about us and why love our services!</p>
       </div>
-      <div class="comment-box">
-        <div class="comment">
-          <div class="active-bar display-none"></div>
-          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
-          <div class="clientname">Client Name</div>
-        </div>
-        <div class="comment">
-          <div class="active-bar"></div>
-          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
-          <div class="clientname">Client Name</div>
-        </div>
-        <div class="comment">
-          <div class="active-bar display-none"></div>
-          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
-          <div class="clientname">Client Name</div>
-        </div>
-        <div class="comment">
-          <div class="active-bar display-none"></div>
-          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
-          <div class="clientname">Client Name</div> 
-        </div>
-        <div class="comment">
-          <div class="active-bar display-none"></div>
-          <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
-          <div class="clientname">Client Name</div>
+      <div class="swiper-container CommentSlide">
+        <div class="comment-box swiper-wrapper">
+          <div class="comment swiper-slide">
+            <div class="active-bar display-none"></div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+            <div class="clientname">Client Name1</div>
+          </div>
+          <div class="comment swiper-slide">
+            <div class="active-bar display-none"></div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+            <div class="clientname">Client Name2</div>
+          </div>
+          <div class="comment swiper-slide">
+            <div class="active-bar display-none"></div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+            <div class="clientname">Client Name3</div>
+          </div>
+          <div class="comment swiper-slide">
+            <div class="active-bar display-none"></div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+            <div class="clientname">Client Name4</div> 
+          </div>
+          <div class="comment swiper-slide">
+            <div class="active-bar display-none"></div>
+            <div>Lorem Ipsum is simply dummy text of the printing and typese tting industry. Lorem Ipsum has been the industry's.</div>
+            <div class="clientname">Client Name5</div>
+          </div>
         </div>
       </div>
     </div>
