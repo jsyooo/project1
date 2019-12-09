@@ -1,0 +1,30 @@
+$(function(){
+  $('.menu').hover(function(){
+    $(this).toggleClass('menu-hover')
+  })
+  $('.readmore').hover(function(){
+    $(this).toggleClass('readmore-hover')
+  })
+  $('.pic').hover(function(){
+    $(this).toggleClass('pic-hover')
+  })
+  $('.twitter').hover(function(){
+    $(this).toggleClass('twitter-hover')
+  })
+  $('.facebook').hover(function(){
+    $(this).toggleClass('facebook-hover')
+  })
+  $('.googleplus').hover(function(){
+    $(this).toggleClass('googleplus-hover')
+  })
+  $('.pinterest').hover(function(){
+    $(this).toggleClass('pinterest-hover')
+  })
+
+  $('.readthis').hover(function(){
+    $(this).toggleClass('readthis-hover')
+  })
+  $('.send').hover(function(){
+    $(this).toggleClass('send-hover')
+  })
+})
