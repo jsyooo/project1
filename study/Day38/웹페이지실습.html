@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>웹페이지 실습</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="../CSS/swiper.css">
   <link rel="stylesheet" href="./웹페이지실습.css">
   <script src="../JS/Jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="../JS/swiper.js"></script>
   <script src="./웹페이지실습.js"></script>
   <script src="https://kit.fontawesome.com/ddedb4d3ce.js" crossorigin="anonymous"></script>
@@ -78,17 +80,21 @@
       </div>
       <div class="reserve">
         <div class="resev-title">FIND YOUR <span>HOLIDAYS</span></div>
-        <div class="resev-detail">
-          <div class="where-box">
-            <span>Where</span>
-            <input type="text" placeholder=" destination" class="where-input">
+        <form action="">
+          <div class="resev-detail">
+            <div class="where-box">
+              <span>Where</span>
+              <input type="text" placeholder=" destination" class="where-input">
+              <i class="fas fa-globe-americas"></i>
+            </div>
+            <div class="when-box">
+              <span>When</span>
+              <input type="text" placeholder=" select date" class="when-input">
+              <i class="far fa-calendar-alt"></i>
+            </div>
+            <button class="btn-search">Search</button>
           </div>
-          <div class="when-box">
-            <span>When</span>
-            <input type="text" placeholder=" select date" class="when-input">
-          </div>
-          <button class="btn-search">Search</button>
-        </div>
+        </form>
       </div>
     </div>
     <div class="content2">
@@ -243,10 +249,12 @@
           Duis autem vel eum iriure dolor in 
           hendrerit in vulputate velit esse molestie consequat, vel illum dolore.
         </div>
-        <div>
-          <input class="input-subs" type="text" placeholder=" Subscribes...">
-          <button class="btn-go">GO</button>
-        </div>
+        <form action="">
+          <div>
+            <input class="input-subs" type="text" placeholder=" Subscribes...">
+            <button class="btn-go">GO</button>
+          </div>
+        </form>
       </div>
       <div class="footer-box latestnews">
         <div class="sub-title">Latest News</div>

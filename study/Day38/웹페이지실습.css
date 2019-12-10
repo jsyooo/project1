@@ -28,6 +28,7 @@ body{
 }
 .content2{
   height: 637px;
+  overflow: hidden;
 }
 .content3{
   height: 518px;
@@ -36,6 +37,7 @@ body{
 }
 .content4{
   height: 462px;
+  overflow: hidden;
 }
 .footer{
   width: 100%;
@@ -242,11 +244,11 @@ li{
 .showonthemap{
   width: 221px;
   height: 60px;
-  background: #1dd2af;
+  background: none;
+  border: 2px solid white;
   border-radius: 5px;
   font-size: 20px;
   color: white;
-  border: none;
   cursor: pointer;
 }
 .moreinfo{
@@ -259,6 +261,10 @@ li{
   border-radius: 5px;
   margin-left: 30px;
   cursor: pointer;
+}
+.main-btn-hover{
+  background-color: #1dd2af;
+  border: none;
 }
 .reserve{
   padding-left: 150px;
@@ -308,6 +314,16 @@ li{
   border: none;
   font-size: 20px;
   cursor: pointer;
+}
+.where-box, .when-box{
+  position: relative;
+}
+.fa-globe-americas, .fa-calendar-alt{
+  color: gray;
+  font-size: 20px;
+  position: absolute;
+  top: 16px;
+  right: 40px;
 }
 
 /* content2 */

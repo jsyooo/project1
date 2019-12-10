@@ -21,9 +21,14 @@
 		 url('./fonts/leckerlione/leckerlione-regular-webfont.svg#leckerli_oneregular') format('svg');
 }
 body{
-  width: 1440px;
+  min-width: 1440px;
   height: 1440px;
 }
+a{
+  text-decoration: none;
+  color: #252525
+}
+/* H O M E */
 /* header */
 .header{
   width: 100%;
@@ -61,7 +66,8 @@ body{
 }
 /* body-content1 */
 .content1{
-  height: 554px;
+  width: 100%;
+  margin: 0 auto;
   position: relative;
 }
 .textbox{
@@ -194,8 +200,10 @@ body{
 .pinterest-hover{
   background-image: url('./images/icons/icon-pinterest-hover.jpg');
 }
+
 /* 공통 클래스 */
 .menu-title{
+  height: 54px;
   background-color: #252525;
   font-family: 'poller_oneregular';
   margin: 0 auto;
@@ -208,11 +216,30 @@ body{
 .border{
   border: 2px solid #252525;
 }
+.text{
+  margin: 0 auto;
+  color: #252525;
+  font-size: 15px;
+  font-family: Arial;
+  text-align: center;
+  line-height: 24px;
+}
+.bold{
+  font-weight: bold;
+}
+.sub-title{
+  font-family: Arial Black;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+.ab{
+  font-family: Arial Black;
+  color: #252525;
+}
 
 /* A B O U T */
 .about-title{
   width: 555px;
-  height: 54px;
 }
 .about-pic{
   width: 620px;
@@ -222,21 +249,13 @@ body{
 }
 .about-txtbox{
   width: 555px;
-  margin: 0 auto;
-  color: #252525;
-  font-size: 15px;
-  font-family: Arial;
-  text-align: center;
 }
-.about-txtbox a{
+.a{
+  text-decoration: underline;
   color: #252525;
 }
 .about-txt{
   margin-top: 25px;
-  line-height: 24px;
-}
-.bold{
-  font-weight: bold;
 }
 .a-hover{
   color: #898989;
@@ -245,7 +264,6 @@ body{
 /* G A L L E R Y */
 .gallery-title{
   width: 250px;
-  height: 54px;
 }
 .row{
   width: 940px;
@@ -256,14 +274,13 @@ body{
 .gallery-pic{
   width: 300px;
   height: 299px;
-  border: 2px solid #252525;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 /* B L O G */
 .blog-title{
   width: 172px;
-  height: 54px;
 }
 .blogpost-list{
   width: 940px;
@@ -275,20 +292,11 @@ body{
 .blog-pic{
   width: 380px;
   height: 299px;
-  border-right: 2px solid #252525;
+  overflow: hidden;
 }
 .blog-post{
-  text-align: center;
-  font-size: 15px;
-  line-height: 24px;
-  font-family: Arial;
-  color: #252525;
   padding: 59px 30px;
-}
-.blog-post-title{
-  font-family: Arial Black;
-  font-size: 25px;
-  margin-bottom: 30px;
+  border-left: 2px solid #252525;
 }
 .blog-post-txt{
   width: 505px;
@@ -300,8 +308,8 @@ body{
   width: 165px;
   height: 29px;
   background-color: #252525;
-  color: #fff;
   font-family: Arial Black;
+  color: #fff;
   font-size: 18px;
   border: none;
   line-height: 29px;
@@ -317,7 +325,6 @@ body{
 /* C O N T A C T */
 .contact-title{
   width: 516px;
-  height: 54px;
 }
 .contact-input{
   width: 620px;
@@ -335,9 +342,6 @@ body{
 .message{
   width: 620px;
   height: 179px;
-  text-align: center;
-  font-family: Arial;
-  font-size: 15px;
   padding: 15px 0;
   margin-bottom: 35px;
 }
@@ -366,7 +370,6 @@ body{
 /* GALLERY SINGLE POST */
 .gal-post-title{
   width: 550px;
-  height: 54px;
 }
 .gal-post-pic{
   width: 621px;
@@ -377,20 +380,31 @@ body{
 .gal-post-txt{
   width: 566px;
   height: 120px;
-  margin: 0 auto;
-  text-align: center;
-  font-family: Arial;
-  color: #252525;
-  line-height: 24px;
 }
 .gal-post-txt-title{
   margin: 0 auto;
   width: 320px;
   height: 35px;
   background-color: #252525;
-  font-family: Arial Black;
   font-size: 25px;
   color: #fff;
   margin-bottom: 25px;
   line-height: 34px;
+}
+
+/* BLOG SINGLE POST */
+.blog-singlepost-title{
+  width: 470px;
+}
+.blog-singlepost-pic{
+  width: 940px;
+  height: 299px;
+  margin: 0 auto;
+}
+.blog-singlepost-txt{
+  width: 560px;
+}
+.blog-singlepost-txt-title{
+  margin: 30px 0;
+  font-size: 25px;
 }

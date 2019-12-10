@@ -1,6 +1,6 @@
 $(function(){
   $('.menu').hover(function(){
-    $(this).toggleClass('menu-hover')
+    $(this).find('a').toggleClass('menu-hover')
   })
   $('.readmore').hover(function(){
     $(this).toggleClass('readmore-hover')
@@ -20,7 +20,12 @@ $(function(){
   $('.pinterest').hover(function(){
     $(this).toggleClass('pinterest-hover')
   })
-
+  $('.a').hover(function(){
+    $(this).toggleClass('a-hover')
+  })
+  $('.gallery-pic').hover(function(){
+    $(this).toggleClass('pic-hover')
+  })
   $('.readthis').hover(function(){
     $(this).toggleClass('readthis-hover')
   })
