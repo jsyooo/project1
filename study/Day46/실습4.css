@@ -1,0 +1,287 @@
+@charset 'utf-8';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 1024px;
+  height: 1559px;
+  font-size: 11px;
+}
+.gulim11{
+  font-family: 'Gulim';
+  font-size: 11px;
+  color: #5a5a5a;
+}
+.gulim12{
+  font-family: 'Gulim';
+  font-size: 12px;
+  color: #5a5a5a;
+  font-weight: bold;
+}
+.border{
+  border: 1px solid #d4d4d4;
+}
+.border-pink{
+  border: 2px solid #fa5065;
+}
+.box-padding{
+  padding: 10px;
+}
+
+/* header */
+.logo-box{
+  height: 254px;
+  text-align: center;
+  padding-top: 115px;
+}
+.logo-txt{
+  font-family: '[(한)흘림체A]';
+  font-size: 11px;
+  color: #5a5a5a;
+}
+.menu-box{
+  height: 62px;
+  position: relative;
+}
+.menu-list{
+  list-style-type: none;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -331.5px;
+  z-index: 0;
+}
+.menu{
+  margin: 5px 20px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+}
+.click{
+  background-image: url('./img/Click.png');
+  width: 80px;
+  height: 27px;
+  position: absolute;
+  top: -3px;
+  left: -50%;
+  z-index: -1;
+}
+.sel-menu{
+  color: #262626;
+  margin-top: 9px;
+}
+
+.body{
+  padding: 0 62px;
+  display: flex;
+}
+.gap{
+  margin-top: 7px;
+}
+/* left */
+.left-line{
+  width: 186px;
+}
+.left-box1{
+  height: 100px;
+  padding: 7px 12px;
+  letter-spacing: -1px;
+}
+.secure{
+  display: flex;
+}
+.secure>i{
+  margin: 2px 0 0 3px;
+}
+.range{
+  width: 40px;
+  height: 5px;
+}
+.securestage{
+  margin-left: 8px;
+}
+.log-in-box{
+  position: relative;
+  margin-top: 5px;
+}
+.login-input{
+  width: 99px;
+  height: 17px;
+  border: 1px solid #cbdba8;
+  margin-bottom: 5px;
+}
+.login-input::placeholder{
+  font-size: 11px;
+  padding-left: 2px;
+}
+.login-right{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.check-id{
+  vertical-align: -3px;
+  margin-right: 3px;
+}
+.btn-login{
+  width: 53px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #b0b0b0;
+  border-radius: 2px;
+  margin-top: 5px;
+  line-height: 18px;
+  letter-spacing: -2px;
+}
+.login-line{
+  margin-bottom: 3px;
+  width: 157px;
+  border: .5px solid #cbdba8;
+}
+.login-option{
+  text-align: center;
+}
+.login-option a{
+  text-decoration: none;
+  color: #474747;
+  vertical-align: 2px;
+}
+.login-option .sign-up{
+  font-weight: bold;
+  color: #ed6c1f;
+}
+.bar{
+  width: 1px;
+  height: 10px;
+  background-color: #cbdba8;
+  margin: 3px 6px 0;
+  display: inline-block;
+}
+.left-box2{
+  height: 50px;
+  overflow: hidden;
+}
+.left-box3{
+  height: 139px;
+  position: relative;
+}
+.more-icon{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.line{
+  height: 1px;
+  width: 166px;
+  background: #e5e5e5;
+  margin: 6px 0 10px 0;
+}
+.notice{
+  list-style-position: inside;
+  padding-left: 3px;
+}
+.text{
+  width: 166px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #262626;
+  margin-bottom: 2px;
+}
+.left-box4{
+  height: 37px;
+  text-align: center;
+  padding-top: 8.5px;
+}
+.left-box5{
+  height: 316px;
+  position: relative;
+}
+
+/* middle */
+.mid-line{
+  width: 512px;
+  margin-left: 7px;
+}
+.mid-box1{
+  height: 157px;
+  overflow: hidden;
+}
+.mid-box2{
+  height: 54px;
+}
+.mid-box3{
+  display: flex;
+}
+.mid-left-box1{
+  width: 252px;
+  height: 122px;
+}
+.mid-left-box2{
+  width: 252px;
+  height: 167px;
+  margin-top: 7px;
+  border: 1px solid;
+}
+.mid-right-box{
+  width: 253px;
+  height: 296px;
+  margin-left: 7px;
+  border: 1px solid;
+}
+.mid-box4{
+  height: 142px;
+  border: 1px solid;
+}
+
+/* right */
+.right-line{
+  width: 188px;
+  margin-left: 7px;
+}
+.right-box1{
+  height: 157px;
+}
+.right-box2{
+  height: 183px;
+  overflow: hidden;
+}
+.right-box3{
+  height: 167px;
+  position: relative;
+}
+.right-box4{
+  height: 113px;
+}
+.right-box5{
+  height: 22px;
+}
+
+
+/* footer */
+.footer{
+  padding: 50px 120px 0;
+}
+.sitemap{
+  height: 50px;
+}
+.copyright{
+  margin-top: 15px;
+  text-align: center;
+  line-height: 14px;
+}
+.red-txt{
+  font-family: 'Gulim';
+  font-size: 11px;
+  color: #e60000;
+}
+
+
+
+.display-none{
+  display: none;
+}
