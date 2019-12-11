@@ -259,6 +259,13 @@ body{
 }
 .right-box5{
   height: 22px;
+  padding: 0 20px;
+}
+.right-box5>a{
+  text-decoration: none;
+  color: #5a5a5a;
+  font-weight: bold;
+  vertical-align: -1px;
 }
 
 
@@ -268,6 +275,10 @@ body{
 }
 .sitemap{
   height: 50px;
+  padding: 0 55px 0 69px;
+}
+.sitemap>img{
+  margin-right: 20px;
 }
 .copyright{
   margin-top: 15px;
