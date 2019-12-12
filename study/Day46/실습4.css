@@ -231,6 +231,7 @@ body{
 .search-box{
   width: 385px;
   height: 20px;
+  position: relative;
 }
 .search-option{
   width: 95px;
@@ -257,6 +258,11 @@ body{
   border: none;
   line-height: 20px;
   cursor: pointer;
+}
+.under{
+  position: absolute;
+  top: 8px;
+  right: 65px;
 }
 .trending{
   width: 340px;
