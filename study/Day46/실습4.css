@@ -8,6 +8,7 @@ body{
   width: 1024px;
   height: 1559px;
   font-size: 11px;
+  margin: 0 auto;
 }
 .gulim11{
   font-family: 'Gulim';
@@ -29,6 +30,10 @@ body{
 .box-padding{
   padding: 10px;
 }
+.bold{
+  font-weight: bold;
+}
+
 
 /* header */
 .logo-box{
@@ -55,26 +60,28 @@ body{
   z-index: 0;
 }
 .menu{
-  margin: 5px 20px;
+  margin: 7px 20px;
   font-size: 14px;
   color: #fff;
   font-weight: bold;
   position: relative;
-}
-.click{
-  background-image: url('./img/Click.png');
-  width: 80px;
-  height: 27px;
-  position: absolute;
-  top: -3px;
-  left: -50%;
-  z-index: -1;
+  cursor: pointer;
 }
 .sel-menu{
   color: #262626;
-  margin-top: 9px;
+  line-height: 24px;
 }
-
+.selected{
+  background-color: #f1f1f1;
+  border: 1px solid #db3b3b;
+  border-bottom: none;
+  width: calc(100% + 40px);
+  height: 25px;
+  margin-left: -20px;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
 .body{
   padding: 0 62px;
   display: flex;
@@ -164,6 +171,7 @@ body{
 .left-box2{
   height: 50px;
   overflow: hidden;
+  cursor: pointer;
 }
 .left-box3{
   height: 139px;
@@ -173,6 +181,7 @@ body{
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
 }
 .line{
   height: 1px;
@@ -189,13 +198,15 @@ body{
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #262626;
+  color: #5a5a5a;
   margin-bottom: 2px;
+  cursor: pointer;
 }
 .left-box4{
   height: 37px;
   text-align: center;
   padding-top: 8.5px;
+  cursor: pointer;
 }
 .left-box5{
   height: 316px;
@@ -210,9 +221,57 @@ body{
 .mid-box1{
   height: 157px;
   overflow: hidden;
+  cursor: pointer;
 }
 .mid-box2{
   height: 54px;
+  background-color: #ffedf2;
+  padding: 8px 60px;
+}
+.search-box{
+  width: 385px;
+  height: 20px;
+}
+.search-option{
+  width: 95px;
+  height: 20px;
+  border: 1px solid #db3b3b;
+  font-size: 12px;
+  color: #e57d7a;
+  /* vertical-align: -.5px; */
+}
+.search{
+  width: 228px;
+  height: 20px;
+  border: 1px solid #db3b3b;
+  outline: none;
+  /* vertical-align: 1px; */
+}
+.btn-search{
+  width: 52px;
+  height: 20px;
+  border-radius: 3px;
+  background-color: #da393e;
+  font-size: 12px;
+  color: #fff;
+  border: none;
+  line-height: 20px;
+  cursor: pointer;
+}
+.trending{
+  width: 340px;
+  height: 15px;
+  margin-top: 3px;
+  display: flex;
+}
+.trending>p{
+  font-size: 11px;
+  line-height: 13px;
+  margin-left: 5px;
+  color: #5a5a5a;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .mid-box3{
   display: flex;
@@ -220,22 +279,140 @@ body{
 .mid-left-box1{
   width: 252px;
   height: 122px;
+  padding: 5px 4px;
+}
+.row{
+  margin-bottom: 7px;
+  line-height: 18px;
+}
+.tag{
+  color: #ff7283;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block;
+}
+.blueman{
+  width: 85px;
+  height: 25px;
+  background: #ff7283;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+}
+.candle{
+  width: 70px;
+  height: 25px;
+  background: #ff7283;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 23px;
+}
+.font15{
+  font-size: 15px;
+}
+.bar4{
+  background-color: #ff7283;
+  vertical-align: -2px;
+  margin: 3px 2px 0 2px;
 }
 .mid-left-box2{
   width: 252px;
   height: 167px;
   margin-top: 7px;
-  border: 1px solid;
+}
+.date{
+  width: 252px;
+  height: 20px;
+  border-radius: 2px;
+  background: #f5f5f5;
+  border: 1px solid #d4d4d4;
+  color: #fa5065;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 15px;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+.blog1{
+  height: 74px;
+  margin-bottom: 7px;
+  cursor: pointer;
+  display: flex;
+}
+.top-blog{
+  margin-left: 10px;
+}
+.blog-title{
+  color: #000000;
+}
+.blog-subtitle{
+  color: #777777;
+  font-size: 10px;
+}
+.blog-detail{
+  color: #a5a5a5;
+  font-size: 10px;
+  margin-top: 22px;
+}
+.black{
+  color: #000000;
+  width: 240px;
 }
 .mid-right-box{
   width: 253px;
   height: 296px;
+  padding-top: 3px;
   margin-left: 7px;
-  border: 1px solid;
+  position: relative;
+}
+.viewall-icon{
+  position: absolute;
+  top: 4px;
+  right: 0;
+  cursor: pointer;
+}
+.pink{
+  color: #fa5065;
+}
+.line2{
+  width: 253px;
+}
+.blog2{
+  height: 87px;
+  margin-bottom: 15px;
+}
+.blog-pink{
+  color: #cf2549;
+  margin-top: 7px;
+}
+.sub-color{
+  color: #734901;
 }
 .mid-box4{
   height: 142px;
-  border: 1px solid;
+  padding-top: 3px;
+  position: relative;
+}
+.line3{
+  width: 512px;
+  margin-bottom: 7px;
+}
+.videophoto{
+  display: flex;
+}
+.clip{
+  width: 120px;
+  height: 102px;
+  margin-right: 10px;
+  text-align: center;
+  color: #5a5a5a;
+  cursor: pointer;
 }
 
 /* right */
@@ -245,10 +422,38 @@ body{
 }
 .right-box1{
   height: 157px;
+  padding: 6px;
 }
+.line4{
+  width: 172px;
+  background-color: #ffa8b3;
+}
+.live-search{
+  list-style: none;
+}
+.live{
+  width: 170px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 16px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  position: relative;
+}
+.live>img{
+  vertical-align: -2px;
+}
+.up{
+  position: absolute;
+  top: 3px;
+  right: 20px; 
+}
+
 .right-box2{
   height: 183px;
   overflow: hidden;
+  cursor: pointer;
 }
 .right-box3{
   height: 167px;
@@ -256,16 +461,33 @@ body{
 }
 .right-box4{
   height: 113px;
+  text-align: center;
+}
+.cal{
+  display: inline-block;
+}
+.before{
+  vertical-align: -1px;
+}
+.after{
+  vertical-align: -2px;
 }
 .right-box5{
   height: 22px;
-  padding: 0 20px;
+  padding: 0 22px;
 }
 .right-box5>a{
   text-decoration: none;
   color: #5a5a5a;
   font-weight: bold;
-  vertical-align: -1px;
+  vertical-align: 3px;
+}
+.bar2{
+  background-color: #d4d4d4;
+  vertical-align: 1px;
+}
+.right-box5>img{
+  margin-top: 5px;
 }
 
 
@@ -275,10 +497,21 @@ body{
 }
 .sitemap{
   height: 50px;
-  padding: 0 55px 0 69px;
+  padding: 4px 55px 0 69px;
+}
+.sites{
+  vertical-align: 10px;
+  cursor: pointer;
 }
 .sitemap>img{
-  margin-right: 20px;
+  margin-right: 25px;
+}
+.bar3{
+  height: 30px;
+  background-color: #d4d4d4;
+  vertical-align: 1px;
+  margin: 0 28px;
+
 }
 .copyright{
   margin-top: 15px;

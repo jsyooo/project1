@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>실습4</title>
   <link rel="stylesheet" href="./실습4.css">
+  <script src="../JS/Jquery.min.js"></script>
+  <script src="./실습4.js"></script>
 </head>
 <body>
   <div class="header">
@@ -21,37 +23,36 @@
       <div>
         <img src="./img/Top Bar Menu.png" alt="">
         <ul class="menu-list">
-          <li class="menu">TOP짱</li>
-          <li class="menu">짱도전!!</li>
-          <li class="menu">FUN&FUN</li>
-          <li class="menu">셀카</li>
-          <li class="menu">무뇌人</li>
-          <li class="menu">UCC</li>
-          <li class="menu">내가최고</li>
-          <li class="menu">카페</li>
+          <li class="menu sel-menu">TOP짱
+            <div class="selected"></div>
+          </li>
+          <li class="menu">짱도전!!
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">FUN&FUN
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">셀카
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">무뇌人
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">UCC
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">내가최고
+            <div class="selected display-none"></div>
+          </li>
+          <li class="menu">카페
+            <div class="selected display-none"></div>
+          </li>
         </ul>
-        <!-- <ul class="sel-menu-list menu-list">
-          <li class="sel-menu menu">TOP짱
-            <div class="click "></div>
-          </li>
-          <li class="sel-menu menu">짱도전!!
-            <div class="click "></div>
-          </li>
-          <li class="sel-menu menu">FUN&FUN
-            <div class="click "></div>
-          </li>
-          <li class="sel-menu menu">셀카
-            <div class="click "></div>
-          </li>
-          <li class="sel-menu menu">무뇌人</li>
-          <li class="sel-menu menu">UCC</li>
-          <li class="sel-menu menu">내가최고</li>
-          <li class="sel-menu menu">카페</li>
-        </ul> -->
       </div>
     </div>
   </div>
   <div class="body">
+    <!-- 왼쪽 컨텐츠 -->
     <div class="left-line">
       <!-- 로그인 -->
       <div class="gap left-box1 border">
@@ -125,22 +126,166 @@
         </ul>
       </div>
     </div>
+    <!-- 중앙 컨텐츠 -->
     <div class="mid-line">
       <div class="gap mid-box1 border">
         <img src="./img/ad1.png" alt="">
       </div>
-      <div class="gap mid-box2 border"></div>
+      <!-- 검색창 -->
+      <div class="gap mid-box2 border">
+        <form action="" class="search-box">
+          <select class="search-option" name="" id="">
+            <option value="통합검색">통합검색</option>
+          </select>
+          <input class="search" type="text">
+          <button class="btn-search">검 색</button>
+        </form>
+        <div class="trending">
+          <img src="./img/인기.JPG" alt="" width="28px" height="auto">
+          <p>이승기, 유가환급금, 브라운아이즈, 백령도, 반딧불축제, 이승기, 유가환급금</p>
+        </div>
+      </div>
       <div class="gap mid-box3">
         <div>
-          <div class="mid-left-box1 border-pink"></div>
-          <div class="mid-left-box2"></div>
+          <div class="mid-left-box1 border-pink">
+            <div class="row">
+              <a class="tag bold font15" href="#">100분토론</a>
+              <div class="bar bar4"></div>
+              <a class="tag" href="#">강아지</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold font15" href="#">게임</a>
+              <div class="bar bar4"></div>
+              <a class="tag" href="#">꿈</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold font15" href="#">낙서</a>
+            </div>
+            <div class="row">
+              <a class="tag" href="#">뮤지컬</a>
+              <div class="bar bar4"></div>
+              <a class="tag blueman" href="#">블루맨그룹</a>
+              <div class="bar bar4"></div>
+              <a class="tag" href="#">서강대녀</a>
+            </div>
+            <div class="row">
+              <a class="tag" href="#">스킨</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold" href="#">알렉스</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold" href="#">애니메이션</a>
+              <div class="bar bar4"></div>
+              <a class="tag" href="#">야구</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold" href="#">요리</a>
+            </div>
+            <div class="row">
+              <a class="tag" href="#">일상</a>
+              <div class="bar bar4"></div>
+              <a class="tag bold font15" href="#">일지매</a>
+              <div class="bar bar4"></div>
+              <a class="tag candle" href="#">촛불집회</a>
+              <div class="bar bar4"></div>
+              <a class="tag" href="#">최강희</a>
+            </div>
+          </div>
+          <div class="mid-left-box2">
+            <div class="date">6월 3일</div>
+            <div class="blog1">
+              <img src="./img/여의도역.JPG" alt="" width="100px">
+              <!-- 블로그 미리보기내용 -->
+              <div class="top-blog">
+                <div class="blog-title gulim12">지하철 타고..</div>
+                <div class="blog-subtitle">900원의 행복~</div>
+                <div class="blog-detail">여의도역</div>
+              </div>
+            </div>
+            <ul class="notice">
+              <li class="text black">지하철역 중 제일 깊은 역, 여의나루역</li>
+              <li class="text black">구로공단역? NO! 구로디지털단지역</li>
+              <li class="text black">구로공단역? NO! 구로디지털단지역</li>
+            </ul>
+          </div>
         </div>
-        <div class="mid-right-box"></div>
+        <div class="mid-right-box">
+          <div class="gulim12"><span class="pink">블로그</span> 라이프</div>
+          <img class="viewall-icon" src="./img/전체보기.JPG" alt="" width="50px">
+          <div class="line line2"></div>
+          <div class="blog1 blog2">
+            <img src="./img/부르델.JPG" alt="" width="100px">
+            <!-- 블로그 미리보기내용 -->
+            <div class="top-blog">
+              <div class="blog-title gulim12 blog-pink">활 쏘는 헤라클래스</div>
+              <div class="blog-subtitle sub-color">labienus</div>
+              <div class="blog-detail">서울시립미술관,<br>2008 거장 부르델展 관람기</div>
+            </div>
+          </div>
+          <ul class="notice">
+            <li class="text black">재활용품의 재발견~</li>
+            <li class="text black">보는 재미가 있는 인사동 '쌈지길'</li>
+            <li class="text black bold">흠좀무?? 지못미??</li>
+            <li class="text black">궂은 날씨에도 이어진 촛불집회</li>
+            <li class="text black">알록달록 재미있는 공놀이</li>
+            <li class="text black">무럭무럭 잘 자라줘~</li>
+            <li class="text black bold">작지만 강한 촛불의 힘</li>
+            <li class="text black">한 번 도전해 보세요!</li>
+          </ul>
+        </div>
       </div>
-      <div class="gap mid-box4"></div>
+      <div class="gap mid-box4">
+        <div class="gulim12">
+          <span class="pink">동영상</span>&<span class="pink">포토</span>
+        </div>
+          <img class="viewall-icon" src="./img/전체보기.JPG" alt="" width="50px">
+          <div class="line line3"></div>
+          <div class="videophoto">
+            <div class="clip">
+              <img src="./img/도쿄.JPG" alt="" width="120px">
+              도쿄의 모노레일
+            </div>
+            <div class="clip">
+              <img src="./img/프로포즈.JPG" alt="" width="120px">
+              프로포즈 성공기
+            </div>
+            <div class="clip">
+              <img src="./img/피곤.JPG" alt="" width="120px">
+              피곤해요
+            </div>
+            <div class="clip">
+              <img src="./img/참외.JPG" alt="" width="120px">
+              참외의 재발견
+            </div>
+          </div>
+      </div>
     </div>
+    <!-- 오른쪽 컨텐츠 -->
     <div class="right-line">
-      <div class="gap right-box1 border-pink box-padding"></div>
+      <div class="gap right-box1 border-pink box-padding">
+        <div class="live-search-box">
+          <div class="gulim12 red-txt">실시간 급상승 검색어</div>
+          <div class="line line4"></div>
+          <ol class="live-search">
+            <li class="live">
+              <img src="./img/1.JPG" alt="" width="11px"> 네덜란드 이탈리아
+              <img class="up" src="./img/상승.JPG" alt="" width="12px">
+            </li>
+            <li class="live">
+              <img src="./img/2.JPG" alt="" width="11px"> 캠핑카 가격
+              <img class="up" src="./img/상승.JPG" alt="" width="12px">
+            </li>
+            <li class="live">
+              <img src="./img/3.JPG" alt="" width="11px"> 황보
+              <img class="up" src="./img/상승.JPG" alt="" width="12px">
+            </li>
+            <li class="live">
+              <img src="./img/4.JPG" alt="" width="11px"> 이태현
+              <img class="up" src="./img/상승.JPG" alt="" width="12px">
+            </li>
+            <li class="live">
+              <img src="./img/5.JPG" alt="" width="11px"> 크라운제이
+              <img class="up" src="./img/상승.JPG" alt="" width="12px">
+            </li>
+          </ol>
+        </div>
+      </div>
       <div class="gap right-box2 border">
         <img src="./img/ad2.png" alt="" width="188px" height="auto">
       </div>
@@ -149,31 +294,41 @@
           <div class="gulim12">얼짱/몸짱 블로그</div>
           <img class="more-icon" src="./img/)1.png" alt="">
           <div class="line"></div>
-          <ul class="notice">
+          <!-- <ul class="notice">
             <li class="text"></li>
             <li class="text"></li>
             <li class="text"></li>
             <li class="text"></li>
             <li class="text"></li>
             <li class="text"></li>
-          </ul>
+          </ul> -->
       </div>
-      <div class="gap right-box4 border box-padding"></div>
+      <div class="gap right-box4 border box-padding">
+        <img class="before" src="./img/전.JPG" alt="" width="14px">
+        <img class="before" src="./img/이전.JPG" alt="" width="10px">
+        <div class="cal">2006년 / 7월</div>
+        <img class="after" src="./img/후.JPG" alt="" width="9px">
+        <img class="after" src="./img/다음.JPG" alt="" width="13px">
+      </div>
       <div class="gap right-box5 border">
+        <img src="./img/문의.JPG" width="13px"> 
         <a href="#">문의하기</a>
-        <a href="#">신고하기</a>
+        <div class="bar bar2"></div>
+        <img src="./img/신고.JPG" width="11px">
+        <a href="#"> 신고하기</a>
       </div>
     </div>
   </div>
   <div class="footer">
     <div class="sitemap border">
       <img src="./img/small-logo.png" alt="">
-      <img src="./img/show.png" alt="">
-      <img src="./img/sangsang.png" alt="">
-      <img src="./img/seri.png" alt="">
-      <img src="./img/싸이월드.png" alt="">
-      <img src="./img/엠넷미디어.png" alt="">
-      <img src="./img/mgoon.png" alt="">
+      <div class="bar bar3"></div>
+      <img class="sites" src="./img/show.png" alt="">
+      <img class="sites" src="./img/sangsang.png" alt="">
+      <img class="sites" src="./img/seri.png" alt="">
+      <img class="sites" src="./img/싸이월드.png" alt="">
+      <img class="sites" src="./img/엠넷미디어.png" alt="">
+      <img class="sites" src="./img/mgoon.png" alt="">
     </div>
     <div class="copyright gulim11">
         회사소개 | 이용약관 | 개인정보취급방침 | 청소년보호정책 | 광고문의 | 문의하기 | 신고하기 | 사이트맵 <br><br>
