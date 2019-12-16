@@ -1,0 +1,268 @@
+@charset 'utf-8';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-width: 1200px;
+  background: #c34129;
+  font-family: "NanumSquareRound";
+  font-size: 16px;
+}
+@font-face{
+font-family: "NanumBarunGothic";
+src: url('fonts/NanumBarunGothic.eot')format('eot');
+src: url('fonts/NanumBarunGothic.woff') format('woff');
+}
+
+@font-face{
+font-family: "NanumBarunGothicBold";
+src: url('fonts/NanumBarunGothicBold.eot')format('eot');
+src: url('fonts/NanumBarunGothicBold.woff') format('woff');
+}
+
+@font-face{
+font-family: "NanumSquareRound";
+src: url('fonts/NanumSquareRound.eot')format('eot');
+src: url('fonts/NanumSquareRound.woff') format('woff');
+}
+.mj{
+  font-family: 'Nanum Myeongjo', serif;
+}
+.nsr{
+  font-family: "NanumSquareRound";
+}
+.nbg{
+  font-family: "NanumBarunGothic";
+}
+
+.header{
+  width: 1200px;
+  height: 118px;
+  margin: 0 auto;
+  position: relative;
+}
+.menu-icon{
+  margin: 46px 0 0 55px;
+  display: inline-block;
+}
+.logo{
+  position: absolute;
+  top: 24px;
+  left: 468px;
+}
+.call{
+  position: absolute;
+  top: 50px;
+  right: 55px;
+  color: #fff;
+  font-family: 'Nanum Myeongjo', serif;
+  font-size: 16px;
+}
+.call-icon{
+  vertical-align: -4px;
+}
+.main{
+  width: 1200px;
+  height: 460px;
+  margin: 0 auto;
+  position: relative;
+}
+.poster{
+  width: 1103px;
+  height: 462px;
+  border: 7px solid #183a5a;
+  overflow: hidden;
+  margin-left: 48.5px;
+  position: relative;
+}
+.poster-detail{
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 430px;
+  height: 240px;
+  margin: 0 auto;
+}
+.main-title{
+  font-family: "NanumBarunGothicBold";
+  font-size: 86px;
+  color: #fff;
+  font-weight: bold;
+}
+.main-date{
+  font-family: "NanumSquareRound";
+  font-size: 18px;
+  color: #fff;
+  margin-top: 24px;
+}
+.btn-main{
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+.btn-info{
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  border: 2px solid #fff;
+  font-size: 20px;
+  line-height: 60px;
+  color: #fff;
+  margin-right: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: 'Nanum Myeongjo', serif;
+}
+.btn-book{
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #b71f25;
+  font-size: 20px;
+  line-height: 60px;
+  color: #fff;
+  font-family: 'Nanum Myeongjo', serif;
+}
+.main-book-bg{
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  margin-left: -510px;
+}
+.btn-main-left{
+  position: absolute;
+  top: 50%;
+  left: 70px;
+  margin-top: -13px;
+}
+.btn-main-right{
+  position: absolute;
+  top: 50%;
+  right: 70px;
+  margin-top: -13px;
+}
+/* 상영시간표 책갈피 */
+.timetable{
+  position: absolute;
+  top: 0;
+  right: -327px;
+  display: flex;
+}
+.bookmark{
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 33px solid #255e4d;
+  height: 153px;
+  width: 0;
+  padding: 14px 0;
+}
+.bm-txt{
+  color: #fff;
+  writing-mode: vertical-lr;
+  margin-left: 7px;
+}
+.timetable-box{
+  width: 327px;
+  height: 455px;
+  background-color: #255e4d;
+  padding: 40px 27px;
+}
+.choose-date{
+  font-size: 24px;
+  font-family: "NanumSquareRound";
+  color: #fff;
+  position: relative;
+}
+.btn-tb-left{
+  position: absolute;
+  top: 0;
+  left: 47px;
+}
+.btn-tb-right{
+  position: absolute;
+  top: 0;
+  right: 47px;
+}
+.today{
+  text-align: center;
+}
+.movie-box{
+  width: 260px;
+  height: 95px;
+  background-color: #d9b78e;
+  border-radius: 15px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+.navy{
+  color: #183a5a;
+  font-weight: bold;
+}
+.line2{
+  width: 138px;
+  height: 4px;
+  background-color: #c34129;
+  margin: 10px 31px;
+}
+.time-swipe{
+  width: 200px;
+  height: 20px;
+  overflow: hidden;
+}
+.event-title{
+  display: flex;
+  justify-content: center;
+  color: #d9b78e;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 12px;
+  margin: -20px 20px 0 34px;
+}
+.event{
+  margin-top: 130px;
+}
+.line{
+  width: 415px;
+  height: 4px;
+  background-color: #d9b78e;
+}
+.event-contents{
+  margin-top: 68px;
+  display: flex;
+  justify-content: center;
+}
+.event-box{
+  width: 240px;
+  height: 200px;
+  overflow: hidden;
+  margin-right: 35px;
+}
+.event-box:last-child{
+  margin-right: 0;
+}
+.footer{
+  margin-top: 98px;
+  width: 100%;
+  height: 40px;
+  background: #525352;
+  color: #fff;
+  font-family: "NanumSquareRound";
+  font-size: 12px;
+  position: relative;
+}
+.footer-text1{
+  position: absolute;
+  top: 10px;
+  left: 90px;
+}
+.footer-text2{
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -200px;
+}
