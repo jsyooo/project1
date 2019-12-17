@@ -10,6 +10,9 @@ body{
   font-family: "NanumSquareRound";
   font-size: 16px;
 }
+a{
+  text-decoration: none;
+}
 @font-face{
 font-family: "NanumBarunGothic";
 src: url('fonts/NanumBarunGothic.eot')format('eot');
@@ -69,12 +72,16 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   margin: 0 auto;
   position: relative;
 }
+.poster-swipe{
+  width: 1100px;
+  height: 462px;
+}
 .poster{
-  width: 1103px;
+  width: 1100px;
   height: 462px;
   border: 7px solid #183a5a;
   overflow: hidden;
-  margin-left: 48.5px;
+  margin: 0 auto;
   position: relative;
 }
 .poster-detail{
@@ -83,7 +90,6 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   left: 0;
   right: 0;
   text-align: center;
-  width: 430px;
   height: 240px;
   margin: 0 auto;
 }
@@ -115,6 +121,8 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   margin-right: 20px;
   background-color: rgba(0, 0, 0, 0.7);
   font-family: 'Nanum Myeongjo', serif;
+  outline: none;
+  cursor: pointer;
 }
 .btn-book{
   width: 150px;
@@ -125,6 +133,9 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   line-height: 60px;
   color: #fff;
   font-family: 'Nanum Myeongjo', serif;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 .main-book-bg{
   position: absolute;
@@ -132,17 +143,67 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   left: 50%;
   margin-left: -510px;
 }
+.main-book-detail{
+  display: flex;
+  position: absolute;
+  top: 47px;
+  left: 37px;
+}
+.bold14{
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+}
+.date{
+  width: 139px;
+  height: 60px;
+  border: 1px solid;
+}
+.date-option{
+  width: 130px;
+  height: 25px;
+}
+.movie{
+  width: 200px;
+  height: 60px;
+  border: 1px solid;
+}
+.time{
+  width: 150px;
+  height: 60px;
+  border: 1px solid;
+}
+.people{
+  width: 288px;
+  height: 60px;
+  border: 1px solid;
+}
+.underline{
+  width: 150px;
+  color: #666666;
+  border-bottom: 3px solid black;
+}
+.btn-ticket{
+  width: 101px;
+  height: 53px;
+  border-radius: 20px;
+  border: none;
+  background-color: #b71f25;
+  color: #fff;
+}
 .btn-main-left{
   position: absolute;
   top: 50%;
-  left: 70px;
+  left: 30px;
   margin-top: -13px;
+  cursor: pointer;
 }
 .btn-main-right{
   position: absolute;
   top: 50%;
-  right: 70px;
+  right: 30px;
   margin-top: -13px;
+  cursor: pointer;
 }
 /* 상영시간표 책갈피 */
 .timetable{
@@ -158,6 +219,7 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   height: 153px;
   width: 0;
   padding: 14px 0;
+  cursor: pointer;
 }
 .bm-txt{
   color: #fff;
@@ -180,11 +242,13 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   position: absolute;
   top: 0;
   left: 47px;
+  cursor: pointer;
 }
 .btn-tb-right{
   position: absolute;
   top: 0;
   right: 47px;
+  cursor: pointer;
 }
 .today{
   text-align: center;
@@ -225,6 +289,7 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 }
 .event{
   margin-top: 130px;
+  padding: 0 60px;
 }
 .line{
   width: 415px;
@@ -232,18 +297,26 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   background-color: #d9b78e;
 }
 .event-contents{
+  width: 1050px;
+  margin: 0 auto;
   margin-top: 68px;
-  display: flex;
-  justify-content: center;
 }
 .event-box{
   width: 240px;
   height: 200px;
   overflow: hidden;
   margin-right: 35px;
+  display: inline-block;
+  cursor: pointer;
 }
 .event-box:last-child{
   margin-right: 0;
+}
+.btn-event-left{
+  left: 10px;
+}
+.btn-event-right{
+  right: 10px;
 }
 .footer{
   margin-top: 98px;
@@ -265,4 +338,38 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   top: 10px;
   left: 50%;
   margin-left: -200px;
+}
+.menu-page{
+  background-color: #255e4d;
+  min-width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  padding-top: calc(50vh - 243px);
+  position: relative;
+}
+.menu-close{
+  position: absolute;
+  top: 46px;
+  left: 86px;
+  cursor: pointer;
+}
+.square{
+  width: 828px;
+  height: 486px;
+  border: 4px solid #c34129;
+  margin: 0 auto;
+}
+.menu{
+  width: 100%;
+  height: 121.5px;
+  color: #d9b78e;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 12px;
+  line-height: 121px;
+  text-align: center;
+  cursor: pointer;
+}
+.menu:hover{
+  color: #997850;
 }
