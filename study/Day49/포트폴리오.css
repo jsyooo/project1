@@ -7,11 +7,17 @@
 body{
   min-width: 1200px;
   background: #c34129;
+  /* background-image: linear-gradient(45deg,#c34129,#c34129 50% #9a5c3b, #9a5c3b 50%); */
+  /* background-size: 20px 20px; */
   font-family: "NanumSquareRound";
   font-size: 16px;
+  position: relative;
 }
 a{
   text-decoration: none;
+}
+.display-none{
+  display: none;
 }
 @font-face{
 font-family: "NanumBarunGothic";
@@ -40,15 +46,17 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   font-family: "NanumBarunGothic";
 }
 
+/* 메인-header */
 .header{
   width: 1200px;
-  height: 118px;
+  height: 130px;
   margin: 0 auto;
   position: relative;
 }
 .menu-icon{
   margin: 46px 0 0 55px;
   display: inline-block;
+  cursor: pointer;
 }
 .logo{
   position: absolute;
@@ -66,6 +74,7 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 .call-icon{
   vertical-align: -4px;
 }
+/* 메인페이지-body */
 .main{
   width: 1200px;
   height: 460px;
@@ -278,23 +287,30 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   height: 20px;
   overflow: hidden;
 }
-.event-title{
+/* 메인-이벤트 */
+.title-box{
+  width: 100%;
+  height: 70px;
+  padding: 21px 0;
   display: flex;
   justify-content: center;
-  color: #d9b78e;
+}
+.title-text{
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 12px;
-  margin: -20px 20px 0 34px;
+  color: #d9b78e;
+  margin: 0 20px 0 34px;
 }
 .event{
-  margin-top: 130px;
+  margin-top: 120px;
   padding: 0 60px;
 }
 .line{
-  width: 415px;
+  width: 350px;
   height: 4px;
   background-color: #d9b78e;
+  margin-top: 12px;
 }
 .event-contents{
   width: 1050px;
@@ -318,6 +334,7 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 .btn-event-right{
   right: 10px;
 }
+/* footer */
 .footer{
   margin-top: 98px;
   width: 100%;
@@ -339,13 +356,18 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   left: 50%;
   margin-left: -200px;
 }
+
+/* 메뉴창 */
 .menu-page{
   background-color: #255e4d;
-  min-width: 1200px;
+  width: 100%;
   height: 100vh;
   margin: 0 auto;
   padding-top: calc(50vh - 243px);
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 .menu-close{
   position: absolute;
@@ -361,15 +383,220 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 }
 .menu{
   width: 100%;
-  height: 121.5px;
+  height: 97.2px;
   color: #d9b78e;
   font-size: 28px;
   font-weight: bold;
   letter-spacing: 12px;
-  line-height: 121px;
+  line-height: 97px;
   text-align: center;
   cursor: pointer;
 }
 .menu:hover{
   color: #997850;
+}
+
+/* 소개페이지 */
+.theater-photo-box{
+  width: 870px;
+  height: 360px;
+  border: 6px solid #183a5a;
+  margin: 0 auto;
+  overflow: hidden;
+  margin-top: 50px;
+}
+.theater-photo{
+  margin-top: -120px;
+  margin-left: -80px;
+}
+.info-text{
+  width: 660px;
+  margin: 0 auto;
+  line-height: 40px;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+.map-box{
+  margin: 0 auto;
+  margin-top: 80px;
+  width: 890px;
+  height: 340px;
+  overflow: hidden;
+  border: 6px solid #183a5a;
+}
+.howtoget{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.route{
+  width: 140px;
+  height: 23px;
+  background-color: #255e4d;
+  color: #fff;
+  line-height: 23px;
+  padding-left: 10px;
+}
+.route-detail{
+  width: 660px;
+  color: #fff;
+  margin-left: 20px;
+  line-height: 20px;
+}
+.sns{
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+.sns-name{
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  color: #d9b78e;
+  font-weight: bold;
+  font-size: 18px;
+}
+.sns-logo{
+  vertical-align: -6px;
+  margin-right: 10px;
+}
+.row{
+  height: 250px;
+  display: flex;
+  justify-content: center;
+}
+.shadow{
+  width: 172px;
+  height: 172px;
+  background: #183a5a;
+  position: relative;
+  margin: 80px 50px 0 30px;
+}
+.sns-photo{
+  width: 172px;
+  height: 172px;
+  background: #fff;
+  position: absolute;
+  top: -15px;
+  left: -15px;
+}
+
+/* 영화정보 */
+.fixed{
+  background-color: #c34129;
+  z-index: 1;
+}
+#fp-nav ul li .fp-tooltip{
+  font-family: 'Nanum Myeongjo';
+  color: #d9b78e;
+  font-weight: bold;
+}
+.fp-slidesNav ul li a span,
+#fp-nav ul li a span{
+  background-color: #d9b78e;
+}
+.section{
+  height: 540px;
+}
+.movie-info{
+  overflow: visible;
+}
+.movie-wrap{
+  justify-content: center;
+}
+.nowshowing-contents{
+  display: flex;
+  justify-content: center;
+  margin-top: 65px;
+}
+.nowshowing-movie{
+  width: 232px;
+  height: 325px;
+  border: 6px solid #183a5a;
+  overflow: hidden;
+  position: relative;
+  margin: 0 20px;
+}
+.nowshowing-hover{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 60px 45px;
+}
+.swiper-wrapper>.nowshowing-movie:hover{
+  transform: scale(1.2);
+}
+.nowshowing-txt{
+  width: 145px;
+  height: 107px;
+  text-align: center;
+  color: #fff;
+  font-size: 10px;
+  line-height: 16px;
+}
+.font14{
+  font-size: 16px;
+  line-height: 23px;
+}
+.btn-ns{
+  margin-top: 20px;
+}
+.btn-movieinfo, .btn-reserve{
+  width: 100px;
+  height: 30px;
+  margin: 0 auto;
+  border: 1px solid #fff;
+  background-color: #282828;
+  color: #fff;
+  line-height: 20px;
+  font-size: 12px;
+  margin-bottom: 15px;
+  display: block;
+  cursor: pointer;
+}
+.btn-reserve{
+  background-color: #ac1e22;
+}
+
+/* 영화예매 */
+.reserve-box{
+  width: 1012px;
+  height: 433px;
+  background-color: #183a5a;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.date-sel{
+  width: 247px;
+  text-align: center;
+}
+.movie-sel{
+  width: 553px;
+  text-align: center;
+}
+.time-sel{
+  width: 211px;
+  text-align: center;
+}
+.sel-title{
+  color: #fff;
+  font-size: 18px;
+}
+.under-bar{
+  width: 90px;
+  height: 2px;
+  background-color: #fff;
+  margin: 0 auto;
+}
+.c-date{
+  height: 50px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 50px;
 }

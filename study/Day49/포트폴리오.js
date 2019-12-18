@@ -1,4 +1,6 @@
 $(function(){
+  $("a[href^='https://']").attr("target","_blank");
+  // https로 링크걸린 a태그 새창으로 열게하기
   $('.bookmark').click(function(){
     $('.timetable').toggleClass('show')
     if($('.timetable').hasClass('show')){
@@ -8,7 +10,20 @@ $(function(){
       $('.timetable').animate({right : '-327px'},500)
     }
   })
-  
+  $('.menu-icon').click(function(){
+    $('.menu-page').removeClass('display-none')
+  })
+  $('.menu-close').click(function(){
+    $('.menu-page').addClass('display-none')
+  })
+
+  $('.nowshowing-movie').hover(function(){
+    $(this).find('.nowshowing-hover').toggleClass('display-none')
+    if($(this).hasClass('ranking')){
+    
+    }
+  })
+
   var swiper = new Swiper('.poster-swipe', {
     loop: true,
     navigation: {
@@ -23,5 +38,15 @@ $(function(){
       nextEl: '.btn-event-right',
       prevEl: '.btn-event-left',
     },
+  });
+  var swiper3 = new Swiper('.movie-info', {
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+  });
+  new fullpage('#fullpage', {
+    navigation: true,
+    parallax: true,
+    anchors: ['page1', 'page2', 'page3'],
+    navigationTooltips: ['영화순위', '현재상영작', '상영예정작'],
   });
 })
