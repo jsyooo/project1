@@ -6,9 +6,10 @@
 }
 body{
   min-width: 1200px;
-  background: #c34129;
+  /* background: #c34129; */
   /* background-image: linear-gradient(45deg,#c34129,#c34129 50% #9a5c3b, #9a5c3b 50%); */
   /* background-size: 20px 20px; */
+  background: repeating-linear-gradient(-45deg, #9a5c3b, #9a5c3b 1px, #c34129, #c34129 6px);
   font-family: "NanumSquareRound";
   font-size: 16px;
   position: relative;
@@ -154,9 +155,11 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 }
 .main-book-detail{
   display: flex;
+  justify-content: center;
   position: absolute;
   top: 47px;
-  left: 37px;
+  left: 0;
+  right: 0;
 }
 .bold14{
   font-size: 14px;
@@ -164,28 +167,54 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   color: #666666;
 }
 .date{
-  width: 139px;
+  width: 140px;
   height: 60px;
-  border: 1px solid;
-}
-.date-option{
-  width: 130px;
-  height: 25px;
 }
 .movie{
   width: 200px;
   height: 60px;
-  border: 1px solid;
 }
 .time{
   width: 150px;
   height: 60px;
-  border: 1px solid;
 }
 .people{
-  width: 288px;
+  width: 300px;
   height: 60px;
-  border: 1px solid;
+}
+.date-option{
+  width: 120px;
+  height: 25px;
+  outline: none;
+  font-size: 12px;
+  padding-left: 5px;
+  margin-top: 10px;
+  /* border-style: hidden; */
+}
+.movie-option{
+  width: 180px;
+}
+.time-option{
+  width: 130px;
+}
+.people-option{
+  display: flex;
+  margin-top: 10px;
+}
+.people-option>div{
+  margin-right: 5px;
+}
+.people-num{
+  width: 37px;
+  height: 25px;
+  outline: none;
+  font-size: 14px;
+  margin-right: 10px;
+  text-align: center;
+  /* border-style: hidden; */
+}
+.people-num::placeholder{
+  color: #000;
 }
 .underline{
   width: 150px;
@@ -193,12 +222,17 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   border-bottom: 3px solid black;
 }
 .btn-ticket{
-  width: 101px;
-  height: 53px;
-  border-radius: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 25px;
   border: none;
   background-color: #b71f25;
   color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 52px;
+  outline: none;
+  margin-top: 5px;
 }
 .btn-main-left{
   position: absolute;
@@ -359,7 +393,7 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 
 /* 메뉴창 */
 .menu-page{
-  background-color: #255e4d;
+  background-color: /*#255e4d*/ #00543d;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
@@ -425,6 +459,9 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   overflow: hidden;
   border: 6px solid #183a5a;
 }
+.map-box img{
+  margin-top: -80px;
+}
 .howtoget{
   display: flex;
   justify-content: center;
@@ -484,7 +521,11 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
 
 /* 영화정보 */
 .fixed{
-  background-color: #c34129;
+  width: 100%;
+  background: repeating-linear-gradient(-45deg, #9a5c3b, #9a5c3b 1px, #c34129, #c34129 6px);
+  z-index: 1;
+}
+#fp-nav{
   z-index: 1;
 }
 #fp-nav ul li .fp-tooltip{
@@ -571,22 +612,27 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   margin-top: 20px;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 .date-sel{
   width: 247px;
   text-align: center;
+  padding: 22.5px 0;
 }
 .movie-sel{
   width: 553px;
   text-align: center;
+  padding: 22.5px 0;
 }
 .time-sel{
   width: 211px;
   text-align: center;
+  padding: 22.5px 0;
 }
 .sel-title{
   color: #fff;
   font-size: 18px;
+  margin-bottom: 15px;
 }
 .under-bar{
   width: 90px;
@@ -595,8 +641,75 @@ src: url('fonts/NanumSquareRound.woff') format('woff');
   margin: 0 auto;
 }
 .c-date{
+  width: 120px;
   height: 50px;
+  margin: 0 auto;
   color: #fff;
   font-size: 16px;
   line-height: 50px;
+  cursor: pointer;
+  border-radius: 30px;
+}
+.c-date:hover{
+  background-color: #c34129;
+  border: 2px solid #d9b78e;
+}
+.c-date-hover{
+  background-color: #c34129;
+  border: 2px solid #d9b78e;
+}
+.c-movie-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+.c-movie-poster{
+  width: 210px;
+  background-size: 210px;
+  border: 2px solid #d9b78e;
+}
+.movie1{
+  background-image: url('./img/타짜33.jpg');
+}
+.movie2{
+  background-image: url('./img/나쁜녀석들.jpg');
+}
+.movie3{
+  background-image: url('./img/미스터리.jpg');
+}
+.c-movie-box{
+  width: 210px;
+  height: 300px;
+}
+.c-movie{
+  width: 196px;
+  height: 50px;
+}
+.gotoseats{
+  display: flex;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  cursor: pointer;
+}
+.polygon1{
+  height: 42px;
+  width: 110px;
+  background-color: #255e4d;
+  color: #fff;
+  line-height: 42px;
+  padding-left: 20px;
+}
+.polygon1>span{
+  color: #d9b78e;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+.polygon2{
+  border-left: 20px solid #255e4d;
+  border-top: 21px solid transparent;
+  border-bottom: 21px solid transparent;
+  height: 42px;
+  
 }

@@ -23,8 +23,13 @@ $(function(){
     
     }
   })
+  $('.c-date').click(function(){
+    $(this).addClass('c-date-hover').siblings().removeClass('c-date-hover')
+  })
+  
 
   var swiper = new Swiper('.poster-swipe', {
+    autoplay: 3000,
     loop: true,
     navigation: {
       nextEl: '.btn-main-right',

@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>고흥작은영화관</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="../CSS/swiper.css">
   <link rel="stylesheet" href="./포트폴리오.css">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
@@ -48,7 +49,9 @@
               <div class="main-title">나쁜녀석들</div>
               <div class="main-date">2019.09.17.개봉</div>
               <div class="btn-main">
-                <a href="#"><button class="btn-info">영화정보</button></a>
+                <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=177909">
+                  <button class="btn-info">영화정보</button>
+                </a>
                 <a href="#"><button class="btn-book">바로예매</button></a>
               </div>
             </div>
@@ -59,7 +62,9 @@
               <div class="main-title">타짜 :원아이드잭</div>
               <div class="main-date">2019.09.11.개봉</div>
               <div class="btn-main">
-                <a href="#"><button class="btn-info">영화정보</button></a>
+                <a href="https://movie.naver.com/movie/bi/mi/basic.nhn?code=96951">
+                  <button class="btn-info">영화정보</button>
+                </a>
                 <a href="#"><button class="btn-book">바로예매</button></a>
               </div>
             </div>
@@ -80,22 +85,54 @@
         <div class="main-book-detail">
             <div class="date">
               <div class="bold14 nbg">날짜</div>
-              <select class="date-option" name="" id="">
-                <option value="">9/20</option>
+              <select class="date-option mj" name="date" id="">
+                <option value="">-- 날짜 선택 --</option>
+                <option value="">9/19(목)</option>
+                <option value="">9/20(금)</option>
+                <option value="">9/21(토)</option>
+                <option value="">9/22(일)</option>
+                <option value="">9/23(월)</option>
+                <option value="">9/24(화)</option>
               </select>
             </div>
             <div class="movie">
               <div class="bold14 nbg">영화명</div>
-              <div class="underline">영화를 선택하세요.</div>
+              <select class="date-option mj movie-option" name="movie" id="">
+                <option value="">-- 영화 선택 --</option>
+                <option value="">타짜 원아이드잭</option>
+                <option value="">나쁜녀석들 더무비</option>
+                <option value="">힘을내요, 미스터리</option>
+              </select>
             </div>
             <div class="time">
               <div class="bold14 nbg">관람시간</div>
+              <select class="date-option mj time-option" name="time" id="">
+                <option value="">-- 시간 선택 --</option>
+                <option value="">10:30</option>
+                <option value="">13:40</option>
+                <option value="">16:00</option>
+                <option value="">18:20</option>
+                <option value="">21:00</option>
+              </select>
             </div>
             <div class="people">
               <div class="bold14 nbg">관람인원</div>
-              <input type="number" name="" id="" min="0" max="4">
+              <div class="people-option mj">
+                <div>
+                  <label for="adult">성인</label>
+                  <input class="people-num" type="number" name="adult" id="adult" min="0" max="4" placeholder="0">
+                </div>
+                <div>
+                  <label for="teenager">청소년</label>
+                  <input class="people-num" type="number" name="teenager" id="teenager" min="0" max="4" placeholder="0">
+                </div>
+                <div>
+                  <label for="children">어린이</label>
+                  <input class="people-num" type="number" name="children" id="children" min="0" max="4" placeholder="0">
+                </div>
+              </div>
             </div>
-            <button class="btn-ticket">예  매</button>
+            <button class="btn-ticket">예 &nbsp; 매</button>
           </form>
         </div>
       </div>
