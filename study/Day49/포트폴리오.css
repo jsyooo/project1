@@ -826,6 +826,9 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 /* 예매목록 */
+.list-box{
+  position: relative;
+}
 table{
   width: 795px;
   font-size: 14px;
