@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>test</title>
+  <link rel="stylesheet" href="./멀티미디어콘텐츠응용SW_포트폴리오_유정서.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(function(){
+      $('.menu').click(function(){
+        if(!$(this).children().hasClass('open')){ //접힘
+          $('.sub-menu-box').removeClass('open')
+          $(this).children().addClass('open')
+          $('.sub-menu-box').addClass('display-none')
+          $(this).children().removeClass('display-none')
+        }
+        else{
+          $(this).children().toggleClass('display-none')
+        }
+      })
+    })
+  </script>
+</head>
+<body>
+  <div class="nav-bar">
+    <ul class="menu-box">
+      <li class="menu">메뉴1
+        <ul class="sub-menu-box display-none">
+          <li class="sub-menu">서브메뉴1</li>
+          <li class="sub-menu">서브메뉴2</li>
+          <li class="sub-menu">서브메뉴3</li>
+        </ul>
+      </li>
+      <li class="menu">메뉴2
+        <ul class="sub-menu-box  display-none">
+          <li class="sub-menu">서브메뉴1</li>
+          <li class="sub-menu">서브메뉴2</li>
+          <li class="sub-menu">서브메뉴3</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

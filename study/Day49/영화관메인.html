@@ -22,8 +22,8 @@
       <a href="./영화관소개.html"><div class="menu mj">{영화관 소개}</div></a>
       <a href="./영화정보.html"><div class="menu mj">{영화정보}</div></a>
       <a href="./영화예매.html"><div class="menu mj">{영화 예매}</div></a>
-      <a href=""><div class="menu mj">{나의 티켓}</div></a>
-      <a href=""><div class="menu mj">{이벤트/할인}</div></a>
+      <a href="./예매정보입력.html"><div class="menu mj">{나의 티켓}</div></a>
+      <a href="./이벤트.html"><div class="menu mj">{이벤트/할인}</div></a>
     </div>
   </div>
   <div class="header">
@@ -83,6 +83,7 @@
         <img src="./img/영화필름박스.png" alt="">
         <form action=""></form>
         <div class="main-book-detail">
+          <!-- 날짜선택 -->
             <div class="date">
               <div class="bold14 nbg">날짜</div>
               <select class="date-option mj" name="date" id="">
@@ -95,6 +96,8 @@
                 <option value="">9/24(화)</option>
               </select>
             </div>
+            <div class="bar"></div>
+            <!-- 영화선택 -->
             <div class="movie">
               <div class="bold14 nbg">영화명</div>
               <select class="date-option mj movie-option" name="movie" id="">
@@ -104,6 +107,8 @@
                 <option value="">힘을내요, 미스터리</option>
               </select>
             </div>
+            <div class="bar"></div>
+            <!-- 시간선택 -->
             <div class="time">
               <div class="bold14 nbg">관람시간</div>
               <select class="date-option mj time-option" name="time" id="">
@@ -115,20 +120,22 @@
                 <option value="">21:00</option>
               </select>
             </div>
+            <div class="bar"></div>
+            <!-- 인원수 선택 -->
             <div class="people">
               <div class="bold14 nbg">관람인원</div>
               <div class="people-option mj">
                 <div>
                   <label for="adult">성인</label>
-                  <input class="people-num" type="number" name="adult" id="adult" min="0" max="4" placeholder="0">
+                  <input class="people-num  mj" type="number" name="adult" id="adult" min="0" max="4" placeholder="0">
                 </div>
                 <div>
                   <label for="teenager">청소년</label>
-                  <input class="people-num" type="number" name="teenager" id="teenager" min="0" max="4" placeholder="0">
+                  <input class="people-num mj" type="number" name="teenager" id="teenager" min="0" max="4" placeholder="0">
                 </div>
                 <div>
                   <label for="children">어린이</label>
-                  <input class="people-num" type="number" name="children" id="children" min="0" max="4" placeholder="0">
+                  <input class="people-num mj" type="number" name="children" id="children" min="0" max="4" placeholder="0">
                 </div>
               </div>
             </div>
@@ -163,6 +170,7 @@
         </div>
       </div>
     </div>
+    <!-- 이벤트 항목 -->
     <div class="event">
       <div class="title-box">
         <div class="line"></div>
@@ -174,21 +182,69 @@
           <div class="swiper-wrapper">
             <div class="event-box swiper-slide">
               <img src="./img/이벤트2.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
             <div class="event-box swiper-slide">
               <img src="./img/이벤트1.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
             <div class="event-box swiper-slide">
               <img src="./img/이벤트3.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
             <div class="event-box swiper-slide">
               <img src="./img/이벤트4.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
             <div class="event-box swiper-slide">
               <img src="./img/이벤트2.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
             <div class="event-box swiper-slide">
               <img src="./img/이벤트1.jpg" alt="">
+              <div class="event-hover display-none">
+                <img src="./img/event rollover.png" alt="">
+                <div class="event-hover-text mj">
+                  <div>9월 영화 할인 이벤트</div>
+                  <div class="line3"></div>
+                  <a href="./이벤트.html"><div class="btn-eventinfo">상세보기</div></a>
+                </div>
+              </div>
             </div>
           </div>
           <div class="btn-main-left btn-event-left">

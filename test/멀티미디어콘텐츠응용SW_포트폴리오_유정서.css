@@ -1,0 +1,41 @@
+@charset 'utf-8';
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.display-none{
+  display: none;
+}
+.nav-bar{
+  width: 100%;
+  height: 50px;
+  background-color: #000;
+}
+.menu-box{
+  display: flex;
+}
+.nav-bar ul{
+  list-style: none;
+}
+.menu{
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  color: lightgrey;
+  font-size: 20px;
+  text-align: center;
+  cursor: pointer;
+}
+.sub-menu-box{
+  width: 130px;
+  border: 1px solid grey;
+}
+.sub-menu{
+  width: 130px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40px;
+  color: #000;
+}

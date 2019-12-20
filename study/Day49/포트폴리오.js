@@ -1,6 +1,7 @@
 $(function(){
-  $("a[href^='https://']").attr("target","_blank");
   // https로 링크걸린 a태그 새창으로 열게하기
+  $("a[href^='https://']").attr("target","_blank");
+  // 책갈피(상영시간표) fold/unfold
   $('.bookmark').click(function(){
     $('.timetable').toggleClass('show')
     if($('.timetable').hasClass('show')){
@@ -10,19 +11,26 @@ $(function(){
       $('.timetable').animate({right : '-327px'},500)
     }
   })
+  // main>이벤트 배너 hover
+  $('.event-box').hover(function(){
+    $(this).find('.event-hover').toggleClass('display-none')
+  })
+  // menu창 열기
   $('.menu-icon').click(function(){
     $('.menu-page').removeClass('display-none')
   })
+  // menu창 닫기
   $('.menu-close').click(function(){
     $('.menu-page').addClass('display-none')
   })
-
+  // 영화정보>영화 hover 효과
   $('.nowshowing-movie').hover(function(){
     $(this).find('.nowshowing-hover').toggleClass('display-none')
     if($(this).hasClass('ranking')){
     
     }
   })
+  // 영화예매>각 항목(날짜,영화,시간) 선택할때
   $('.c-date').click(function(){
     $(this).addClass('c-date-hover').siblings().removeClass('c-date-hover')
   })
