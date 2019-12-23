@@ -1,6 +1,15 @@
 $(function(){
   // https로 링크걸린 a태그 새창으로 열게하기
   $("a[href^='https://']").attr("target","_blank");
+ 
+  $('.plus').click(function(){
+    alert('djosij')
+    console.log($(this).prev().val())
+    var num = $( this ).prev().val();
+    num++;
+    $(this).prev().val(num);
+    
+  })
   // 책갈피(상영시간표) fold/unfold
   $('.bookmark').click(function(){
     $('.timetable').toggleClass('show')
@@ -34,7 +43,15 @@ $(function(){
   $('.c-date').click(function(){
     $(this).addClass('c-date-hover').siblings().removeClass('c-date-hover')
   })
-  
+  // 좌석선택 영화선택
+  $('.gotoseats').click(function(){
+    $('.body1').addClass('display-none')
+    $('.body2').removeClass('display-none')
+  })
+  $('.gotomovie').click(function(){
+    $('.body2').addClass('display-none')
+    $('.body1').removeClass('display-none')
+  })
 
   var swiper = new Swiper('.poster-swipe', {
     autoplay: 3000,
