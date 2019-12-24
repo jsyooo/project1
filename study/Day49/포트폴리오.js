@@ -1,15 +1,24 @@
 $(function(){
   // https로 링크걸린 a태그 새창으로 열게하기
   $("a[href^='https://']").attr("target","_blank");
- 
+  // 인원수 증가 감소
   $('.plus').click(function(){
-    alert('djosij')
-    console.log($(this).prev().val())
-    var num = $( this ).prev().val();
+    var num = $( this ).parent().prev().val();
     num++;
-    $(this).prev().val(num);
-    
+    if(num>4){
+      return;
+    }
+    $(this).parent().prev().val(num);
   })
+  $('.minus').click(function(){
+    var num = $( this ).parent().prev().val();
+    num--;
+    if(num<0){
+      return;
+    }
+    $(this).parent().prev().val(num);
+  })
+
   // 책갈피(상영시간표) fold/unfold
   $('.bookmark').click(function(){
     $('.timetable').toggleClass('show')
@@ -51,6 +60,44 @@ $(function(){
   $('.gotomovie').click(function(){
     $('.body2').addClass('display-none')
     $('.body1').removeClass('display-none')
+  })
+
+  // 영화예매>인원수 선택
+  
+  $('.plus').click(function(){
+    $('.white-box2').removeClass('display-none')
+  var cnt1 = $('#adult').val();
+    if(cnt1>0){
+      $('.adult').removeClass('display-none')
+      $('.adult-w').text(11000*cnt1+'원')
+    }
+  var cnt2 = $('#teenager').val();
+    if(cnt2>0){
+      $('.teen').removeClass('display-none')
+      $('.teen-w').text(9000*cnt2+'원')
+    }
+  var cnt3 = $('#children').val();
+    if(cnt3>0){
+      $('.child').removeClass('display-none')
+      $('.child-w').text(7000*cnt3+'원')
+    }
+  })
+  $('.minus').click(function(){
+    var cnt1 = $('#adult').val();
+    if(cnt1==0){
+      $('.adult').addClass('display-none')
+    }
+  var cnt2 = $('#teenager').val();
+    if(cnt2==0){
+      $('.teen').addClass('display-none')
+    }
+  var cnt3 = $('#children').val();
+    if(cnt3==0){
+      $('.child').addClass('display-none')
+    }
+  if(cnt1==0 && cnt2==0 && cnt3==0){
+    $('.white-box2').addClass('display-none')
+  }
   })
 
   var swiper = new Swiper('.poster-swipe', {

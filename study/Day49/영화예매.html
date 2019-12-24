@@ -101,37 +101,6 @@
     </div>
     <div class="reserve-box seatbox-padding">
       <div class="flex">
-        <div class="white-box">
-          <!-- 인원수 선택 -->
-          <div class="people seats-people">
-            <div class="people-option">
-              <div class="people-count">
-                <label for="adult">성인</label>
-                <input class="people-num  mj" type="number" name="adult" id="adult" min="0" max="4" placeholder="0">
-                <div class="count-box">
-                  <div class="plus"></div>
-                  <div class="minus"></div>
-                </div>
-              </div>
-              <div class="people-count">
-                <label for="teenager">청소년</label>
-                <input class="people-num mj" type="number" name="teenager" id="teenager" min="0" max="4" placeholder="0">
-                <div class="count-box">
-                  <div class="plus"></div>
-                  <div class="minus"></div>
-                </div>
-              </div>
-              <div class="people-count">
-                <label for="children">어린이</label>
-                <input class="people-num mj" type="number" name="children" id="children" min="0" max="4" placeholder="0">
-                <div class="count-box">
-                  <div class="plus"></div>
-                  <div class="minus"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       <div class="seat-area">
         <div class="screen">S C R E E N</div>
         <div class="seats">
@@ -298,6 +267,44 @@
         </div>
         <div class="seats-notice">
           * 관람하실 인원을 먼저 선택하시고 자리를 선택해주세요. 자리선택 후 결제가능합니다.*
+        </div>
+      </div>
+      <div class="white-box">
+        <!-- 인원수 선택 -->
+        <div class="people seats-people">
+          <div class="people-option">
+            <div class="people-count">
+              <label for="adult">성인</label>
+              <input class="people-num mj" type="number" name="adult" id="adult" min="0" max="4" placeholder="0">
+              <div class="count-box">
+                <div class="plus"></div>
+                <div class="minus"></div>
+              </div>
+            </div>
+            <div class="people-count">
+              <label for="teenager">청소년</label>
+              <input class="people-num mj" type="number" name="teenager" id="teenager" min="0" max="4" placeholder="0">
+              <div class="count-box">
+                <div class="plus"></div>
+                <div class="minus"></div>
+              </div>
+            </div>
+            <div class="people-count">
+              <label for="children">어린이</label>
+              <input class="people-num mj" type="number" name="children" id="children" min="0" max="4" placeholder="0">
+              <div class="count-box">
+                <div class="plus"></div>
+                <div class="minus"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="white-box2 display-none">
+          <div class="text-box adult display-none">성인<span class="bold18 adult-w">10,000원</span></div>
+          <div class="text-box teen display-none">청소년<span class="bold18 teen-w">10,000원</span></div>
+          <div class="text-box child display-none">어린이<span class="bold18 child-w">10,000원</span></div>
+          <div class="text-box text-box3">총 결제금액<span class="bold-b font28 total">20,000원</span></div>
+          <button class="btn-pay Myeongjo">결 &nbsp; 제</button>
         </div>
       </div>
     </div>
